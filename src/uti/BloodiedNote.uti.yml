@@ -1,0 +1,46 @@
+--- !nwn-lib.elv.es,2013-07:struct
+__data_type: UTI
+__struct_id: 4294967295
+AddCost: {type: dword, value: 0}
+BaseItem: {type: int, value: 24}
+Charges: {type: byte, value: 0}
+Comment: {type: cexostr, value: ''}
+Cost: {type: dword, value: 0}
+Cursed: {type: byte, value: 0}
+DescIdentified:
+  type: cexolocstr
+  value:
+    0: |-
+      The small note is mostly covered in the Elduran's guard dried up blood. However, there are a few readable parts:
+
+      " .....time is com....."
+      "meet........ ruins......"
+      "......Ghilgalad........"
+
+      The sender of this note signed it only with the letter "A"
+Description:
+  type: cexolocstr
+  value:
+    0: |-
+      The small note is mostly covered in the Elduran's guard dried up blood. However, there are a few readable parts:
+
+      " .....tymp'l a vien....."
+      "ajthepta'ma........ ruyne'le......"
+      "......Ghilgalad........"
+
+      The sender of this note signed it only with the letter "A"
+Identified: {type: byte, value: 1}
+LocalizedName:
+  type: cexolocstr
+  value:
+    0: Bloodied Note
+ModelPart1: {type: byte, value: 89}
+PaletteID: {type: byte, value: 60}
+Plot: {type: byte, value: 1}
+PropertiesList:
+  type: list
+  value: []
+StackSize: {type: word, value: 1}
+Stolen: {type: byte, value: 0}
+Tag: {type: cexostr, value: e1_luther_bloodied_note}
+TemplateResRef: {type: resref, value: bloodiednote}

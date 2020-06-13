@@ -1,0 +1,29 @@
+{
+    "folders": [
+        {
+            "path": "..\\eldura 1\\"
+        }
+    ],
+    "settings": {
+        "files.exclude": {
+            "**/*.are": true,
+            "**/*.dlg": true,
+            "**/*.exe": true,
+            "**/*.fac": true,
+            "**/*.gic": true,
+            "**/*.git": true,
+            "**/*.ifo": true,
+            "**/*.itp": true,
+            "**/*.jrl": true,
+            "**/*.mod": true,
+            "**/*.ncs": true,
+            "**/*.utc": true,
+            "**/*.ute": true,
+            "**/*.uti": true,
+            "**/*.utp": true,
+            "**/*.uts": true,
+            "**/.nwnproject": true
+        }
+    },
+    "files.associations": {}
+}

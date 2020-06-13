@@ -1,0 +1,18 @@
+//::///////////////////////////////////////////////
+//:: FileName e1_lak_tk_cond1
+//:://////////////////////////////////////////////
+//:://////////////////////////////////////////////
+//:: Created By: Script Wizard
+//:: Created On: 5
+//:://////////////////////////////////////////////
+#include "nw_i0_tool"
+
+int StartingConditional()
+{
+
+	// Make sure the PC speaker has these items in their inventory
+	if(!HasItem(GetPCSpeaker(), "e1_pale_amulet"))
+		return FALSE;
+
+	return TRUE;
+}
