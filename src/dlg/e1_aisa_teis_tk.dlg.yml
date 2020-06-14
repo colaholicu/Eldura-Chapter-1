@@ -142,7 +142,7 @@ EntryList:
       type: cexolocstr
       value:
         0: However, I'm forever grateful to you, <FirstName>. You have been an invaluable
-          help as I have told you when we first met in Draktu. If not for you, I wouldn't
+          help as I have told you when we first met in Drahkthu. If not for you, I wouldn't
           have been able to seize these stones.
   - !nwn-lib.elv.es,2013-07:struct
     __struct_id: 6

@@ -154,9 +154,9 @@ EntryList:
     Text:
       type: cexolocstr
       value:
-        0: Ghilghalad is the Child of both Draktu and Anghtu... You are the Ghilghalad!
+        0: Ghilghalad is the Child of both Drahkthu and Ahngthu... You are the Ghilghalad!
           You see, your father, Arctus, was a direct descendant of the Children of
-          Angh, an ancient line of holy paladins created by the Eldurs themselves.
+          Ahng, an ancient line of holy paladins created by the Eldurs themselves.
   - !nwn-lib.elv.es,2013-07:struct
     __struct_id: 6
     AnimLoop: {type: byte, value: 1}
@@ -201,7 +201,7 @@ EntryList:
     Text:
       type: cexolocstr
       value:
-        0: After your journey to Draktu, your spirit has been imbued with the realm's
+        0: After your journey to Drahkthu, your spirit has been imbued with the realm's
           essence. You yourself have noticed there was something changed about you
           upon your arrival back from it.
   - !nwn-lib.elv.es,2013-07:struct
@@ -228,7 +228,7 @@ EntryList:
         0: Unfortunately, Mort'ul has been working for years on a way to breach the
           Inner Sanctum. He is an awesome necromancer, and a very ancient one. Arcanys'
           words hinted that he may have found a way to create a Ghilghalad - a child
-          of both Draktu and Anghtu.
+          of both Drahkthu and Ahngthu.
   - !nwn-lib.elv.es,2013-07:struct
     __struct_id: 9
     AnimLoop: {type: byte, value: 1}
@@ -450,7 +450,7 @@ ReplyList:
     Text:
       type: cexolocstr
       value:
-        0: But what about me being the Child of Draktu?
+        0: But what about me being the Child of Drahkthu?
   - !nwn-lib.elv.es,2013-07:struct
     __struct_id: 8
     AnimLoop: {type: byte, value: 1}
@@ -530,7 +530,7 @@ ReplyList:
     Text:
       type: cexolocstr
       value:
-        0: '"When the night is at its darkest, the Child of both Draktu and Anghtu
+        0: '"When the night is at its darkest, the Child of both Drahkthu and Ahngthu
           shall come and deliver the kingdom from the Shadow of Ashtakhar"'
 StartingList:
   type: list

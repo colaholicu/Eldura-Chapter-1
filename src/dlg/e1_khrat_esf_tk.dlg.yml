@@ -29,7 +29,7 @@ EntryList:
     Text:
       type: cexolocstr
       value:
-        0: It seems that Mort'ul was right. You did manage to escape Draktu.
+        0: It seems that Mort'ul was right. You did manage to escape Drahkthu.
   - !nwn-lib.elv.es,2013-07:struct
     __struct_id: 1
     AnimLoop: {type: byte, value: 1}
