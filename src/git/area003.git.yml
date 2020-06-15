@@ -9727,7 +9727,7 @@ Creature List:
 
               " .....time is com....."
               "meet........ ruins......"
-              "......Ghilgalad........"
+              "......Ar'Ishtanu........"
 
               The sender of this note signed it only with the letter "A"
         Description:
@@ -9738,7 +9738,7 @@ Creature List:
 
               " .....tymp'l a vien....."
               "ajthepta'ma........ ruyne'le......"
-              "......Ghilgalad........"
+              "......Ar'Ishtanu........"
 
               The sender of this note signed it only with the letter "A"
         Dropable: {type: byte, value: 1}

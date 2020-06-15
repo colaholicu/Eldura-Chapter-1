@@ -14,6 +14,7 @@ Mod_Area_list:
   - !nwn-lib.elv.es,2013-07:struct {__struct_id: 6, Area_Name: {type: resref, value: area005}}
   - !nwn-lib.elv.es,2013-07:struct {__struct_id: 6, Area_Name: {type: resref, value: area006}}
   - !nwn-lib.elv.es,2013-07:struct {__struct_id: 6, Area_Name: {type: resref, value: area007}}
+  - !nwn-lib.elv.es,2013-07:struct {__struct_id: 6, Area_Name: {type: resref, value: testarea}}
 Mod_CacheNSSList:
   type: list
   value: []
@@ -28,12 +29,12 @@ Mod_Description:
   value:
     0: ''
 Mod_DuskHour: {type: byte, value: 18}
-Mod_Entry_Area: {type: resref, value: area}
+Mod_Entry_Area: {type: resref, value: area007}
 Mod_Entry_Dir_X: {type: float, value: 0.0}
 Mod_Entry_Dir_Y: {type: float, value: 1.0}
-Mod_Entry_X: {type: float, value: 14.0}
-Mod_Entry_Y: {type: float, value: 10.0}
-Mod_Entry_Z: {type: float, value: 0.0}
+Mod_Entry_X: {type: float, value: 41.9795}
+Mod_Entry_Y: {type: float, value: 77.7003}
+Mod_Entry_Z: {type: float, value: 0.4}
 Mod_Expan_List:
   type: list
   value: []

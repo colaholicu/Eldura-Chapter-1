@@ -224,14 +224,14 @@ Creature List:
     BodyPart_Torso: {type: byte, value: 1}
     CRAdjust: {type: int, value: 0}
     Cha: {type: byte, value: 10}
-    ChallengeRating: {type: float, value: 9.0}
+    ChallengeRating: {type: float, value: 6.0}
     ClassList:
       type: list
       value:
       - !nwn-lib.elv.es,2013-07:struct
         __struct_id: 2
         Class: {type: int, value: 10}
-        ClassLevel: {type: short, value: 6}
+        ClassLevel: {type: short, value: 4}
         MemorizedList0:
           type: list
           value:
@@ -250,27 +250,22 @@ Creature List:
             Spell: {type: word, value: 144}
             SpellFlags: {type: byte, value: 1}
             SpellMetaMagic: {type: byte, value: 0}
-          - !nwn-lib.elv.es,2013-07:struct
-            __struct_id: 3
-            Spell: {type: word, value: 144}
-            SpellFlags: {type: byte, value: 1}
-            SpellMetaMagic: {type: byte, value: 0}
         MemorizedList1:
           type: list
           value:
           - !nwn-lib.elv.es,2013-07:struct
             __struct_id: 3
-            Spell: {type: word, value: 102}
+            Spell: {type: word, value: 371}
             SpellFlags: {type: byte, value: 1}
             SpellMetaMagic: {type: byte, value: 0}
           - !nwn-lib.elv.es,2013-07:struct
             __struct_id: 3
-            Spell: {type: word, value: 107}
+            Spell: {type: word, value: 143}
             SpellFlags: {type: byte, value: 1}
             SpellMetaMagic: {type: byte, value: 0}
           - !nwn-lib.elv.es,2013-07:struct
             __struct_id: 3
-            Spell: {type: word, value: 107}
+            Spell: {type: word, value: 143}
             SpellFlags: {type: byte, value: 1}
             SpellMetaMagic: {type: byte, value: 0}
         MemorizedList2:
@@ -278,49 +273,31 @@ Creature List:
           value:
           - !nwn-lib.elv.es,2013-07:struct
             __struct_id: 3
-            Spell: {type: word, value: 94}
+            Spell: {type: word, value: 64}
             SpellFlags: {type: byte, value: 1}
             SpellMetaMagic: {type: byte, value: 0}
           - !nwn-lib.elv.es,2013-07:struct
             __struct_id: 3
-            Spell: {type: word, value: 115}
-            SpellFlags: {type: byte, value: 1}
-            SpellMetaMagic: {type: byte, value: 0}
-          - !nwn-lib.elv.es,2013-07:struct
-            __struct_id: 3
-            Spell: {type: word, value: 157}
-            SpellFlags: {type: byte, value: 1}
-            SpellMetaMagic: {type: byte, value: 0}
-        MemorizedList3:
-          type: list
-          value:
-          - !nwn-lib.elv.es,2013-07:struct
-            __struct_id: 3
-            Spell: {type: word, value: 58}
-            SpellFlags: {type: byte, value: 1}
-            SpellMetaMagic: {type: byte, value: 0}
-          - !nwn-lib.elv.es,2013-07:struct
-            __struct_id: 3
-            Spell: {type: word, value: 78}
+            Spell: {type: word, value: 64}
             SpellFlags: {type: byte, value: 1}
             SpellMetaMagic: {type: byte, value: 0}
       - !nwn-lib.elv.es,2013-07:struct
         __struct_id: 2
-        Class: {type: int, value: 19}
-        ClassLevel: {type: short, value: 6}
+        Class: {type: int, value: 4}
+        ClassLevel: {type: short, value: 2}
     Color_Hair: {type: byte, value: 16}
     Color_Skin: {type: byte, value: 16}
     Color_Tattoo1: {type: byte, value: 23}
     Color_Tattoo2: {type: byte, value: 37}
     Con: {type: byte, value: 13}
     Conversation: {type: resref, value: ''}
-    CurrentHitPoints: {type: short, value: 55}
-    DecayTime: {type: dword, value: 0}
+    CurrentHitPoints: {type: short, value: 50}
+    DecayTime: {type: dword, value: 5000}
     Deity: {type: cexostr, value: ''}
     Description:
       type: cexolocstr
       value: {}
-    Dex: {type: byte, value: 14}
+    Dex: {type: byte, value: 10}
     Disarmable: {type: byte, value: 0}
     Equip_ItemList:
       type: list
@@ -351,7 +328,43 @@ Creature List:
         Charges: {type: byte, value: 0}
         Cloth1Color: {type: byte, value: 23}
         Cloth2Color: {type: byte, value: 23}
-        Cost: {type: dword, value: 6012}
+        Cost: {type: dword, value: 10}
+        Cursed: {type: byte, value: 0}
+        DescIdentified:
+          type: cexolocstr
+          value: {}
+        Description:
+          type: cexolocstr
+          value: {}
+        Identified: {type: byte, value: 1}
+        Leather1Color: {type: byte, value: 23}
+        Leather2Color: {type: byte, value: 37}
+        LocalizedName:
+          type: cexolocstr
+          str_ref: 12905
+          value:
+            0: PIPI Night's Darkness, Leather Armor +5
+        Metal1Color: {type: byte, value: 24}
+        Metal2Color: {type: byte, value: 3}
+        Plot: {type: byte, value: 0}
+        PropertiesList:
+          type: list
+          value: []
+        StackSize: {type: word, value: 1}
+        Stolen: {type: byte, value: 0}
+        Tag: {type: cexostr, value: e1_nght_drk2}
+        TemplateResRef: {type: resref, value: nightsdarknes004}
+        XOrientation: {type: float, value: 0.0}
+        XPosition: {type: float, value: -1.0}
+        YOrientation: {type: float, value: 1.0}
+        YPosition: {type: float, value: -1.0}
+        ZPosition: {type: float, value: -1.0}
+      - !nwn-lib.elv.es,2013-07:struct
+        __struct_id: 16
+        AddCost: {type: dword, value: 0}
+        BaseItem: {type: int, value: 18}
+        Charges: {type: byte, value: 0}
+        Cost: {type: dword, value: 40}
         Cursed: {type: byte, value: 0}
         DescIdentified:
           type: cexolocstr
@@ -360,15 +373,13 @@ Creature List:
           type: cexolocstr
           value: {}
         Identified: {type: byte, value: 0}
-        Leather1Color: {type: byte, value: 23}
-        Leather2Color: {type: byte, value: 37}
         LocalizedName:
           type: cexolocstr
-          str_ref: 12905
           value:
-            0: Night's Darkness, Leather Armor +5
-        Metal1Color: {type: byte, value: 24}
-        Metal2Color: {type: byte, value: 3}
+            0: Rage of the Dead
+        ModelPart1: {type: byte, value: 13}
+        ModelPart2: {type: byte, value: 33}
+        ModelPart3: {type: byte, value: 33}
         Plot: {type: byte, value: 0}
         PropertiesList:
           type: list
@@ -376,16 +387,25 @@ Creature List:
           - !nwn-lib.elv.es,2013-07:struct
             __struct_id: 0
             ChanceAppear: {type: byte, value: 100}
-            CostTable: {type: byte, value: 2}
-            CostValue: {type: word, value: 5}
+            CostTable: {type: byte, value: 0}
+            CostValue: {type: word, value: 0}
             Param1: {type: byte, value: 255}
             Param1Value: {type: byte, value: 0}
-            PropertyName: {type: word, value: 2}
-            Subtype: {type: word, value: 4}
+            PropertyName: {type: word, value: 62}
+            Subtype: {type: word, value: 5}
+          - !nwn-lib.elv.es,2013-07:struct
+            __struct_id: 0
+            ChanceAppear: {type: byte, value: 100}
+            CostTable: {type: byte, value: 0}
+            CostValue: {type: word, value: 0}
+            Param1: {type: byte, value: 255}
+            Param1Value: {type: byte, value: 0}
+            PropertyName: {type: word, value: 83}
+            Subtype: {type: word, value: 6}
         StackSize: {type: word, value: 1}
         Stolen: {type: byte, value: 0}
-        Tag: {type: cexostr, value: e1_nght_drk2}
-        TemplateResRef: {type: resref, value: nightsdarknes2}
+        Tag: {type: cexostr, value: e1_rage_dead}
+        TemplateResRef: {type: resref, value: rageofthedead001}
         XOrientation: {type: float, value: 0.0}
         XPosition: {type: float, value: -1.0}
         YOrientation: {type: float, value: 1.0}
@@ -514,12 +534,11 @@ Creature List:
         YOrientation: {type: float, value: 1.0}
         YPosition: {type: float, value: -1.0}
         ZPosition: {type: float, value: -1.0}
-    FactionID: {type: word, value: 2}
+    FactionID: {type: word, value: 4}
     FeatList:
       type: list
       value:
       - !nwn-lib.elv.es,2013-07:struct {__struct_id: 1, Feat: {type: word, value: 3}}
-      - !nwn-lib.elv.es,2013-07:struct {__struct_id: 1, Feat: {type: word, value: 6}}
       - !nwn-lib.elv.es,2013-07:struct {__struct_id: 1, Feat: {type: word, value: 7}}
       - !nwn-lib.elv.es,2013-07:struct {__struct_id: 1, Feat: {type: word, value: 474}}
       - !nwn-lib.elv.es,2013-07:struct {__struct_id: 1, Feat: {type: word, value: 11}}
@@ -528,23 +547,23 @@ Creature List:
       - !nwn-lib.elv.es,2013-07:struct {__struct_id: 1, Feat: {type: word, value: 25}}
       - !nwn-lib.elv.es,2013-07:struct {__struct_id: 1, Feat: {type: word, value: 29}}
       - !nwn-lib.elv.es,2013-07:struct {__struct_id: 1, Feat: {type: word, value: 33}}
-      - !nwn-lib.elv.es,2013-07:struct {__struct_id: 1, Feat: {type: word, value: 472}}
       - !nwn-lib.elv.es,2013-07:struct {__struct_id: 1, Feat: {type: word, value: 171}}
       - !nwn-lib.elv.es,2013-07:struct {__struct_id: 1, Feat: {type: word, value: 36}}
       - !nwn-lib.elv.es,2013-07:struct {__struct_id: 1, Feat: {type: word, value: 37}}
       - !nwn-lib.elv.es,2013-07:struct {__struct_id: 1, Feat: {type: word, value: 303}}
       - !nwn-lib.elv.es,2013-07:struct {__struct_id: 1, Feat: {type: word, value: 475}}
       - !nwn-lib.elv.es,2013-07:struct {__struct_id: 1, Feat: {type: word, value: 435}}
+      - !nwn-lib.elv.es,2013-07:struct {__struct_id: 1, Feat: {type: word, value: 45}}
     FirstName:
       type: cexolocstr
       value:
         0: Mort'ul
     Gender: {type: byte, value: 0}
-    GoodEvil: {type: byte, value: 100}
-    HitPoints: {type: short, value: 55}
-    Int: {type: byte, value: 17}
+    GoodEvil: {type: byte, value: 0}
+    HitPoints: {type: short, value: 50}
+    Int: {type: byte, value: 15}
     Interruptable: {type: byte, value: 0}
-    IsImmortal: {type: byte, value: 0}
+    IsImmortal: {type: byte, value: 1}
     IsPC: {type: byte, value: 0}
     LastName:
       type: cexolocstr
@@ -552,7 +571,7 @@ Creature List:
         0: ''
     LawfulChaotic: {type: byte, value: 0}
     Lootable: {type: byte, value: 0}
-    MaxHitPoints: {type: short, value: 67}
+    MaxHitPoints: {type: short, value: 56}
     NaturalAC: {type: byte, value: 0}
     NoPermDeath: {type: byte, value: 0}
     PerceptionRange: {type: byte, value: 11}
@@ -561,7 +580,7 @@ Creature List:
     PortraitId: {type: word, value: 12}
     Race: {type: byte, value: 4}
     ScriptAttacked: {type: resref, value: nw_c2_default5}
-    ScriptDamaged: {type: resref, value: nw_c2_default6}
+    ScriptDamaged: {type: resref, value: e1_teis_on_dmg}
     ScriptDeath: {type: resref, value: nw_c2_default7}
     ScriptDialogue: {type: resref, value: nw_c2_default4}
     ScriptDisturbed: {type: resref, value: nw_c2_default8}
@@ -610,20 +629,20 @@ Creature List:
       value: []
     StartingPackage: {type: byte, value: 33}
     Str: {type: byte, value: 10}
-    Subrace: {type: cexostr, value: Half-Lich}
-    Tag: {type: cexostr, value: e1_mortul}
+    Subrace: {type: cexostr, value: ''}
+    Tag: {type: cexostr, value: e1_mortul_weak}
     Tail_New: {type: dword, value: 0}
     TemplateList:
       type: list
       value: []
-    TemplateResRef: {type: resref, value: creature}
+    TemplateResRef: {type: resref, value: mortul_teis}
     WalkRate: {type: int, value: 7}
     Wings_New: {type: dword, value: 0}
     Wis: {type: byte, value: 12}
     XOrientation: {type: float, value: 0.0}
-    XPosition: {type: float, value: 40.3296}
+    XPosition: {type: float, value: 38.8107}
     YOrientation: {type: float, value: 1.0}
-    YPosition: {type: float, value: 76.6878}
+    YPosition: {type: float, value: 76.7525}
     ZPosition: {type: float, value: 0.4}
     fortbonus: {type: short, value: 0}
     refbonus: {type: short, value: 0}

@@ -361,6 +361,12 @@ MAIN:
             RESREF: {type: resref, value: creature}
           - !nwn-lib.elv.es,2013-07:struct
             __struct_id: 0
+            CR: {type: float, value: 7.0}
+            FACTION: {type: cexostr, value: Defender}
+            NAME: {type: cexostr, value: Mort'ul}
+            RESREF: {type: resref, value: mortul_teis}
+          - !nwn-lib.elv.es,2013-07:struct
+            __struct_id: 0
             CR: {type: float, value: 10.0}
             FACTION: {type: cexostr, value: Defender}
             NAME: {type: cexostr, value: Xen}

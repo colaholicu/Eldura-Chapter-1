@@ -44,23 +44,37 @@
                 "kind": "build",
                 "isDefault": true
             }
-        },
-        {
-            "label": "NSSnippets",
-            "type": "process",
-            "args": [
-                "${workspaceFolder}\\nwscript.nss",
-                "${file}",
-                "${fileDirname}",
-                "${workspaceFolder}\\.vscode\\nss.code-snippets"
-            ],
-            "command": [
-                "NSSnippets"
-            ],
-            "presentation": {
-                "reveal": "never"
-            },
-            "problemMatcher": []
         }
+        // ,
+        // {
+        //     "label": "Compile",
+        //     "type": "shell",
+        //     "command": "ruby \"..\\nwn-devbase\\build.rb\" compile $file",
+        //     "presentation": {
+        //         "reveal": "always"
+        //     },
+        //     "group": {
+        //         "kind": "build",
+        //         "isDefault": true
+        //     }
+        // }
+        // ,
+        // {
+        //     "label": "NSSnippets",
+        //     "type": "process",
+        //     "args": [
+        //         "${workspaceFolder}\\nwscript.nss",
+        //         "${file}",
+        //         "${fileDirname}",
+        //         "${workspaceFolder}\\.vscode\\nss.code-snippets"
+        //     ],
+        //     "command": [
+        //         "NSSnippets"
+        //     ],
+        //     "presentation": {
+        //         "reveal": "never"
+        //     },
+        //     "problemMatcher": []
+        // }
     ]
 }

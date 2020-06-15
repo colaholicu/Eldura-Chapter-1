@@ -62,8 +62,16 @@ MAIN:
           value:
           - !nwn-lib.elv.es,2013-07:struct
             __struct_id: 0
+            NAME: {type: cexostr, value: 'CACA Night''s Darkness, Leather Armor +5'}
+            RESREF: {type: resref, value: nightsdarknes003}
+          - !nwn-lib.elv.es,2013-07:struct
+            __struct_id: 0
             NAME: {type: cexostr, value: 'Night''s Darkness, Leather Armor +5'}
             RESREF: {type: resref, value: nightsdarknes2}
+          - !nwn-lib.elv.es,2013-07:struct
+            __struct_id: 0
+            NAME: {type: cexostr, value: 'PIPI Night''s Darkness, Leather Armor +5'}
+            RESREF: {type: resref, value: nightsdarknes004}
           - !nwn-lib.elv.es,2013-07:struct
             __struct_id: 0
             NAME: {type: cexostr, value: Wood Elven Armor}
@@ -315,6 +323,17 @@ MAIN:
           - !nwn-lib.elv.es,2013-07:struct
             __struct_id: 0
             ID: {type: byte, value: 32}
+            LIST:
+              type: list
+              value:
+              - !nwn-lib.elv.es,2013-07:struct
+                __struct_id: 0
+                NAME: {type: cexostr, value: Rage of the Dead}
+                RESREF: {type: resref, value: rageofthedead}
+              - !nwn-lib.elv.es,2013-07:struct
+                __struct_id: 0
+                NAME: {type: cexostr, value: Rage of the Dead}
+                RESREF: {type: resref, value: rageofthedead001}
             STRREF: {type: dword, value: 6762}
           - !nwn-lib.elv.es,2013-07:struct
             __struct_id: 0
