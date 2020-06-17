@@ -3,10 +3,7 @@ float distance = -1.0f;
 void main()
 {
     string command = GetPCChatMessage();
-    object pc = GetFirstPC();
-
-    ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectDeath(), pc);
-    return;    
+    object pc = GetFirstPC(); 
 
     int commandLength = GetStringLength(command);
     string commandPrefix = "tp_";

@@ -219,6 +219,12 @@ MAIN:
                 __struct_id: 0
                 CR: {type: float, value: 1.0}
                 FACTION: {type: cexostr, value: Commoner}
+                NAME: {type: cexostr, value: Zombie}
+                RESREF: {type: resref, value: zombie_teis}
+              - !nwn-lib.elv.es,2013-07:struct
+                __struct_id: 0
+                CR: {type: float, value: 1.0}
+                FACTION: {type: cexostr, value: Commoner}
                 NAME: {type: cexostr, value: Zombie Corpse}
                 RESREF: {type: resref, value: zombie003}
             STRREF: {type: dword, value: 6725}
