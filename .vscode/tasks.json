@@ -3,38 +3,8 @@
     // for the documentation about the tasks.json format
     "version": "2.0.0",
     "tasks": [
-        // {
-        //     "label": "NWNSC Script Compiler",
-        //     "type": "process",
-        //     "args": [
-        //         "-n",
-        //         "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Neverwinter Nights",
-        //         ".\\src\\nss\\*.nss" //"${file}"
-        //     ],
-        //     "problemMatcher": {
-        //         "fileLocation": [
-        //             "relative",
-        //             "${workspaceFolder}/src/nss"
-        //         ],
-        //         "pattern": {
-        //             "regexp": "(.*?(?=(?:\\()|$))\\((.*?)\\): (Warning|Error): (.*)",
-        //             "file": 1,
-        //             "line": 2,
-        //             "severity": 3,
-        //             "message": 4
-        //         }
-        //     },
-        //     "command": "nwnsc.exe",
-        //     "presentation": {
-        //         "reveal": "silent"
-        //     },
-        //     "group": {
-        //         "kind": "build",
-        //         "isDefault": true
-        //     }
-        // },
         {
-            "label": "Ruby Packer",
+            "label": "Pack",
             "type": "shell",
             "command": "ruby \"..\\nwn-devbase\\build.rb\" pack",
             "presentation": {
@@ -44,37 +14,33 @@
                 "kind": "build",
                 "isDefault": true
             }
+        },
+        {
+            "label": "Compile",
+            "type": "shell",
+            "command": "ruby \"..\\nwn-devbase\\build.rb\" compile ${file}",
+            "presentation": {
+                "reveal": "always"
+            },
+            "group": "none"
+        },
+        {
+            "label": "Compile Solution",
+            "type": "shell",
+            "command": "ruby \"..\\nwn-devbase\\build.rb\" compile",
+            "presentation": {
+                "reveal": "always"
+            },
+            "group": "none"
+        },
+        {
+            "label": "Unpack",
+            "type": "shell",
+            "command": "ruby \"..\\nwn-devbase\\build.rb\" extract",
+            "presentation": {
+                "reveal": "always"
+            },
+            "group": "none"
         }
-        // ,
-        // {
-        //     "label": "Compile",
-        //     "type": "shell",
-        //     "command": "ruby \"..\\nwn-devbase\\build.rb\" compile $file",
-        //     "presentation": {
-        //         "reveal": "always"
-        //     },
-        //     "group": {
-        //         "kind": "build",
-        //         "isDefault": true
-        //     }
-        // }
-        // ,
-        // {
-        //     "label": "NSSnippets",
-        //     "type": "process",
-        //     "args": [
-        //         "${workspaceFolder}\\nwscript.nss",
-        //         "${file}",
-        //         "${fileDirname}",
-        //         "${workspaceFolder}\\.vscode\\nss.code-snippets"
-        //     ],
-        //     "command": [
-        //         "NSSnippets"
-        //     ],
-        //     "presentation": {
-        //         "reveal": "never"
-        //     },
-        //     "problemMatcher": []
-        // }
     ]
 }

@@ -337,6 +337,12 @@ MAIN:
           value:
           - !nwn-lib.elv.es,2013-07:struct
             __struct_id: 0
+            CR: {type: float, value: 11.0}
+            FACTION: {type: cexostr, value: Commoner}
+            NAME: {type: cexostr, value: Arctus}
+            RESREF: {type: resref, value: arctus_hu}
+          - !nwn-lib.elv.es,2013-07:struct
+            __struct_id: 0
             CR: {type: float, value: 4.0}
             FACTION: {type: cexostr, value: Commoner}
             NAME: {type: cexostr, value: Khrat'ul}

@@ -17,7 +17,7 @@ void spawnZombies(object mortul, object pc)
     DelayCommand(2.5f, ApplyEffectAtLocation(DURATION_TYPE_INSTANT, EffectVisualEffect(VFX_FNF_LOS_HOLY_30), GetLocation(zombieDestination)));
     DelayCommand(4.0f, FadeToBlack(pc));
     DelayCommand(7.0f, SetCutsceneMode(pc, FALSE));
-    DelayCommand(7.1f, AssignCommand(pc, ActionJumpToLocation(GetLocation(GetObjectByTag("e1_arcanys")))));
+    DelayCommand(7.1f, AssignCommand(pc, ActionJumpToLocation(GetLocation(GetObjectByTag("e1_dream_one_start")))));
     DelayCommand(9.0f, FadeFromBlack(pc, FADE_SPEED_SLOWEST));
 }
 

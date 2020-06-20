@@ -21,6 +21,10 @@ MAIN:
             RESREF: {type: resref, value: archwizardrobes}
           - !nwn-lib.elv.es,2013-07:struct
             __struct_id: 0
+            NAME: {type: cexostr, value: Mort'ul's Cloak}
+            RESREF: {type: resref, value: item}
+          - !nwn-lib.elv.es,2013-07:struct
+            __struct_id: 0
             NAME: {type: cexostr, value: Night's Darkness}
             RESREF: {type: resref, value: nightsdarkness}
         STRREF: {type: dword, value: 186}
@@ -38,6 +42,10 @@ MAIN:
             __struct_id: 0
             NAME: {type: cexostr, value: 'Dread Armor, Half Plate +2'}
             RESREF: {type: resref, value: dreadedamorfullp}
+          - !nwn-lib.elv.es,2013-07:struct
+            __struct_id: 0
+            NAME: {type: cexostr, value: 'Inquisitor Armor, Half Plate +2'}
+            RESREF: {type: resref, value: champarm}
         STRREF: {type: dword, value: 4818}
       - !nwn-lib.elv.es,2013-07:struct
         __struct_id: 0
@@ -53,6 +61,10 @@ MAIN:
             __struct_id: 0
             NAME: {type: cexostr, value: Helm of Bhaal}
             RESREF: {type: resref, value: helmofbhaal}
+          - !nwn-lib.elv.es,2013-07:struct
+            __struct_id: 0
+            NAME: {type: cexostr, value: Helm of Lords}
+            RESREF: {type: resref, value: helmoflords}
         STRREF: {type: dword, value: 6739}
       - !nwn-lib.elv.es,2013-07:struct
         __struct_id: 0
@@ -68,6 +80,10 @@ MAIN:
             __struct_id: 0
             NAME: {type: cexostr, value: 'Night''s Darkness, Leather Armor +5'}
             RESREF: {type: resref, value: nightsdarknes2}
+          - !nwn-lib.elv.es,2013-07:struct
+            __struct_id: 0
+            NAME: {type: cexostr, value: 'Night''s Darkness, Leather Armor +5'}
+            RESREF: {type: resref, value: nightsdarknes005}
           - !nwn-lib.elv.es,2013-07:struct
             __struct_id: 0
             NAME: {type: cexostr, value: 'PIPI Night''s Darkness, Leather Armor +5'}
@@ -114,6 +130,10 @@ MAIN:
             LIST:
               type: list
               value:
+              - !nwn-lib.elv.es,2013-07:struct
+                __struct_id: 0
+                NAME: {type: cexostr, value: 'Shield of Lords, Large Shield +2'}
+                RESREF: {type: resref, value: sdsd001}
               - !nwn-lib.elv.es,2013-07:struct
                 __struct_id: 0
                 NAME: {type: cexostr, value: 'Shield of the Damned, Large Shield +2'}
@@ -334,6 +354,10 @@ MAIN:
                 __struct_id: 0
                 NAME: {type: cexostr, value: Rage of the Dead}
                 RESREF: {type: resref, value: rageofthedead001}
+              - !nwn-lib.elv.es,2013-07:struct
+                __struct_id: 0
+                NAME: {type: cexostr, value: Wrath of Heavens}
+                RESREF: {type: resref, value: rageofthedead002}
             STRREF: {type: dword, value: 6762}
           - !nwn-lib.elv.es,2013-07:struct
             __struct_id: 0
@@ -355,6 +379,10 @@ MAIN:
             LIST:
               type: list
               value:
+              - !nwn-lib.elv.es,2013-07:struct
+                __struct_id: 0
+                NAME: {type: cexostr, value: 'Light''s Wrath, Bastard Sword +1d6'}
+                RESREF: {type: resref, value: swordarctus}
               - !nwn-lib.elv.es,2013-07:struct
                 __struct_id: 0
                 NAME: {type: cexostr, value: 'Sword of Chaos, Bastard Sword +1d6'}
