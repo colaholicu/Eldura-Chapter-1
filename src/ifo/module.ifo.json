@@ -118,7 +118,7 @@
   },
   "Mod_Entry_Area": {
     "type": "resref",
-    "value": "dream"
+    "value": "area"
   },
   "Mod_Entry_Dir_X": {
     "type": "float",
@@ -130,15 +130,15 @@
   },
   "Mod_Entry_X": {
     "type": "float",
-    "value": 17.2694
+    "value": 15.2862
   },
   "Mod_Entry_Y": {
     "type": "float",
-    "value": 2.4143
+    "value": 9.463699999999999
   },
   "Mod_Entry_Z": {
     "type": "float",
-    "value": 0.01
+    "value": 0.0
   },
   "Mod_Expan_List": {
     "type": "list",
