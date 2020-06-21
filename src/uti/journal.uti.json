@@ -1,0 +1,81 @@
+{
+  "__data_type": "UTI ",
+  "AddCost": {
+    "type": "dword",
+    "value": 0
+  },
+  "BaseItem": {
+    "type": "int",
+    "value": 74
+  },
+  "Charges": {
+    "type": "byte",
+    "value": 0
+  },
+  "Comment": {
+    "type": "cexostring",
+    "value": ""
+  },
+  "Cost": {
+    "type": "dword",
+    "value": 1
+  },
+  "Cursed": {
+    "type": "byte",
+    "value": 0
+  },
+  "DescIdentified": {
+    "type": "cexolocstring",
+    "value": {}
+  },
+  "Description": {
+    "id": 13056,
+    "type": "cexolocstring",
+    "value": {
+      "0": "You were born in the city of Alka'tar, in the far north of Eldura, and lived a normal life until your father, Sir Arctus, a Paladin of Light, died in a battle with a necromancer. Since then, your life was never the same. You had to take care of your mother and your smaller brothers. One day when you were coming from the field, you found your home burning and your family being slaughtered by the same necromancer that killed your father. From that day forward, you swore revenge and developed a great hatred for necromancers and their undead minions. You dedicated your life to help the needy and one day you even saved King Luther's life in a war against the Fallen Ones of Ashtakhar, kingdom situated to the East of Eldura. In his gratitude he ennobled you and recruited you in the Order of Helm. During a mysterious undead infestation in Alka'tar, your hometown, you were sent to cleanse the city and redeem the people. Your companions noticed your skills against the undead and told Luther. He was thrilled with joy and entitled you Defender of Light. Now, you live in a small cottage in the Evergreen Forest and serve the king with all your heart."
+    }
+  },
+  "Identified": {
+    "type": "byte",
+    "value": 1
+  },
+  "LocalizedName": {
+    "id": 13055,
+    "type": "cexolocstring",
+    "value": {
+      "0": "Journal"
+    }
+  },
+  "ModelPart1": {
+    "type": "byte",
+    "value": 3
+  },
+  "PaletteID": {
+    "type": "byte",
+    "value": 60
+  },
+  "Plot": {
+    "type": "byte",
+    "value": 1
+  },
+  "PropertiesList": {
+    "type": "list",
+    "value": []
+  },
+  "StackSize": {
+    "type": "word",
+    "value": 1
+  },
+  "Stolen": {
+    "type": "byte",
+    "value": 0
+  },
+  "Tag": {
+    "type": "cexostring",
+    "value": "journal"
+  },
+  "TemplateResRef": {
+    "type": "resref",
+    "value": "journal"
+  }
+}

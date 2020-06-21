@@ -6,7 +6,7 @@
         {
             "label": "Pack",
             "type": "shell",
-            "command": "ruby \"..\\nwn-devbase\\build.rb\" pack",
+            "command": "nasher install",
             "presentation": {
                 "reveal": "always"
             },
@@ -18,7 +18,7 @@
         {
             "label": "Compile",
             "type": "shell",
-            "command": "ruby \"..\\nwn-devbase\\build.rb\" compile ${file}",
+            "command": "nasher compile ${file}",
             "presentation": {
                 "reveal": "always"
             },
@@ -27,7 +27,7 @@
         {
             "label": "Compile Solution",
             "type": "shell",
-            "command": "ruby \"..\\nwn-devbase\\build.rb\" compile",
+            "command": "nasher compile",
             "presentation": {
                 "reveal": "always"
             },
@@ -36,7 +36,7 @@
         {
             "label": "Unpack",
             "type": "shell",
-            "command": "ruby \"..\\nwn-devbase\\build.rb\" extract",
+            "command": "nasher unpack",
             "presentation": {
                 "reveal": "always"
             },

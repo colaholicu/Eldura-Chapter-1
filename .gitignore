@@ -1,3 +1,8 @@
-*.ncs
-server/
-NSSnippets.exe
+# Ignore packed files
+*.erf
+*.hak
+*.mod
+*.tlk
+
+# Ignore the nasher directory
+.nasher/

@@ -22,7 +22,7 @@
             "**/*.uti": true,
             "**/*.utp": true,
             "**/*.uts": true,
-            "**/.nwnproject": true
+            "**/.nasher": true
         }
     },
     "files.associations": {}
