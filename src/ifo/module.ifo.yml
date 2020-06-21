@@ -33,9 +33,9 @@ Mod_DuskHour: {type: byte, value: 18}
 Mod_Entry_Area: {type: resref, value: dream}
 Mod_Entry_Dir_X: {type: float, value: 0.0}
 Mod_Entry_Dir_Y: {type: float, value: 1.0}
-Mod_Entry_X: {type: float, value: 9.2687}
-Mod_Entry_Y: {type: float, value: 2.4433}
-Mod_Entry_Z: {type: float, value: -0.0}
+Mod_Entry_X: {type: float, value: 17.2694}
+Mod_Entry_Y: {type: float, value: 2.4143}
+Mod_Entry_Z: {type: float, value: 0.01}
 Mod_Expan_List:
   type: list
   value: []
