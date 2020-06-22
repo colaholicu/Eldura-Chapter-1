@@ -690,6 +690,25 @@
                     "__struct_id": 0,
                     "CR": {
                       "type": "float",
+                      "value": 3.0
+                    },
+                    "FACTION": {
+                      "type": "cexostring",
+                      "value": "Defender"
+                    },
+                    "NAME": {
+                      "type": "cexostring",
+                      "value": "Anera"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "anera"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "CR": {
+                      "type": "float",
                       "value": 11.0
                     },
                     "FACTION": {

@@ -6,8 +6,6 @@ void main()
         return;
     }
 
-    AssignCommand(pc, ActionSpeakString("caca mmmmmmmmmmmaca?"));
-
     if (GetTag(GetArea(pc)) == "e1_luthers_cottage")
     {
         if (GetLocalInt(GetModule(), "e1TeleportedFromArcanys") && !GetLocalInt(GetModule(), "e1TeleportedToLuther"))

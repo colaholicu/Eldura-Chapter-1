@@ -266,6 +266,17 @@
                     "__struct_id": 0,
                     "NAME": {
                       "type": "cexostring",
+                      "value": "Anera's Clothes"
+                    },
+                    "RESREF": {
+                      "type": "resref",
+                      "value": "item003"
+                    }
+                  },
+                  {
+                    "__struct_id": 0,
+                    "NAME": {
+                      "type": "cexostring",
                       "value": "Old Clothes"
                     },
                     "RESREF": {
