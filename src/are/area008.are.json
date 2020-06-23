@@ -96,7 +96,7 @@
   },
   "OnEnter": {
     "type": "resref",
-    "value": ""
+    "value": "e1_on_area_enter"
   },
   "OnExit": {
     "type": "resref",

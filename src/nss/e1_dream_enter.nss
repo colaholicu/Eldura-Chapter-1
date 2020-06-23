@@ -71,4 +71,6 @@ void main()
     {
         DelayCommand(2.0f, TalkDream1(1));
     }
+
+    ExecuteScript("e1_on_area_enter");
 }

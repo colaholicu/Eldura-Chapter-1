@@ -1,10 +1,80 @@
 float pitch = -1.0f;
 float distance = -1.0f;
+
+void DebugOut(string message)
+{
+    object pc = GetFirstPC();
+    
+    // Define colours using Hex. FF is highest, 00 is lowest. See online calculators if you want specific colours.
+    int nColourRed = 0xFF0000FF;
+    int nColourGreen = 0x00FF0FF;
+    int nColourBlue = 0x0000FFFF;
+    int nColourWhite = 0xFFFFFFFF;
+    int nFadeOut = 0xFFFFFFFF;
+    float timeOnScreen = 9999.0f;    
+
+    string msg1 = GetLocalString(pc, "msg1");
+    string msg2 = GetLocalString(pc, "msg2");
+    string msg3 = GetLocalString(pc, "msg3");
+    string msg4 = GetLocalString(pc, "msg4");
+    string msg5 = GetLocalString(pc, "msg5");
+
+    if (GetStringLength(msg1) > 0)
+    {
+        if (GetStringLength(msg2) > 0)
+        {
+            if (GetStringLength(msg3) > 0)
+            {
+                if (GetStringLength(msg4) > 0)
+                {
+                    if (GetStringLength(msg5) > 0)
+                    {
+                        msg1 = msg2;
+                        msg2 = msg3;
+                        msg3 = msg4;
+                        msg4 = msg5;
+                    }
+                    
+                    msg5 = message;
+                }
+                else
+                {
+                    msg4 = message;
+                }
+            }
+            else
+            {
+                msg3 = message;
+            }
+        }
+        else
+        {
+            msg2 = message;
+        }
+    }
+    else
+    {
+        msg1 = message;
+    }
+
+    SetLocalString(pc, "msg1", msg1);
+    SetLocalString(pc, "msg2", msg2);
+    SetLocalString(pc, "msg3", msg3);
+    SetLocalString(pc, "msg4", msg4);
+    SetLocalString(pc, "msg5", msg5);
+    
+    PostString(pc, msg1, 0, 0, SCREEN_ANCHOR_TOP_LEFT, timeOnScreen, nColourWhite, nFadeOut);
+    PostString(pc, msg2, 0, 1, SCREEN_ANCHOR_TOP_LEFT, timeOnScreen, nColourWhite, nFadeOut);
+    PostString(pc, msg3, 0, 2, SCREEN_ANCHOR_TOP_LEFT, timeOnScreen, nColourWhite, nFadeOut);
+    PostString(pc, msg4, 0, 3, SCREEN_ANCHOR_TOP_LEFT, timeOnScreen, nColourWhite, nFadeOut);
+    PostString(pc, msg5, 0, 4, SCREEN_ANCHOR_TOP_LEFT, timeOnScreen, nColourWhite, nFadeOut);
+}
+
 void main()
 {
     string command = GetPCChatMessage();
-    object pc = GetFirstPC(); 
-
+    object pc = GetFirstPC();
+    
     int commandLength = GetStringLength(command);
     string commandPrefix = "tp_";
     int isValidCommand = FindSubString(command, commandPrefix);
@@ -49,7 +119,7 @@ void main()
             }
         }
 
-        AssignCommand(pc, ActionSpeakString(debug));
+        DebugOut(debug);
         return;
     }
 
@@ -67,8 +137,8 @@ void main()
         if (value == 1)
         {
             cameraMode = CAMERA_MODE_STIFF_CHASE_CAMERA;
-            pitch = 80.f;
-            distance = 10.f;
+            pitch = 80.0f;
+            distance = 5.0f;
 
         }
         else
@@ -93,7 +163,7 @@ void main()
         }
 
         string debug = "SetCameraMode(" + strCameraMode + ");\nSetCameraFacing(" + FloatToString(facing) + ", " + FloatToString(distance) + ", " + FloatToString(pitch) + ")";
-        AssignCommand(pc, ActionSpeakString(debug));
+        DebugOut(debug);
         DelayCommand(0.1f, AssignCommand(pc, SetCameraFacing(facing, distance, pitch)));
 
         DelayCommand(0.2f, LockCameraDistance(pc, value));
@@ -124,7 +194,7 @@ void main()
                 break;
         }
         string debug = "Setting Camera Mode to " + strValue;
-        AssignCommand(pc, ActionSpeakString(debug));
+        DebugOut(debug);
         SetCameraMode(pc, value);
         return;
     }
@@ -139,7 +209,7 @@ void main()
         string variable = GetSubString(command, prefixLength, commandLength - prefixLength);
         pitch = StringToFloat(variable);
         string debug = "SetCameraFacing(" + FloatToString(facing) + ", " + FloatToString(distance) + ", " + variable + ")";
-        AssignCommand(pc, ActionSpeakString(debug));
+        DebugOut(debug);
         AssignCommand(pc, SetCameraFacing(facing, distance, pitch));
         return;
     }
@@ -154,7 +224,7 @@ void main()
         string variable = GetSubString(command, prefixLength, commandLength - prefixLength);
         distance = StringToFloat(variable);
         string debug = "SetCameraFacing(" + FloatToString(facing) + ", " + variable + ", " + FloatToString(pitch) + ")";
-        AssignCommand(pc, ActionSpeakString(debug));
+        DebugOut(debug);
         AssignCommand(pc, SetCameraFacing(facing, distance, pitch));
         return;
     }
@@ -164,7 +234,7 @@ void main()
     if (isValidCommand != -1)
     {
         string debug = "Kill PC";
-        AssignCommand(pc, ActionSpeakString(debug));
+        DebugOut(debug);
         ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectDamage(999), pc);
         return;
     }
@@ -178,7 +248,7 @@ void main()
         string strValue = GetSubString(command, commandLength - 1, 1);
         int value = StringToInt(strValue);
         string debug = "SetLocalInt(PC, " + variable + ", " + strValue + ")";
-        AssignCommand(pc, ActionSpeakString(debug));
+        DebugOut(debug);
         SetLocalInt(pc, variable, value);
         return;
     }
@@ -192,7 +262,7 @@ void main()
         string strValue = GetSubString(command, commandLength - 1, 1);
         int value = StringToInt(strValue);
         string debug = "SetLocalInt(Module, " + variable + ", " + strValue + ")";
-        AssignCommand(pc, ActionSpeakString(debug));
+        DebugOut(debug);
         SetLocalInt(GetModule(), variable, value);
         return;
     }
@@ -227,7 +297,7 @@ void main()
             }
         }
 
-        AssignCommand(pc, ActionSpeakString(debug));
+        DebugOut(debug);
         return;
     }
 }
