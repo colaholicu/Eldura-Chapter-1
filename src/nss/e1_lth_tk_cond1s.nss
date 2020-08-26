@@ -8,5 +8,4 @@
 void main()
 {
     SetLocalInt(GetModule(), "e1LutherFullIntro", 1);
-    PlaySound("applausesound");
 }
