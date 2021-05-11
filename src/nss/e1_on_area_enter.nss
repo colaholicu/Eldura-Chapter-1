@@ -17,14 +17,18 @@ void main()
         }
     }
 
-    int cameraMode = CAMERA_MODE_STIFF_CHASE_CAMERA;
-    float facing = GetFacing(pc);
-    float pitch = 80.0f;
-    float distance = 5.0f;
+    int usePresetCameraMode = 0;
+    if (usePresetCameraMode)
+    {
+        int cameraMode = CAMERA_MODE_STIFF_CHASE_CAMERA;
+        float facing = GetFacing(pc);
+        float pitch = 80.0f;
+        float distance = 5.0f;
 
-    DelayCommand(0.5f, AssignCommand(pc, SetCameraFacing(facing, distance, pitch)));
+        DelayCommand(0.5f, AssignCommand(pc, SetCameraFacing(facing, distance, pitch)));
 
-    DelayCommand(0.7f, LockCameraDistance(pc, TRUE));
-    DelayCommand(0.8f, LockCameraPitch(pc, TRUE));
-    DelayCommand(0.9f, SetCameraMode(pc, cameraMode));
+        DelayCommand(0.7f, LockCameraDistance(pc, TRUE));
+        DelayCommand(0.8f, LockCameraPitch(pc, TRUE));
+        DelayCommand(0.9f, SetCameraMode(pc, cameraMode));
+    }    
 }

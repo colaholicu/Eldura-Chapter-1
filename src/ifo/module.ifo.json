@@ -25,13 +25,6 @@
         "__struct_id": 6,
         "Area_Name": {
           "type": "resref",
-          "value": "smallhouse"
-        }
-      },
-      {
-        "__struct_id": 6,
-        "Area_Name": {
-          "type": "resref",
           "value": "area002"
         }
       },
@@ -83,12 +76,15 @@
           "type": "resref",
           "value": "dream"
         }
+      },
+      {
+        "__struct_id": 6,
+        "Area_Name": {
+          "type": "resref",
+          "value": "smallhouse"
+        }
       }
     ]
-  },
-  "Mod_CacheNSSList": {
-    "type": "list",
-    "value": []
   },
   "Mod_Creator_ID": {
     "type": "int",
@@ -130,15 +126,15 @@
   },
   "Mod_Entry_X": {
     "type": "float",
-    "value": 4.0095
+    "value": 4.1591
   },
   "Mod_Entry_Y": {
     "type": "float",
-    "value": 2.9534
+    "value": 5.9328
   },
   "Mod_Entry_Z": {
     "type": "float",
-    "value": 0.0
+    "value": -0.0
   },
   "Mod_Expan_List": {
     "type": "list",
@@ -158,7 +154,7 @@
   },
   "Mod_MinGameVer": {
     "type": "cexostring",
-    "value": "1.80"
+    "value": "1.82"
   },
   "Mod_MinPerHour": {
     "type": "byte",

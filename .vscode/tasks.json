@@ -19,7 +19,7 @@
         {
             "label": "Test",
             "type": "shell",
-            "command": "nasher test --default",
+            "command": "nasher test -y --default --verbose",
             "presentation": {
                 "reveal": "always"
             },
@@ -27,17 +27,7 @@
                 "kind": "test",
                 "isDefault": true
             }
-        },
-        {
-            "label": "Compile",
-            "type": "shell",
-            "command": "nasher compile ${file}",
-            "presentation": {
-                "reveal": "always"
-            },
-            "group": "none",
-            "problemMatcher": []
-        },
+        },        
         {
             "label": "Compile Solution",
             "type": "shell",

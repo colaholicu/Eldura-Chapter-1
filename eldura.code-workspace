@@ -2,6 +2,9 @@
     "folders": [
         {
             "path": "..\\eldura\\"
+        },
+        {
+            "path": "C:\\Users\\iosmur\\AppData\\Roaming\\nasher"
         }
     ],
     "settings": {
@@ -22,7 +25,8 @@
             "**/*.uti": true,
             "**/*.utp": true,
             "**/*.uts": true,
-            "**/.nasher": true
+            "**/.nasher": true,
+            "**/tools": true
         }
     },
     "files.associations": {}
