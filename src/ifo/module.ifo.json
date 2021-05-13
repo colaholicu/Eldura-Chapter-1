@@ -114,7 +114,7 @@
   },
   "Mod_Entry_Area": {
     "type": "resref",
-    "value": "area008"
+    "value": "smallhouse"
   },
   "Mod_Entry_Dir_X": {
     "type": "float",
@@ -126,15 +126,15 @@
   },
   "Mod_Entry_X": {
     "type": "float",
-    "value": 4.1591
+    "value": 13.6436
   },
   "Mod_Entry_Y": {
     "type": "float",
-    "value": 5.9328
+    "value": 7.0816
   },
   "Mod_Entry_Z": {
     "type": "float",
-    "value": -0.0
+    "value": -0.0028
   },
   "Mod_Expan_List": {
     "type": "list",

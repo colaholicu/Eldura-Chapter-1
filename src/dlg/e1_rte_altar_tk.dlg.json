@@ -335,7 +335,7 @@
         "Text": {
           "type": "cexolocstring",
           "value": {
-            "0": "There is a propechy as old as Eldura itself that says \"When the night is at its darkest, the Ghilghalad shall come and deliver the kingdom from the Shadow of Ashtakhar\". As you may have guessed, the Shadow represents Mort'ul."
+            "0": "There is a propechy as old as Eldura itself that says \"When the night is at its darkest, the Ar'Ishtanu shall come and deliver the kingdom from the Shadow of Ashtakhar\". As you may have guessed, the Shadow represents Mort'ul."
           }
         }
       },
@@ -396,7 +396,7 @@
         "Text": {
           "type": "cexolocstring",
           "value": {
-            "0": "Ghilghalad is the Child of both Drahkthu and Ahngthu... You are the Ghilghalad! You see, your father, Arctus, was a direct descendant of the Children of Ahng, an ancient line of holy paladins created by the Eldurs themselves."
+            "0": "Ar'Ishtanu is the Child of both Drahkthu and Ahngthu... You are the Ar'Ishtanu! You see, your father, Arctus, was a direct descendant of the Children of Ahng, an ancient line of holy paladins created by the Eldurs themselves."
           }
         }
       },
@@ -579,7 +579,7 @@
         "Text": {
           "type": "cexolocstring",
           "value": {
-            "0": "Unfortunately, Mort'ul has been working for years on a way to breach the Inner Sanctum. He is an awesome necromancer, and a very ancient one. Arcanys' words hinted that he may have found a way to create a Ghilghalad - a child of both Drahkthu and Ahngthu."
+            "0": "Unfortunately, Mort'ul has been working for years on a way to breach the Inner Sanctum. He is an awesome necromancer, and a very ancient one. Arcanys' words hinted that he may have found a way to create a Ar'Ishtanu - a child of both Drahkthu and Ahngthu."
           }
         }
       },
@@ -1060,7 +1060,7 @@
         "Text": {
           "type": "cexolocstring",
           "value": {
-            "0": "And Ghilghalad?"
+            "0": "And Ar'Ishtanu?"
           }
         }
       },
