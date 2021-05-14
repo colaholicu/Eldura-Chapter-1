@@ -1,0 +1,144 @@
+{
+  "__data_type": "JRL ",
+  "Categories": {
+    "type": "list",
+    "value": [
+      {
+        "__struct_id": 0,
+        "Comment": {
+          "type": "cexostring",
+          "value": "Monty finds the Python King who is a sentient zombie that cracks jokes and has snakes and plans to flank the elves and kill them."
+        },
+        "EntryList": {
+          "type": "list",
+          "value": [
+            {
+              "__struct_id": 0,
+              "End": {
+                "type": "word",
+                "value": 0
+              },
+              "ID": {
+                "type": "dword",
+                "value": 1
+              },
+              "Text": {
+                "type": "cexolocstring",
+                "value": {
+                  "0": "An old lady in Northern Evergreen Forest claims her child, Monty, has been stolen by the elves. She won't say anything else."
+                }
+              }
+            },
+            {
+              "__struct_id": 1,
+              "End": {
+                "type": "word",
+                "value": 0
+              },
+              "ID": {
+                "type": "dword",
+                "value": 2
+              },
+              "Text": {
+                "type": "cexolocstring",
+                "value": {
+                  "0": "Entry 2"
+                }
+              }
+            }
+          ]
+        },
+        "Name": {
+          "type": "cexolocstring",
+          "value": {
+            "0": "The Python King"
+          }
+        },
+        "Picture": {
+          "type": "word",
+          "value": 65535
+        },
+        "Priority": {
+          "type": "dword",
+          "value": 2
+        },
+        "Tag": {
+          "type": "cexostring",
+          "value": "ThePythonKing"
+        },
+        "XP": {
+          "type": "dword",
+          "value": 1000
+        }
+      },
+      {
+        "__struct_id": 1,
+        "Comment": {
+          "type": "cexostring",
+          "value": "The zombies in the courtyard are being powered by a lich that's keeping the High Priestess as a battery. If defeated all the zombies die and the priestess returns to normal."
+        },
+        "EntryList": {
+          "type": "list",
+          "value": [
+            {
+              "__struct_id": 0,
+              "End": {
+                "type": "word",
+                "value": 0
+              },
+              "ID": {
+                "type": "dword",
+                "value": 1
+              },
+              "Text": {
+                "type": "cexolocstring",
+                "value": {
+                  "0": "An elven scout by the name of Yiolin has gone missing this morning. Captain Anireth thinks that she might be looking for a secret entrance that may take them past the temple's courtyard."
+                }
+              }
+            },
+            {
+              "__struct_id": 1,
+              "End": {
+                "type": "word",
+                "value": 0
+              },
+              "ID": {
+                "type": "dword",
+                "value": 2
+              },
+              "Text": {
+                "type": "cexolocstring",
+                "value": {
+                  "0": "Entry 2"
+                }
+              }
+            }
+          ]
+        },
+        "Name": {
+          "type": "cexolocstring",
+          "value": {
+            "0": "The Root of All Evil"
+          }
+        },
+        "Picture": {
+          "type": "word",
+          "value": 65535
+        },
+        "Priority": {
+          "type": "dword",
+          "value": 2
+        },
+        "Tag": {
+          "type": "cexostring",
+          "value": "TheRootOfAllEvil"
+        },
+        "XP": {
+          "type": "dword",
+          "value": 1000
+        }
+      }
+    ]
+  }
+}

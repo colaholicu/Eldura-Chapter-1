@@ -23,7 +23,30 @@
         "__struct_id": 0,
         "ActionParams": {
           "type": "list",
-          "value": []
+          "value": [
+            {
+              "__struct_id": 0,
+              "Key": {
+                "type": "cexostring",
+                "value": "argc"
+              },
+              "Value": {
+                "type": "cexostring",
+                "value": "1"
+              }
+            },
+            {
+              "__struct_id": 1,
+              "Key": {
+                "type": "cexostring",
+                "value": "arg1"
+              },
+              "Value": {
+                "type": "cexostring",
+                "value": "p:LakhesiQuest=n:1"
+              }
+            }
+          ]
         },
         "Animation": {
           "type": "dword",
@@ -43,7 +66,11 @@
         },
         "Quest": {
           "type": "cexostring",
-          "value": ""
+          "value": "ThePythonKing"
+        },
+        "QuestEntry": {
+          "type": "dword",
+          "value": 1
         },
         "RepliesList": {
           "type": "list",
@@ -71,7 +98,7 @@
         },
         "Script": {
           "type": "resref",
-          "value": ""
+          "value": "e1_conv_set"
         },
         "Sound": {
           "type": "resref",
@@ -84,7 +111,7 @@
         "Text": {
           "type": "cexolocstring",
           "value": {
-            "0": "No time to talk, no time to talk! Elves took Mondy! Thieves! Bring him back! No time to talk!"
+            "0": "No time to talk, no time to talk! Elves took my child, my poor Monty! Thieves! Bring him back! No time to talk!"
           }
         }
       },
@@ -346,7 +373,7 @@
               },
               "Value": {
                 "type": "cexostring",
-                "value": "p:lakhesiSpokenBefore=n:1"
+                "value": "p:LakhesiSpokenBefore=n:1"
               }
             }
           ]
@@ -1088,7 +1115,7 @@
   },
   "NumWords": {
     "type": "dword",
-    "value": 233
+    "value": 237
   },
   "PreventZoomIn": {
     "type": "byte",
@@ -1974,7 +2001,7 @@
               },
               "Value": {
                 "type": "cexostring",
-                "value": "p:lakhesiFoundDog==n:1"
+                "value": "p:LakhesiFoundDog==n:1"
               }
             },
             {
@@ -1985,7 +2012,7 @@
               },
               "Value": {
                 "type": "cexostring",
-                "value": "p:lakhesiSpokenBefore==n:0"
+                "value": "p:LakhesiSpokenBefore==n:0"
               }
             }
           ]
@@ -2072,7 +2099,7 @@
               },
               "Value": {
                 "type": "cexostring",
-                "value": "p:lakhesiSpokenBefore==n:1"
+                "value": "p:LakhesiSpokenBefore==n:1"
               }
             }
           ]
@@ -2110,7 +2137,7 @@
               },
               "Value": {
                 "type": "cexostring",
-                "value": "p:lakhesiFoundDog==n:0"
+                "value": "p:LakhesiFoundDog==n:0"
               }
             }
           ]

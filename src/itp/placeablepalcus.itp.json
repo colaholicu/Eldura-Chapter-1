@@ -14,13 +14,13 @@
           "value": [
             {
               "__struct_id": 0,
-              "NAME": {
-                "type": "cexostring",
-                "value": "Skeletal Remains"
-              },
               "RESREF": {
                 "type": "resref",
                 "value": "e1skelcorpse"
+              },
+              "STRREF": {
+                "type": "dword",
+                "value": 75540
               }
             }
           ]

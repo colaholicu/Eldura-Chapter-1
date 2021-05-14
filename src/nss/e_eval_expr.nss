@@ -88,7 +88,7 @@ string ScopeToString(int scope)
             return "m:";
 
         case scope_inventory:
-            return "b:";
+            return "i:";
     }
 
     return "@:";
@@ -227,102 +227,107 @@ int CompareObject(string variableName, string objectName, int op, int scope)
 int EvaluateGet(int scope, string variable, int op, int type, string value)
 {
     int result = FALSE;
-    if (scope == scope_inventory)
+    switch (scope)
     {
-        if (type == t_int)
-        {
-            int hasItem = HasItem(GetPCSpeaker(), variable);
-            if (op == op_equal)
+        case scope_inventory:
+            if (type == t_int)
             {
-                result = hasItem == StringToInt(value);
+                int hasItem = HasItem(GetPCSpeaker(), variable);
+                if (op == op_equal)
+                {
+                    result = hasItem == StringToInt(value);
+                }
+                else
+                {
+                    result = hasItem != StringToInt(value);
+                }            
             }
             else
             {
-                result = hasItem != StringToInt(value);
-            }            
-        }
-        else
-        {
-            DebugOut("ERROR: wrong type (expected \'n:\') in expression: " + ScopeToString(scope) + variable + OpToString(op) + TypeToString(type) + value + ")");
-        }
-    }
-    else
-    {
-        switch (type)
-        {
-            case t_int:
-                result = CompareInt(variable, StringToInt(value), op, scope);
-                break;
+                DebugOut("ERROR: wrong type (expected \'n:\') in expression: " + ScopeToString(scope) + variable + OpToString(op) + TypeToString(type) + value + ")");
+            }
+            break;
 
-            case t_float:
-                result = CompareFloat(variable, StringToFloat(value), op, scope);
-                break;
+        default:
+            switch (type)
+            {
+                case t_int:
+                    result = CompareInt(variable, StringToInt(value), op, scope);
+                    break;
 
-            case t_string:
-                result = CompareString(variable, value, op, scope);
-                break;
+                case t_float:
+                    result = CompareFloat(variable, StringToFloat(value), op, scope);
+                    break;
 
-            case t_object:
-                result = CompareObject(variable, value, op, scope);
-                break;
+                case t_string:
+                    result = CompareString(variable, value, op, scope);
+                    break;
 
-            default:
-                result = FALSE;
-                DebugOut("ERROR: unknown type in expression: ScopeToString(scope) + variable + OpToString(op) + TypeToString(type) + value");
-        }
+                case t_object:
+                    result = CompareObject(variable, value, op, scope);
+                    break;
+
+                default:
+                    result = FALSE;
+                    DebugOut("ERROR: unknown type in expression: ScopeToString(scope) + variable + OpToString(op) + TypeToString(type) + value");
+            }
+            break;
     }
     
-    DebugOut("EVAL SUCCESS: result = " + IntToString(result) + " --> " + ScopeToString(scope) + variable + OpToString(op) + TypeToString(type) + value + ")");
+    DebugOut(ScopeToString(scope) + variable + OpToString(op) + TypeToString(type) + value + " => " + IntToString(result));
     return result;
 }
 
 int EvaluateSet(int scope, string variable, int op, int type, string value)
 {
-    if (scope == scope_inventory)
-    {        
-        if (type == t_int)
-        {
-            if (CreateItemOnObject(variable, GetPCSpeaker(), StringToInt(value)) != OBJECT_INVALID)
+    switch (scope)
+    {
+        case scope_inventory:
+            if (type == t_int)
             {
-                DebugOut("SUCCESS: CreateItemOnObject(" + variable + ", PC, " + value + ")");
+                if (CreateItemOnObject(variable, GetPCSpeaker(), StringToInt(value)) != OBJECT_INVALID)
+                {
+                    DebugOut("SUCCESS: CreateItemOnObject(" + variable + ", PC, " + value + ")");
+                }
+                else
+                {
+                    DebugOut("ERROR: CreateItemOnObject(" + variable + ", PC, " + value + ")");
+                }
             }
             else
             {
-                DebugOut("ERROR: CreateItemOnObject(" + variable + ", PC, " + value + ")");
-            }
-        }
-        else
-        {
-            DebugOut("ERROR: wrong type (expected \'n:\') in expression: ScopeToString(scope) + variable + OpToString(op) + TypeToString(type) + value");
-            return FALSE;
-        }        
-    }
-    else
-    {
-        switch (type)
-        {
-            case t_int:
-                SetLocalInt((scope == scope_local) ? GetPCSpeaker() : GetModule(), variable, StringToInt(value));
-                break;
-
-            case t_float:
-                SetLocalFloat((scope == scope_local) ? GetPCSpeaker() : GetModule(), variable, StringToFloat(value));
-                break;
-
-            case t_string:
-                SetLocalString((scope == scope_local) ? GetPCSpeaker() : GetModule(), variable, value);
-                break;
-
-            case t_object:
-                SetLocalObject((scope == scope_local) ? GetPCSpeaker() : GetModule(), variable, GetNearestObjectByTag(value));
-                break;
-
-            default:
-                DebugOut("ERROR: wrong type in expression: ScopeToString(scope) + variable + OpToString(op) + TypeToString(type) + value");
+                DebugOut("ERROR: wrong type (expected \'n:\') in expression: ScopeToString(scope) + variable + OpToString(op) + TypeToString(type) + value");
                 return FALSE;
-        }
+            }
+            break;
 
-        DebugOut("SetLocal<type>(" + ((scope == scope_local) ? "PC, " : "Module, ") + variable + ", " + value + ")");
+        default:
+            switch (type)
+            {
+                case t_int:
+                    SetLocalInt((scope == scope_local) ? GetPCSpeaker() : GetModule(), variable, StringToInt(value));
+                    break;
+
+                case t_float:
+                    SetLocalFloat((scope == scope_local) ? GetPCSpeaker() : GetModule(), variable, StringToFloat(value));
+                    break;
+
+                case t_string:
+                    SetLocalString((scope == scope_local) ? GetPCSpeaker() : GetModule(), variable, value);
+                    break;
+
+                case t_object:
+                    SetLocalObject((scope == scope_local) ? GetPCSpeaker() : GetModule(), variable, GetNearestObjectByTag(value));
+                    break;
+
+                default:
+                    DebugOut("ERROR: wrong type in expression: ScopeToString(scope) + variable + OpToString(op) + TypeToString(type) + value");
+                    return FALSE;
+            }
+
+            DebugOut("SetLocal<type>(" + ((scope == scope_local) ? "PC, " : "Module, ") + variable + ", " + value + ")");
+            break;
+
     }
 
     return TRUE;

@@ -20,6 +20,22 @@
           "type": "byte",
           "value": 6
         },
+        "LIST": {
+          "type": "list",
+          "value": [
+            {
+              "__struct_id": 0,
+              "NAME": {
+                "type": "cexostring",
+                "value": "Speech Trigger"
+              },
+              "RESREF": {
+                "type": "resref",
+                "value": "newgeneric001"
+              }
+            }
+          ]
+        },
         "STRREF": {
           "type": "dword",
           "value": 6790
