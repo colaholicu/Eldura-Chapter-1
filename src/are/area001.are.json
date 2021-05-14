@@ -11165,7 +11165,7 @@
   },
   "Tileset": {
     "type": "resref",
-    "value": "ttf01"
+    "value": "ttf02"
   },
   "Width": {
     "type": "int",
