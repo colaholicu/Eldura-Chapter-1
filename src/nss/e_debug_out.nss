@@ -1,14 +1,14 @@
 void DebugOut(string message)
 {
     object pc = GetFirstPC();
-    
+
     // Define colours using Hex. FF is highest, 00 is lowest. See online calculators if you want specific colours.
     int nColourRed = 0xFF0000FF;
     int nColourGreen = 0x00FF0FF;
     int nColourBlue = 0x0000FFFF;
     int nColourWhite = 0xFFFFFFFF;
     int nFadeOut = 0xFFFFFFFF;
-    float timeOnScreen = 9999.0f;    
+    float timeOnScreen = 9999.0f;
 
     string msg1 = GetLocalString(pc, "msg1");
     string msg2 = GetLocalString(pc, "msg2");
@@ -31,7 +31,7 @@ void DebugOut(string message)
                         msg3 = msg4;
                         msg4 = msg5;
                     }
-                    
+
                     msg5 = message;
                 }
                 else
@@ -59,10 +59,11 @@ void DebugOut(string message)
     SetLocalString(pc, "msg3", msg3);
     SetLocalString(pc, "msg4", msg4);
     SetLocalString(pc, "msg5", msg5);
-    
-    PostString(pc, msg1, 0, 0, SCREEN_ANCHOR_TOP_LEFT, timeOnScreen, nColourWhite, nFadeOut);
-    PostString(pc, msg2, 0, 1, SCREEN_ANCHOR_TOP_LEFT, timeOnScreen, nColourWhite, nFadeOut);
-    PostString(pc, msg3, 0, 2, SCREEN_ANCHOR_TOP_LEFT, timeOnScreen, nColourWhite, nFadeOut);
-    PostString(pc, msg4, 0, 3, SCREEN_ANCHOR_TOP_LEFT, timeOnScreen, nColourWhite, nFadeOut);
-    PostString(pc, msg5, 0, 4, SCREEN_ANCHOR_TOP_LEFT, timeOnScreen, nColourWhite, nFadeOut);
+
+    int offset = 20;
+    PostString(pc, msg1, 0, offset + 0, SCREEN_ANCHOR_TOP_LEFT, timeOnScreen, nColourWhite, nFadeOut);
+    PostString(pc, msg2, 0, offset + 1, SCREEN_ANCHOR_TOP_LEFT, timeOnScreen, nColourWhite, nFadeOut);
+    PostString(pc, msg3, 0, offset + 2, SCREEN_ANCHOR_TOP_LEFT, timeOnScreen, nColourWhite, nFadeOut);
+    PostString(pc, msg4, 0, offset + 3, SCREEN_ANCHOR_TOP_LEFT, timeOnScreen, nColourWhite, nFadeOut);
+    PostString(pc, msg5, 0, offset + 4, SCREEN_ANCHOR_TOP_LEFT, timeOnScreen, nColourWhite, nFadeOut);
 }

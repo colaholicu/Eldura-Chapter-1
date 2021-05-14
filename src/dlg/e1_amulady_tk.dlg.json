@@ -121,6 +121,29 @@
               "__struct_id": 0,
               "Active": {
                 "type": "resref",
+                "value": "e1_lak_chk_name"
+              },
+              "ConditionParams": {
+                "type": "list",
+                "value": []
+              },
+              "Index": {
+                "type": "dword",
+                "value": 10
+              },
+              "IsChild": {
+                "type": "byte",
+                "value": 1
+              },
+              "LinkComment": {
+                "type": "cexostring",
+                "value": ""
+              }
+            },
+            {
+              "__struct_id": 1,
+              "Active": {
+                "type": "resref",
                 "value": ""
               },
               "ConditionParams": {
@@ -129,11 +152,84 @@
               },
               "Index": {
                 "type": "dword",
-                "value": 1
+                "value": 3
               },
               "IsChild": {
                 "type": "byte",
-                "value": 0
+                "value": 1
+              },
+              "LinkComment": {
+                "type": "cexostring",
+                "value": ""
+              }
+            },
+            {
+              "__struct_id": 2,
+              "Active": {
+                "type": "resref",
+                "value": ""
+              },
+              "ConditionParams": {
+                "type": "list",
+                "value": []
+              },
+              "Index": {
+                "type": "dword",
+                "value": 2
+              },
+              "IsChild": {
+                "type": "byte",
+                "value": 1
+              },
+              "LinkComment": {
+                "type": "cexostring",
+                "value": ""
+              }
+            },
+            {
+              "__struct_id": 3,
+              "Active": {
+                "type": "resref",
+                "value": "e1_check_cond"
+              },
+              "ConditionParams": {
+                "type": "list",
+                "value": [
+                  {
+                    "__struct_id": 0,
+                    "Key": {
+                      "type": "cexostring",
+                      "value": "argc"
+                    },
+                    "Value": {
+                      "type": "cexostring",
+                      "value": "1"
+                    }
+                  },
+                  {
+                    "__struct_id": 1,
+                    "Key": {
+                      "type": "cexostring",
+                      "value": "arg1"
+                    },
+                    "Value": {
+                      "type": "cexostring",
+                      "value": "p:askedLakhesiAboutName==n:0"
+                    }
+                  }
+                ]
+              },
+              "Index": {
+                "type": "dword",
+                "value": 11
+              },
+              "IsChild": {
+                "type": "byte",
+                "value": 1
+              },
+              "LinkComment": {
+                "type": "cexostring",
+                "value": ""
               }
             }
           ]
@@ -153,7 +249,7 @@
         "Text": {
           "type": "cexolocstring",
           "value": {
-            "0": "Nothing"
+            "0": "Ah, you came back! Hihi! Have my wares peaked your interes, <FirstName>?"
           }
         }
       },
@@ -190,29 +286,6 @@
               "__struct_id": 0,
               "Active": {
                 "type": "resref",
-                "value": "e1_lak_chk_name"
-              },
-              "ConditionParams": {
-                "type": "list",
-                "value": []
-              },
-              "Index": {
-                "type": "dword",
-                "value": 11
-              },
-              "IsChild": {
-                "type": "byte",
-                "value": 1
-              },
-              "LinkComment": {
-                "type": "cexostring",
-                "value": ""
-              }
-            },
-            {
-              "__struct_id": 1,
-              "Active": {
-                "type": "resref",
                 "value": ""
               },
               "ConditionParams": {
@@ -221,84 +294,11 @@
               },
               "Index": {
                 "type": "dword",
-                "value": 4
+                "value": 1
               },
               "IsChild": {
                 "type": "byte",
-                "value": 1
-              },
-              "LinkComment": {
-                "type": "cexostring",
-                "value": ""
-              }
-            },
-            {
-              "__struct_id": 2,
-              "Active": {
-                "type": "resref",
-                "value": ""
-              },
-              "ConditionParams": {
-                "type": "list",
-                "value": []
-              },
-              "Index": {
-                "type": "dword",
-                "value": 3
-              },
-              "IsChild": {
-                "type": "byte",
-                "value": 1
-              },
-              "LinkComment": {
-                "type": "cexostring",
-                "value": ""
-              }
-            },
-            {
-              "__struct_id": 3,
-              "Active": {
-                "type": "resref",
-                "value": "e1_check_cond"
-              },
-              "ConditionParams": {
-                "type": "list",
-                "value": [
-                  {
-                    "__struct_id": 0,
-                    "Key": {
-                      "type": "cexostring",
-                      "value": "argc"
-                    },
-                    "Value": {
-                      "type": "cexostring",
-                      "value": "1"
-                    }
-                  },
-                  {
-                    "__struct_id": 1,
-                    "Key": {
-                      "type": "cexostring",
-                      "value": "arg1"
-                    },
-                    "Value": {
-                      "type": "cexostring",
-                      "value": "p:askedLakhesiAboutName==n:0"
-                    }
-                  }
-                ]
-              },
-              "Index": {
-                "type": "dword",
-                "value": 12
-              },
-              "IsChild": {
-                "type": "byte",
-                "value": 1
-              },
-              "LinkComment": {
-                "type": "cexostring",
-                "value": ""
+                "value": 0
               }
             }
           ]
@@ -318,7 +318,7 @@
         "Text": {
           "type": "cexolocstring",
           "value": {
-            "0": "Ah, you came back! Hihi! Have my wares peaked your interes, <FirstName>?"
+            "0": "Came back for another amulet? Old Lakhesi has run out of them. Hihi!"
           }
         }
       },
@@ -326,7 +326,30 @@
         "__struct_id": 3,
         "ActionParams": {
           "type": "list",
-          "value": []
+          "value": [
+            {
+              "__struct_id": 0,
+              "Key": {
+                "type": "cexostring",
+                "value": "argc"
+              },
+              "Value": {
+                "type": "cexostring",
+                "value": "1"
+              }
+            },
+            {
+              "__struct_id": 1,
+              "Key": {
+                "type": "cexostring",
+                "value": "arg1"
+              },
+              "Value": {
+                "type": "cexostring",
+                "value": "p:lakhesiSpokenBefore=n:1"
+              }
+            }
+          ]
         },
         "Animation": {
           "type": "dword",
@@ -355,6 +378,44 @@
               "__struct_id": 0,
               "Active": {
                 "type": "resref",
+                "value": "e1_lak_chk_name"
+              },
+              "ConditionParams": {
+                "type": "list",
+                "value": []
+              },
+              "Index": {
+                "type": "dword",
+                "value": 10
+              },
+              "IsChild": {
+                "type": "byte",
+                "value": 0
+              }
+            },
+            {
+              "__struct_id": 1,
+              "Active": {
+                "type": "resref",
+                "value": ""
+              },
+              "ConditionParams": {
+                "type": "list",
+                "value": []
+              },
+              "Index": {
+                "type": "dword",
+                "value": 3
+              },
+              "IsChild": {
+                "type": "byte",
+                "value": 0
+              }
+            },
+            {
+              "__struct_id": 2,
+              "Active": {
+                "type": "resref",
                 "value": ""
               },
               "ConditionParams": {
@@ -374,7 +435,7 @@
         },
         "Script": {
           "type": "resref",
-          "value": ""
+          "value": "e1_conv_set"
         },
         "Sound": {
           "type": "resref",
@@ -387,7 +448,7 @@
         "Text": {
           "type": "cexolocstring",
           "value": {
-            "0": "Came back for another amulet? Old Lakhesi has run out of them. Hihi!"
+            "0": "Ah, a customer! Yes, yes, welcome! Hihi! What shall I sell today? Hihi!"
           }
         }
       },
@@ -424,11 +485,34 @@
               "__struct_id": 0,
               "Active": {
                 "type": "resref",
-                "value": "e1_lak_chk_name"
+                "value": "e1_check_cond"
               },
               "ConditionParams": {
                 "type": "list",
-                "value": []
+                "value": [
+                  {
+                    "__struct_id": 0,
+                    "Key": {
+                      "type": "cexostring",
+                      "value": "argc"
+                    },
+                    "Value": {
+                      "type": "cexostring",
+                      "value": "1"
+                    }
+                  },
+                  {
+                    "__struct_id": 1,
+                    "Key": {
+                      "type": "cexostring",
+                      "value": "arg1"
+                    },
+                    "Value": {
+                      "type": "cexostring",
+                      "value": "p:askedLakhesiAboutName==n:0"
+                    }
+                  }
+                ]
               },
               "Index": {
                 "type": "dword",
@@ -436,7 +520,11 @@
               },
               "IsChild": {
                 "type": "byte",
-                "value": 0
+                "value": 1
+              },
+              "LinkComment": {
+                "type": "cexostring",
+                "value": ""
               }
             },
             {
@@ -451,7 +539,7 @@
               },
               "Index": {
                 "type": "dword",
-                "value": 4
+                "value": 9
               },
               "IsChild": {
                 "type": "byte",
@@ -470,7 +558,26 @@
               },
               "Index": {
                 "type": "dword",
-                "value": 3
+                "value": 5
+              },
+              "IsChild": {
+                "type": "byte",
+                "value": 0
+              }
+            },
+            {
+              "__struct_id": 3,
+              "Active": {
+                "type": "resref",
+                "value": ""
+              },
+              "ConditionParams": {
+                "type": "list",
+                "value": []
+              },
+              "Index": {
+                "type": "dword",
+                "value": 4
               },
               "IsChild": {
                 "type": "byte",
@@ -481,7 +588,7 @@
         },
         "Script": {
           "type": "resref",
-          "value": "e1_lak_tk_act3"
+          "value": ""
         },
         "Sound": {
           "type": "resref",
@@ -494,7 +601,7 @@
         "Text": {
           "type": "cexolocstring",
           "value": {
-            "0": "Ah, a customer! Yes, yes, welcome! Hihi! What shall I sell today? Hihi!"
+            "0": "Necklaces. Beautiful, beautiful amulets! Hihi! Do you want one, <FirstName>?"
           }
         }
       },
@@ -531,71 +638,6 @@
               "__struct_id": 0,
               "Active": {
                 "type": "resref",
-                "value": "e1_check_cond"
-              },
-              "ConditionParams": {
-                "type": "list",
-                "value": [
-                  {
-                    "__struct_id": 0,
-                    "Key": {
-                      "type": "cexostring",
-                      "value": "argc"
-                    },
-                    "Value": {
-                      "type": "cexostring",
-                      "value": "1"
-                    }
-                  },
-                  {
-                    "__struct_id": 1,
-                    "Key": {
-                      "type": "cexostring",
-                      "value": "arg1"
-                    },
-                    "Value": {
-                      "type": "cexostring",
-                      "value": "p:askedLakhesiAboutName==n:0"
-                    }
-                  }
-                ]
-              },
-              "Index": {
-                "type": "dword",
-                "value": 12
-              },
-              "IsChild": {
-                "type": "byte",
-                "value": 1
-              },
-              "LinkComment": {
-                "type": "cexostring",
-                "value": ""
-              }
-            },
-            {
-              "__struct_id": 1,
-              "Active": {
-                "type": "resref",
-                "value": ""
-              },
-              "ConditionParams": {
-                "type": "list",
-                "value": []
-              },
-              "Index": {
-                "type": "dword",
-                "value": 10
-              },
-              "IsChild": {
-                "type": "byte",
-                "value": 0
-              }
-            },
-            {
-              "__struct_id": 2,
-              "Active": {
-                "type": "resref",
                 "value": ""
               },
               "ConditionParams": {
@@ -612,7 +654,7 @@
               }
             },
             {
-              "__struct_id": 3,
+              "__struct_id": 1,
               "Active": {
                 "type": "resref",
                 "value": ""
@@ -623,11 +665,15 @@
               },
               "Index": {
                 "type": "dword",
-                "value": 5
+                "value": 2
               },
               "IsChild": {
                 "type": "byte",
-                "value": 0
+                "value": 1
+              },
+              "LinkComment": {
+                "type": "cexostring",
+                "value": ""
               }
             }
           ]
@@ -647,7 +693,7 @@
         "Text": {
           "type": "cexolocstring",
           "value": {
-            "0": "Necklaces. Beautiful, beautiful amulets! Hihi! Do you want one, <FirstName>?"
+            "0": "No, no, no! It doesn't work that way! Hihi! Do you want one or not?!"
           }
         }
       },
@@ -698,29 +744,6 @@
                 "type": "byte",
                 "value": 0
               }
-            },
-            {
-              "__struct_id": 1,
-              "Active": {
-                "type": "resref",
-                "value": ""
-              },
-              "ConditionParams": {
-                "type": "list",
-                "value": []
-              },
-              "Index": {
-                "type": "dword",
-                "value": 3
-              },
-              "IsChild": {
-                "type": "byte",
-                "value": 1
-              },
-              "LinkComment": {
-                "type": "cexostring",
-                "value": ""
-              }
             }
           ]
         },
@@ -739,7 +762,7 @@
         "Text": {
           "type": "cexolocstring",
           "value": {
-            "0": "No, no, no! It doesn't work that way! Hihi! Do you want one or not?!"
+            "0": "Hihi! Funny <boy/girl>! You have already payed for it! Hihi. Here, take it! <StartAction>[She takes out a pale white amulet and hands it to you. As you hesistate to take it she shoves it to your chest.]</Start>"
           }
         }
       },
@@ -776,7 +799,7 @@
               "__struct_id": 0,
               "Active": {
                 "type": "resref",
-                "value": "e1_lak_tk_act1"
+                "value": ""
               },
               "ConditionParams": {
                 "type": "list",
@@ -808,7 +831,7 @@
         "Text": {
           "type": "cexolocstring",
           "value": {
-            "0": "Hihi! Funny <boy/girl>! You have already payed for it! Hihi. Here, take it! <StartAction>[She takes out a pale white amulet and hands it to you. As you hesistate to take it she shoves it to your chest.]</Start>"
+            "0": "Hihi! Now you know too, hihi!"
           }
         }
       },
@@ -845,26 +868,95 @@
               "__struct_id": 0,
               "Active": {
                 "type": "resref",
-                "value": ""
+                "value": "e1_check_cond"
               },
               "ConditionParams": {
                 "type": "list",
-                "value": []
+                "value": [
+                  {
+                    "__struct_id": 0,
+                    "Key": {
+                      "type": "cexostring",
+                      "value": "argc"
+                    },
+                    "Value": {
+                      "type": "cexostring",
+                      "value": "1"
+                    }
+                  },
+                  {
+                    "__struct_id": 1,
+                    "Key": {
+                      "type": "cexostring",
+                      "value": "arg1"
+                    },
+                    "Value": {
+                      "type": "cexostring",
+                      "value": "p:askedLakhesiAboutName==n:0"
+                    }
+                  }
+                ]
               },
               "Index": {
                 "type": "dword",
-                "value": 9
+                "value": 11
               },
               "IsChild": {
                 "type": "byte",
                 "value": 0
+              }
+            },
+            {
+              "__struct_id": 1,
+              "Active": {
+                "type": "resref",
+                "value": "e1_check_cond"
+              },
+              "ConditionParams": {
+                "type": "list",
+                "value": [
+                  {
+                    "__struct_id": 0,
+                    "Key": {
+                      "type": "cexostring",
+                      "value": "argc"
+                    },
+                    "Value": {
+                      "type": "cexostring",
+                      "value": "1"
+                    }
+                  },
+                  {
+                    "__struct_id": 1,
+                    "Key": {
+                      "type": "cexostring",
+                      "value": "arg1"
+                    },
+                    "Value": {
+                      "type": "cexostring",
+                      "value": "p:askedLakhesiAboutName==n:1"
+                    }
+                  }
+                ]
+              },
+              "Index": {
+                "type": "dword",
+                "value": 13
+              },
+              "IsChild": {
+                "type": "byte",
+                "value": 1
+              },
+              "LinkComment": {
+                "type": "cexostring",
+                "value": ""
               }
             }
           ]
         },
         "Script": {
           "type": "resref",
-          "value": ""
+          "value": "e1_lak_set_name"
         },
         "Sound": {
           "type": "resref",
@@ -877,7 +969,7 @@
         "Text": {
           "type": "cexolocstring",
           "value": {
-            "0": "Hihi! Now you know too, hihi!"
+            "0": "Lakhesi, is the name. Old lady Lakhesi, hihi! And you must be <FirstName>!"
           }
         }
       },
@@ -938,48 +1030,6 @@
                     },
                     "Value": {
                       "type": "cexostring",
-                      "value": "p:askedLakhesiAboutName==n:0"
-                    }
-                  }
-                ]
-              },
-              "Index": {
-                "type": "dword",
-                "value": 12
-              },
-              "IsChild": {
-                "type": "byte",
-                "value": 0
-              }
-            },
-            {
-              "__struct_id": 1,
-              "Active": {
-                "type": "resref",
-                "value": "e1_check_cond"
-              },
-              "ConditionParams": {
-                "type": "list",
-                "value": [
-                  {
-                    "__struct_id": 0,
-                    "Key": {
-                      "type": "cexostring",
-                      "value": "argc"
-                    },
-                    "Value": {
-                      "type": "cexostring",
-                      "value": "1"
-                    }
-                  },
-                  {
-                    "__struct_id": 1,
-                    "Key": {
-                      "type": "cexostring",
-                      "value": "arg1"
-                    },
-                    "Value": {
-                      "type": "cexostring",
                       "value": "p:askedLakhesiAboutName==n:1"
                     }
                   }
@@ -987,103 +1037,7 @@
               },
               "Index": {
                 "type": "dword",
-                "value": 14
-              },
-              "IsChild": {
-                "type": "byte",
-                "value": 1
-              },
-              "LinkComment": {
-                "type": "cexostring",
-                "value": ""
-              }
-            }
-          ]
-        },
-        "Script": {
-          "type": "resref",
-          "value": "e1_lak_tk_act2"
-        },
-        "Sound": {
-          "type": "resref",
-          "value": ""
-        },
-        "Speaker": {
-          "type": "cexostring",
-          "value": ""
-        },
-        "Text": {
-          "type": "cexolocstring",
-          "value": {
-            "0": "Lakhesi, is the name. Old lady Lakhesi, hihi! And you must be <FirstName>!"
-          }
-        }
-      },
-      {
-        "__struct_id": 10,
-        "ActionParams": {
-          "type": "list",
-          "value": []
-        },
-        "Animation": {
-          "type": "dword",
-          "value": 0
-        },
-        "AnimLoop": {
-          "type": "byte",
-          "value": 1
-        },
-        "Comment": {
-          "type": "cexostring",
-          "value": ""
-        },
-        "Delay": {
-          "type": "dword",
-          "value": 4294967295
-        },
-        "Quest": {
-          "type": "cexostring",
-          "value": ""
-        },
-        "RepliesList": {
-          "type": "list",
-          "value": [
-            {
-              "__struct_id": 0,
-              "Active": {
-                "type": "resref",
-                "value": "e1_check_cond"
-              },
-              "ConditionParams": {
-                "type": "list",
-                "value": [
-                  {
-                    "__struct_id": 0,
-                    "Key": {
-                      "type": "cexostring",
-                      "value": "argc"
-                    },
-                    "Value": {
-                      "type": "cexostring",
-                      "value": "1"
-                    }
-                  },
-                  {
-                    "__struct_id": 1,
-                    "Key": {
-                      "type": "cexostring",
-                      "value": "arg1"
-                    },
-                    "Value": {
-                      "type": "cexostring",
-                      "value": "p:askedLakhesiAboutName==n:1"
-                    }
-                  }
-                ]
-              },
-              "Index": {
-                "type": "dword",
-                "value": 14
+                "value": 13
               },
               "IsChild": {
                 "type": "byte",
@@ -1102,7 +1056,7 @@
               },
               "Index": {
                 "type": "dword",
-                "value": 13
+                "value": 12
               },
               "IsChild": {
                 "type": "byte",
@@ -1134,7 +1088,7 @@
   },
   "NumWords": {
     "type": "dword",
-    "value": 235
+    "value": 233
   },
   "PreventZoomIn": {
     "type": "byte",
@@ -1167,27 +1121,7 @@
         },
         "EntriesList": {
           "type": "list",
-          "value": [
-            {
-              "__struct_id": 0,
-              "Active": {
-                "type": "resref",
-                "value": ""
-              },
-              "ConditionParams": {
-                "type": "list",
-                "value": []
-              },
-              "Index": {
-                "type": "dword",
-                "value": 1
-              },
-              "IsChild": {
-                "type": "byte",
-                "value": 0
-              }
-            }
-          ]
+          "value": []
         },
         "Quest": {
           "type": "cexostring",
@@ -1204,7 +1138,7 @@
         "Text": {
           "type": "cexolocstring",
           "value": {
-            "0": "Huh?"
+            "0": ""
           }
         }
       },
@@ -1294,12 +1228,77 @@
         "Text": {
           "type": "cexolocstring",
           "value": {
-            "0": ""
+            "0": "You seem a bit crazy in the head. Goodbye!"
           }
         }
       },
       {
         "__struct_id": 3,
+        "ActionParams": {
+          "type": "list",
+          "value": []
+        },
+        "Animation": {
+          "type": "dword",
+          "value": 0
+        },
+        "AnimLoop": {
+          "type": "byte",
+          "value": 1
+        },
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        },
+        "Delay": {
+          "type": "dword",
+          "value": 4294967295
+        },
+        "EntriesList": {
+          "type": "list",
+          "value": [
+            {
+              "__struct_id": 0,
+              "Active": {
+                "type": "resref",
+                "value": ""
+              },
+              "ConditionParams": {
+                "type": "list",
+                "value": []
+              },
+              "Index": {
+                "type": "dword",
+                "value": 4
+              },
+              "IsChild": {
+                "type": "byte",
+                "value": 0
+              }
+            }
+          ]
+        },
+        "Quest": {
+          "type": "cexostring",
+          "value": ""
+        },
+        "Script": {
+          "type": "resref",
+          "value": ""
+        },
+        "Sound": {
+          "type": "resref",
+          "value": ""
+        },
+        "Text": {
+          "type": "cexolocstring",
+          "value": {
+            "0": "I don't see any shop around here, what are you selling?"
+          }
+        }
+      },
+      {
+        "__struct_id": 4,
         "ActionParams": {
           "type": "list",
           "value": []
@@ -1344,7 +1343,7 @@
         }
       },
       {
-        "__struct_id": 4,
+        "__struct_id": 5,
         "ActionParams": {
           "type": "list",
           "value": []
@@ -1404,52 +1403,7 @@
         "Text": {
           "type": "cexolocstring",
           "value": {
-            "0": "I don't see any shop around here, what are you selling?"
-          }
-        }
-      },
-      {
-        "__struct_id": 5,
-        "ActionParams": {
-          "type": "list",
-          "value": []
-        },
-        "Animation": {
-          "type": "dword",
-          "value": 0
-        },
-        "AnimLoop": {
-          "type": "byte",
-          "value": 1
-        },
-        "Comment": {
-          "type": "cexostring",
-          "value": ""
-        },
-        "Delay": {
-          "type": "dword",
-          "value": 4294967295
-        },
-        "EntriesList": {
-          "type": "list",
-          "value": []
-        },
-        "Quest": {
-          "type": "cexostring",
-          "value": ""
-        },
-        "Script": {
-          "type": "resref",
-          "value": ""
-        },
-        "Sound": {
-          "type": "resref",
-          "value": ""
-        },
-        "Text": {
-          "type": "cexolocstring",
-          "value": {
-            "0": "You seem a bit crazy in the head. Goodbye!"
+            "0": "I don't know, show me your wares."
           }
         }
       },
@@ -1514,7 +1468,7 @@
         "Text": {
           "type": "cexolocstring",
           "value": {
-            "0": "I don't know, show me your wares."
+            "0": "Alright, how much for one?"
           }
         }
       },
@@ -1522,7 +1476,30 @@
         "__struct_id": 7,
         "ActionParams": {
           "type": "list",
-          "value": []
+          "value": [
+            {
+              "__struct_id": 0,
+              "Key": {
+                "type": "cexostring",
+                "value": "argc"
+              },
+              "Value": {
+                "type": "cexostring",
+                "value": "1"
+              }
+            },
+            {
+              "__struct_id": 1,
+              "Key": {
+                "type": "cexostring",
+                "value": "arg1"
+              },
+              "Value": {
+                "type": "cexostring",
+                "value": "i:palenecklace=n:1"
+              }
+            }
+          ]
         },
         "Animation": {
           "type": "dword",
@@ -1570,6 +1547,51 @@
         },
         "Script": {
           "type": "resref",
+          "value": "e1_conv_set"
+        },
+        "Sound": {
+          "type": "resref",
+          "value": ""
+        },
+        "Text": {
+          "type": "cexolocstring",
+          "value": {
+            "0": "Take the amulet. "
+          }
+        }
+      },
+      {
+        "__struct_id": 8,
+        "ActionParams": {
+          "type": "list",
+          "value": []
+        },
+        "Animation": {
+          "type": "dword",
+          "value": 0
+        },
+        "AnimLoop": {
+          "type": "byte",
+          "value": 1
+        },
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        },
+        "Delay": {
+          "type": "dword",
+          "value": 4294967295
+        },
+        "EntriesList": {
+          "type": "list",
+          "value": []
+        },
+        "Quest": {
+          "type": "cexostring",
+          "value": ""
+        },
+        "Script": {
+          "type": "resref",
           "value": ""
         },
         "Sound": {
@@ -1579,12 +1601,81 @@
         "Text": {
           "type": "cexolocstring",
           "value": {
-            "0": "Alright, how much for one?"
+            "0": "You're starting to freak me out. I'm leaving!"
           }
         }
       },
       {
-        "__struct_id": 8,
+        "__struct_id": 9,
+        "ActionParams": {
+          "type": "list",
+          "value": []
+        },
+        "Animation": {
+          "type": "dword",
+          "value": 0
+        },
+        "AnimLoop": {
+          "type": "byte",
+          "value": 1
+        },
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        },
+        "Delay": {
+          "type": "dword",
+          "value": 4294967295
+        },
+        "EntriesList": {
+          "type": "list",
+          "value": [
+            {
+              "__struct_id": 0,
+              "Active": {
+                "type": "resref",
+                "value": ""
+              },
+              "ConditionParams": {
+                "type": "list",
+                "value": []
+              },
+              "Index": {
+                "type": "dword",
+                "value": 6
+              },
+              "IsChild": {
+                "type": "byte",
+                "value": 1
+              },
+              "LinkComment": {
+                "type": "cexostring",
+                "value": ""
+              }
+            }
+          ]
+        },
+        "Quest": {
+          "type": "cexostring",
+          "value": ""
+        },
+        "Script": {
+          "type": "resref",
+          "value": ""
+        },
+        "Sound": {
+          "type": "resref",
+          "value": ""
+        },
+        "Text": {
+          "type": "cexolocstring",
+          "value": {
+            "0": "Sure! How much is it?"
+          }
+        }
+      },
+      {
+        "__struct_id": 10,
         "ActionParams": {
           "type": "list",
           "value": []
@@ -1635,51 +1726,6 @@
         },
         "Script": {
           "type": "resref",
-          "value": "e1_lak_tk_act1"
-        },
-        "Sound": {
-          "type": "resref",
-          "value": ""
-        },
-        "Text": {
-          "type": "cexolocstring",
-          "value": {
-            "0": "Take the amulet. "
-          }
-        }
-      },
-      {
-        "__struct_id": 9,
-        "ActionParams": {
-          "type": "list",
-          "value": []
-        },
-        "Animation": {
-          "type": "dword",
-          "value": 0
-        },
-        "AnimLoop": {
-          "type": "byte",
-          "value": 1
-        },
-        "Comment": {
-          "type": "cexostring",
-          "value": ""
-        },
-        "Delay": {
-          "type": "dword",
-          "value": 4294967295
-        },
-        "EntriesList": {
-          "type": "list",
-          "value": []
-        },
-        "Quest": {
-          "type": "cexostring",
-          "value": ""
-        },
-        "Script": {
-          "type": "resref",
           "value": ""
         },
         "Sound": {
@@ -1689,76 +1735,7 @@
         "Text": {
           "type": "cexolocstring",
           "value": {
-            "0": "You're starting to freak me out. I'm leaving!"
-          }
-        }
-      },
-      {
-        "__struct_id": 10,
-        "ActionParams": {
-          "type": "list",
-          "value": []
-        },
-        "Animation": {
-          "type": "dword",
-          "value": 0
-        },
-        "AnimLoop": {
-          "type": "byte",
-          "value": 1
-        },
-        "Comment": {
-          "type": "cexostring",
-          "value": ""
-        },
-        "Delay": {
-          "type": "dword",
-          "value": 4294967295
-        },
-        "EntriesList": {
-          "type": "list",
-          "value": [
-            {
-              "__struct_id": 0,
-              "Active": {
-                "type": "resref",
-                "value": ""
-              },
-              "ConditionParams": {
-                "type": "list",
-                "value": []
-              },
-              "Index": {
-                "type": "dword",
-                "value": 7
-              },
-              "IsChild": {
-                "type": "byte",
-                "value": 1
-              },
-              "LinkComment": {
-                "type": "cexostring",
-                "value": ""
-              }
-            }
-          ]
-        },
-        "Quest": {
-          "type": "cexostring",
-          "value": ""
-        },
-        "Script": {
-          "type": "resref",
-          "value": ""
-        },
-        "Sound": {
-          "type": "resref",
-          "value": ""
-        },
-        "Text": {
-          "type": "cexolocstring",
-          "value": {
-            "0": "Sure! How much is it?"
+            "0": "Who are you?"
           }
         }
       },
@@ -1766,7 +1743,30 @@
         "__struct_id": 11,
         "ActionParams": {
           "type": "list",
-          "value": []
+          "value": [
+            {
+              "__struct_id": 0,
+              "Key": {
+                "type": "cexostring",
+                "value": "argc"
+              },
+              "Value": {
+                "type": "cexostring",
+                "value": "1"
+              }
+            },
+            {
+              "__struct_id": 1,
+              "Key": {
+                "type": "cexostring",
+                "value": "arg1"
+              },
+              "Value": {
+                "type": "cexostring",
+                "value": "p:askedLakhesiAboutName=n:1"
+              }
+            }
+          ]
         },
         "Animation": {
           "type": "dword",
@@ -1814,72 +1814,7 @@
         },
         "Script": {
           "type": "resref",
-          "value": ""
-        },
-        "Sound": {
-          "type": "resref",
-          "value": ""
-        },
-        "Text": {
-          "type": "cexolocstring",
-          "value": {
-            "0": "Who are you?"
-          }
-        }
-      },
-      {
-        "__struct_id": 12,
-        "ActionParams": {
-          "type": "list",
-          "value": []
-        },
-        "Animation": {
-          "type": "dword",
-          "value": 0
-        },
-        "AnimLoop": {
-          "type": "byte",
-          "value": 1
-        },
-        "Comment": {
-          "type": "cexostring",
-          "value": ""
-        },
-        "Delay": {
-          "type": "dword",
-          "value": 4294967295
-        },
-        "EntriesList": {
-          "type": "list",
-          "value": [
-            {
-              "__struct_id": 0,
-              "Active": {
-                "type": "resref",
-                "value": ""
-              },
-              "ConditionParams": {
-                "type": "list",
-                "value": []
-              },
-              "Index": {
-                "type": "dword",
-                "value": 10
-              },
-              "IsChild": {
-                "type": "byte",
-                "value": 0
-              }
-            }
-          ]
-        },
-        "Quest": {
-          "type": "cexostring",
-          "value": ""
-        },
-        "Script": {
-          "type": "resref",
-          "value": "e1_lak_tk_act4"
+          "value": "e1_conv_set"
         },
         "Sound": {
           "type": "resref",
@@ -1893,7 +1828,7 @@
         }
       },
       {
-        "__struct_id": 13,
+        "__struct_id": 12,
         "ActionParams": {
           "type": "list",
           "value": []
@@ -1938,7 +1873,7 @@
         }
       },
       {
-        "__struct_id": 14,
+        "__struct_id": 13,
         "ActionParams": {
           "type": "list",
           "value": []
@@ -1974,7 +1909,7 @@
               },
               "Index": {
                 "type": "dword",
-                "value": 5
+                "value": 4
               },
               "IsChild": {
                 "type": "byte",
@@ -2057,7 +1992,7 @@
         },
         "Index": {
           "type": "dword",
-          "value": 4
+          "value": 3
         }
       },
       {
@@ -2095,7 +2030,7 @@
         },
         "Index": {
           "type": "dword",
-          "value": 3
+          "value": 2
         }
       },
       {
@@ -2144,7 +2079,7 @@
         },
         "Index": {
           "type": "dword",
-          "value": 2
+          "value": 1
         }
       },
       {
@@ -2175,7 +2110,7 @@
               },
               "Value": {
                 "type": "cexostring",
-                "value": "p:lakhesiFoundDog==:0"
+                "value": "p:lakhesiFoundDog==n:0"
               }
             }
           ]

@@ -7,6 +7,7 @@ const int op_less_or_equal = 2;
 const int op_greater_or_equal = 3;
 const int op_less = 4;
 const int op_greater = 5;
+const int op_assign = 6;
 
 const int scope_local = 0;
 const int scope_global = 1;
@@ -19,11 +20,12 @@ const int t_object = 3;
 
 // operators:  ==, !=, <=, >=, <, >
 // types: n: -> int, f: -> float, s: -> string, o: -> object
-// scopes: p: -> GetLocal<type>(PC), m: -> GetLocal<type>(module), b: -> HasItem(PC)
+// scopes: p: -> GetLocal<type>(PC), m: -> GetLocal<type>(module), i: -> Has/Give/CreateItem(PC)
 
 // valid expression examples:
 // p:variable_name==n:1
 // m:variable_name==s:string_value
+// p:variable_name=n:3
 
 string OpToString(int op)
 {
@@ -46,6 +48,10 @@ string OpToString(int op)
 
         case op_greater:
             return ">";
+
+        case op_assign:
+            return "=";
+
     }
 
     return "##";
@@ -121,7 +127,7 @@ int CompareInt(string variableName, int value, int op, int scope)
             return variable > value;
     }
 
-    return 0;
+    return FALSE;
 }
 
 int CompareFloat(string variableName, float value, int op, int scope)
@@ -157,7 +163,7 @@ int CompareFloat(string variableName, float value, int op, int scope)
             return variable > value;
     }
 
-    return 0;
+    return FALSE;
 }
 
 int CompareString(string variableName, string value, int op, int scope)
@@ -182,10 +188,11 @@ int CompareString(string variableName, string value, int op, int scope)
         case op_greater_or_equal:
         case op_less:
         case op_greater:
+        case op_assign:
             return variable != value;
     }
 
-    return 0;
+    return FALSE;
 }
 
 int CompareObject(string variableName, string objectName, int op, int scope)
@@ -200,7 +207,7 @@ int CompareObject(string variableName, string objectName, int op, int scope)
         variable = GetLocalObject(GetModule(), variableName);
     }
     
-    object value = GetObjectByTag(objectName);
+    object value = GetNearestObjectByTag(objectName);
     switch (op)
     {
         case op_equal:
@@ -214,12 +221,12 @@ int CompareObject(string variableName, string objectName, int op, int scope)
             return variable != value;
     }
 
-    return 0;
+    return FALSE;
 }
 
 int EvaluateGet(int scope, string variable, int op, int type, string value)
 {
-    int result = 0;
+    int result = FALSE;
     if (scope == scope_inventory)
     {
         if (type == t_int)
@@ -236,7 +243,7 @@ int EvaluateGet(int scope, string variable, int op, int type, string value)
         }
         else
         {
-            DebugOut("ERROR: wrong type (expected \'n:\')in expression: ScopeToString(scope) + variable + OpToString(op) + TypeToString(type) + value");
+            DebugOut("ERROR: wrong type (expected \'n:\') in expression: " + ScopeToString(scope) + variable + OpToString(op) + TypeToString(type) + value + ")");
         }
     }
     else
@@ -258,11 +265,67 @@ int EvaluateGet(int scope, string variable, int op, int type, string value)
             case t_object:
                 result = CompareObject(variable, value, op, scope);
                 break;
+
+            default:
+                result = FALSE;
+                DebugOut("ERROR: unknown type in expression: ScopeToString(scope) + variable + OpToString(op) + TypeToString(type) + value");
         }
     }
     
-
+    DebugOut("EVAL SUCCESS: result = " + IntToString(result) + " --> " + ScopeToString(scope) + variable + OpToString(op) + TypeToString(type) + value + ")");
     return result;
+}
+
+int EvaluateSet(int scope, string variable, int op, int type, string value)
+{
+    if (scope == scope_inventory)
+    {        
+        if (type == t_int)
+        {
+            if (CreateItemOnObject(variable, GetPCSpeaker(), StringToInt(value)) != OBJECT_INVALID)
+            {
+                DebugOut("SUCCESS: CreateItemOnObject(" + variable + ", PC, " + value + ")");
+            }
+            else
+            {
+                DebugOut("ERROR: CreateItemOnObject(" + variable + ", PC, " + value + ")");
+            }
+        }
+        else
+        {
+            DebugOut("ERROR: wrong type (expected \'n:\') in expression: ScopeToString(scope) + variable + OpToString(op) + TypeToString(type) + value");
+            return FALSE;
+        }        
+    }
+    else
+    {
+        switch (type)
+        {
+            case t_int:
+                SetLocalInt((scope == scope_local) ? GetPCSpeaker() : GetModule(), variable, StringToInt(value));
+                break;
+
+            case t_float:
+                SetLocalFloat((scope == scope_local) ? GetPCSpeaker() : GetModule(), variable, StringToFloat(value));
+                break;
+
+            case t_string:
+                SetLocalString((scope == scope_local) ? GetPCSpeaker() : GetModule(), variable, value);
+                break;
+
+            case t_object:
+                SetLocalObject((scope == scope_local) ? GetPCSpeaker() : GetModule(), variable, GetNearestObjectByTag(value));
+                break;
+
+            default:
+                DebugOut("ERROR: wrong type in expression: ScopeToString(scope) + variable + OpToString(op) + TypeToString(type) + value");
+                return FALSE;
+        }
+
+        DebugOut("SetLocal<type>(" + ((scope == scope_local) ? "PC, " : "Module, ") + variable + ", " + value + ")");
+    }
+
+    return TRUE;
 }
 
 int EvaluateExpression(string expression)
@@ -313,7 +376,7 @@ int EvaluateExpression(string expression)
     }
 
     int op = -1;
-    for (op = op_equal; op <= op_greater; op++)
+    for (op = op_equal; op <= op_assign; op++)
     {
         int found = -1;
         int opStrLength = 2;
@@ -344,6 +407,11 @@ int EvaluateExpression(string expression)
                 found = FindSubString(expression, ">");
                 opStrLength = 1;
                 break;
+
+            case op_assign:
+                found = FindSubString(expression, "=");
+                opStrLength = 1;
+                break;
         }
 
         if (found != -1)
@@ -353,10 +421,14 @@ int EvaluateExpression(string expression)
         }
     }
 
-    if (TRUE)
+    if (op == op_assign)
+    {
+        return EvaluateSet(scope, variable, op, type, value);
+    }
+    else
     {
         return EvaluateGet(scope, variable, op, type, value);
     }
 
-    return 0;
+    return FALSE;
 }
