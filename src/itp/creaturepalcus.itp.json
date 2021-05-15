@@ -529,6 +529,25 @@
                           },
                           "FACTION": {
                             "type": "cexostring",
+                            "value": "Commoner"
+                          },
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Priest Corpse"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "zombie005"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "CR": {
+                            "type": "float",
+                            "value": 1.0
+                          },
+                          "FACTION": {
+                            "type": "cexostring",
                             "value": "Hostile"
                           },
                           "NAME": {
@@ -576,6 +595,25 @@
                           "RESREF": {
                             "type": "resref",
                             "value": "zombie003"
+                          }
+                        },
+                        {
+                          "__struct_id": 0,
+                          "CR": {
+                            "type": "float",
+                            "value": 1.0
+                          },
+                          "FACTION": {
+                            "type": "cexostring",
+                            "value": "Hostile"
+                          },
+                          "NAME": {
+                            "type": "cexostring",
+                            "value": "Zombie Priest"
+                          },
+                          "RESREF": {
+                            "type": "resref",
+                            "value": "zombie004"
                           }
                         }
                       ]
