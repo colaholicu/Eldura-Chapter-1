@@ -81,14 +81,14 @@
         "__struct_id": 6,
         "Area_Name": {
           "type": "resref",
-          "value": "smallhouse"
+          "value": "evergreentemp001"
         }
       },
       {
         "__struct_id": 6,
         "Area_Name": {
           "type": "resref",
-          "value": "evergreentemp001"
+          "value": "smallhouse"
         }
       }
     ]
@@ -133,15 +133,15 @@
   },
   "Mod_Entry_X": {
     "type": "float",
-    "value": 10.8214
+    "value": 52.8432
   },
   "Mod_Entry_Y": {
     "type": "float",
-    "value": 32.3076
+    "value": 2.9713
   },
   "Mod_Entry_Z": {
     "type": "float",
-    "value": 7.4285
+    "value": -0.0
   },
   "Mod_Expan_List": {
     "type": "list",
