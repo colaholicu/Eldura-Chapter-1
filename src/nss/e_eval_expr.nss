@@ -12,6 +12,7 @@ const int op_assign = 6;
 const int scope_local = 0;
 const int scope_global = 1;
 const int scope_inventory = 2;
+const int scope_jump = 3;
 
 const int t_int = 0;
 const int t_float = 1;
@@ -20,7 +21,7 @@ const int t_object = 3;
 
 // operators:  ==, !=, <=, >=, <, >
 // types: n: -> int, f: -> float, s: -> string, o: -> object
-// scopes: p: -> GetLocal<type>(PC), m: -> GetLocal<type>(module), i: -> Has/Give/CreateItem(PC)
+// scopes: p: -> GetLocal<type>(PC), m: -> GetLocal<type>(module), i: -> Has/Give/CreateItem(PC), j: -> JumpToLocation(PC)
 
 // valid expression examples:
 // p:variable_name==n:1
@@ -89,6 +90,9 @@ string ScopeToString(int scope)
 
         case scope_inventory:
             return "i:";
+
+        case scope_jump:
+            return "j:";
     }
 
     return "@:";
@@ -101,9 +105,13 @@ int CompareInt(string variableName, int value, int op, int scope)
     {
         variable = GetLocalInt(GetPCSpeaker(), variableName);
     }
-    else
+    else if (scope == scope_global)
     {
         variable = GetLocalInt(GetModule(), variableName);
+    }
+    else
+    {
+        return FALSE;
     }
     
     switch (op)
@@ -137,9 +145,13 @@ int CompareFloat(string variableName, float value, int op, int scope)
     {
         variable = GetLocalFloat(GetPCSpeaker(), variableName);
     }
-    else
+    else if (scope == scope_global)
     {
         variable = GetLocalFloat(GetModule(), variableName);
+    }
+    else
+    {
+        return FALSE;
     }
     
     switch (op)
@@ -173,9 +185,13 @@ int CompareString(string variableName, string value, int op, int scope)
     {
         variable = GetLocalString(GetPCSpeaker(), variableName);
     }
-    else
+    else if (scope == scope_global)
     {
         variable = GetLocalString(GetModule(), variableName);
+    }
+    else
+    {
+        return FALSE;
     }
     
     switch (op)
@@ -248,6 +264,10 @@ int EvaluateGet(int scope, string variable, int op, int type, string value)
             }
             break;
 
+        case scope_jump:
+            DebugOut("ERROR: invalid use of EvaluateGet() in expression: " + ScopeToString(scope) + variable + OpToString(op) + TypeToString(type) + value + ")");
+            break;
+
         default:
             switch (type)
             {
@@ -301,6 +321,28 @@ int EvaluateSet(int scope, string variable, int op, int type, string value)
             }
             break;
 
+        case scope_jump:
+            if (type == t_int)
+            {
+                object target = GetObjectByTag(variable);
+                if (target == OBJECT_INVALID)
+                {
+                    DebugOut("ERROR: GetObjectByTag(" + variable + ")");
+                }
+                else
+                {
+                    DebugOut("SUCCESS: AssignCommand(PC, ActionJumpToObject(" + variable + ", FALSE" + "))");
+                    AssignCommand(GetPCSpeaker(), ActionJumpToObject(target, FALSE));
+                }
+            }
+            else
+            {
+                DebugOut("ERROR: wrong type (expected \'n:\') in expression: ScopeToString(scope) + variable + OpToString(op) + TypeToString(type) + value");
+                return FALSE;
+            }
+            break;
+
+
         default:
             switch (type)
             {
@@ -348,6 +390,10 @@ int EvaluateExpression(string expression)
     else if (FindSubString(expression, "i:") != -1)
     {
         scope = scope_inventory;
+    }
+    if (FindSubString(expression, "j:") != -1)
+    {
+        scope = scope_jump;
     }
 
     int type = -1;
