@@ -307,7 +307,7 @@
         },
         "Conversation": {
           "type": "resref",
-          "value": "e1_etc_fiss_tk"
+          "value": ""
         },
         "CurrentHP": {
           "type": "short",
@@ -423,7 +423,7 @@
         },
         "OnUsed": {
           "type": "resref",
-          "value": "e1_conv_on_used"
+          "value": "e1_jump_on_used"
         },
         "OnUserDefined": {
           "type": "resref",
@@ -496,7 +496,7 @@
               "__struct_id": 0,
               "Name": {
                 "type": "cexostring",
-                "value": "Conversation"
+                "value": "Target"
               },
               "Type": {
                 "type": "dword",
@@ -504,7 +504,7 @@
               },
               "Value": {
                 "type": "cexostring",
-                "value": "e1_etc_fiss_tk"
+                "value": "e1_etc_from_wp1"
               }
             }
           ]
@@ -554,7 +554,7 @@
         },
         "Conversation": {
           "type": "resref",
-          "value": "e1_etc_fiss_tk"
+          "value": ""
         },
         "CurrentHP": {
           "type": "short",
@@ -604,7 +604,7 @@
         },
         "Lockable": {
           "type": "byte",
-          "value": 1
+          "value": 0
         },
         "Locked": {
           "type": "byte",
@@ -670,7 +670,7 @@
         },
         "OnUsed": {
           "type": "resref",
-          "value": "e1_conv_on_used"
+          "value": "e1_jump_on_used"
         },
         "OnUserDefined": {
           "type": "resref",
@@ -743,7 +743,7 @@
               "__struct_id": 0,
               "Name": {
                 "type": "cexostring",
-                "value": "Conversation"
+                "value": "Target"
               },
               "Type": {
                 "type": "dword",
@@ -751,7 +751,7 @@
               },
               "Value": {
                 "type": "cexostring",
-                "value": "e1_etc_fiss_tk"
+                "value": "e1_etc_caves_wp2"
               }
             }
           ]
@@ -801,7 +801,7 @@
         },
         "Conversation": {
           "type": "resref",
-          "value": "e1_etc_fiss_tk"
+          "value": ""
         },
         "CurrentHP": {
           "type": "short",
@@ -917,7 +917,7 @@
         },
         "OnUsed": {
           "type": "resref",
-          "value": "e1_conv_on_used"
+          "value": "e1_jump_on_used"
         },
         "OnUserDefined": {
           "type": "resref",
@@ -990,7 +990,7 @@
               "__struct_id": 0,
               "Name": {
                 "type": "cexostring",
-                "value": "Conversation"
+                "value": "Target"
               },
               "Type": {
                 "type": "dword",
@@ -998,7 +998,7 @@
               },
               "Value": {
                 "type": "cexostring",
-                "value": "e1_etc_fiss_tk"
+                "value": "e1_etc_caves_from_wp2"
               }
             }
           ]
@@ -1048,7 +1048,7 @@
         },
         "Conversation": {
           "type": "resref",
-          "value": "e1_etc_fiss_tk"
+          "value": ""
         },
         "CurrentHP": {
           "type": "short",
@@ -1164,7 +1164,7 @@
         },
         "OnUsed": {
           "type": "resref",
-          "value": "e1_conv_on_used"
+          "value": "e1_jump_on_used"
         },
         "OnUserDefined": {
           "type": "resref",
@@ -1237,7 +1237,7 @@
               "__struct_id": 0,
               "Name": {
                 "type": "cexostring",
-                "value": "Conversation"
+                "value": "Target"
               },
               "Type": {
                 "type": "dword",
@@ -1245,7 +1245,7 @@
               },
               "Value": {
                 "type": "cexostring",
-                "value": "e1_etc_fiss_tk"
+                "value": "e1_etc_caves_wp3"
               }
             }
           ]
@@ -1295,7 +1295,7 @@
         },
         "Conversation": {
           "type": "resref",
-          "value": "e1_etc_fiss_tk"
+          "value": ""
         },
         "CurrentHP": {
           "type": "short",
@@ -1411,7 +1411,7 @@
         },
         "OnUsed": {
           "type": "resref",
-          "value": "e1_conv_on_used"
+          "value": "e1_jump_on_used"
         },
         "OnUserDefined": {
           "type": "resref",
@@ -1484,7 +1484,7 @@
               "__struct_id": 0,
               "Name": {
                 "type": "cexostring",
-                "value": "Conversation"
+                "value": "Target"
               },
               "Type": {
                 "type": "dword",
@@ -1492,7 +1492,7 @@
               },
               "Value": {
                 "type": "cexostring",
-                "value": "e1_etc_fiss_tk"
+                "value": "e1_etc_caves_from_wp3"
               }
             }
           ]
@@ -1564,7 +1564,7 @@
         },
         "Tag": {
           "type": "cexostring",
-          "value": "e1_etc_caves_to_wp1"
+          "value": "e1_etc_caves_wp1"
         },
         "TemplateResRef": {
           "type": "resref",
@@ -1572,19 +1572,259 @@
         },
         "XOrientation": {
           "type": "float",
-          "value": 0.1467
+          "value": 0.6344
         },
         "XPosition": {
           "type": "float",
-          "value": 5.869
+          "value": 4.361
         },
         "YOrientation": {
           "type": "float",
-          "value": 0.9892
+          "value": 0.773
         },
         "YPosition": {
           "type": "float",
-          "value": 50.387
+          "value": 50.8812
+        },
+        "ZPosition": {
+          "type": "float",
+          "value": -0.0
+        }
+      },
+      {
+        "__struct_id": 5,
+        "Appearance": {
+          "type": "byte",
+          "value": 1
+        },
+        "Description": {
+          "type": "cexolocstring",
+          "value": {}
+        },
+        "HasMapNote": {
+          "type": "byte",
+          "value": 0
+        },
+        "LinkedTo": {
+          "type": "cexostring",
+          "value": ""
+        },
+        "LocalizedName": {
+          "id": 14817,
+          "type": "cexolocstring",
+          "value": {}
+        },
+        "MapNote": {
+          "type": "cexolocstring",
+          "value": {}
+        },
+        "MapNoteEnabled": {
+          "type": "byte",
+          "value": 1
+        },
+        "Tag": {
+          "type": "cexostring",
+          "value": "e1_etc_caves_from_wp2"
+        },
+        "TemplateResRef": {
+          "type": "resref",
+          "value": "nw_waypoint001"
+        },
+        "XOrientation": {
+          "type": "float",
+          "value": -0.3369
+        },
+        "XPosition": {
+          "type": "float",
+          "value": 4.8694
+        },
+        "YOrientation": {
+          "type": "float",
+          "value": -0.9415
+        },
+        "YPosition": {
+          "type": "float",
+          "value": 60.736
+        },
+        "ZPosition": {
+          "type": "float",
+          "value": -0.0
+        }
+      },
+      {
+        "__struct_id": 5,
+        "Appearance": {
+          "type": "byte",
+          "value": 1
+        },
+        "Description": {
+          "type": "cexolocstring",
+          "value": {}
+        },
+        "HasMapNote": {
+          "type": "byte",
+          "value": 0
+        },
+        "LinkedTo": {
+          "type": "cexostring",
+          "value": ""
+        },
+        "LocalizedName": {
+          "id": 14817,
+          "type": "cexolocstring",
+          "value": {}
+        },
+        "MapNote": {
+          "type": "cexolocstring",
+          "value": {}
+        },
+        "MapNoteEnabled": {
+          "type": "byte",
+          "value": 1
+        },
+        "Tag": {
+          "type": "cexostring",
+          "value": "e1_etc_caves_wp2"
+        },
+        "TemplateResRef": {
+          "type": "resref",
+          "value": "nw_waypoint001"
+        },
+        "XOrientation": {
+          "type": "float",
+          "value": 0.9495
+        },
+        "XPosition": {
+          "type": "float",
+          "value": 16.5522
+        },
+        "YOrientation": {
+          "type": "float",
+          "value": 0.3137
+        },
+        "YPosition": {
+          "type": "float",
+          "value": 75.3237
+        },
+        "ZPosition": {
+          "type": "float",
+          "value": -0.0
+        }
+      },
+      {
+        "__struct_id": 5,
+        "Appearance": {
+          "type": "byte",
+          "value": 1
+        },
+        "Description": {
+          "type": "cexolocstring",
+          "value": {}
+        },
+        "HasMapNote": {
+          "type": "byte",
+          "value": 0
+        },
+        "LinkedTo": {
+          "type": "cexostring",
+          "value": ""
+        },
+        "LocalizedName": {
+          "id": 14817,
+          "type": "cexolocstring",
+          "value": {}
+        },
+        "MapNote": {
+          "type": "cexolocstring",
+          "value": {}
+        },
+        "MapNoteEnabled": {
+          "type": "byte",
+          "value": 1
+        },
+        "Tag": {
+          "type": "cexostring",
+          "value": "e1_etc_caves_from_wp3"
+        },
+        "TemplateResRef": {
+          "type": "resref",
+          "value": "nw_waypoint001"
+        },
+        "XOrientation": {
+          "type": "float",
+          "value": 0.0736
+        },
+        "XPosition": {
+          "type": "float",
+          "value": 44.8174
+        },
+        "YOrientation": {
+          "type": "float",
+          "value": 0.9973
+        },
+        "YPosition": {
+          "type": "float",
+          "value": 65.8899
+        },
+        "ZPosition": {
+          "type": "float",
+          "value": 0.0
+        }
+      },
+      {
+        "__struct_id": 5,
+        "Appearance": {
+          "type": "byte",
+          "value": 1
+        },
+        "Description": {
+          "type": "cexolocstring",
+          "value": {}
+        },
+        "HasMapNote": {
+          "type": "byte",
+          "value": 0
+        },
+        "LinkedTo": {
+          "type": "cexostring",
+          "value": ""
+        },
+        "LocalizedName": {
+          "id": 14817,
+          "type": "cexolocstring",
+          "value": {}
+        },
+        "MapNote": {
+          "type": "cexolocstring",
+          "value": {}
+        },
+        "MapNoteEnabled": {
+          "type": "byte",
+          "value": 1
+        },
+        "Tag": {
+          "type": "cexostring",
+          "value": "e1_etc_caves_wp3"
+        },
+        "TemplateResRef": {
+          "type": "resref",
+          "value": "nw_waypoint001"
+        },
+        "XOrientation": {
+          "type": "float",
+          "value": -0.5556
+        },
+        "XPosition": {
+          "type": "float",
+          "value": 42.4979
+        },
+        "YOrientation": {
+          "type": "float",
+          "value": -0.8315
+        },
+        "YPosition": {
+          "type": "float",
+          "value": 55.8037
         },
         "ZPosition": {
           "type": "float",

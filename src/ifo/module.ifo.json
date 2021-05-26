@@ -90,6 +90,13 @@
           "type": "resref",
           "value": "smallhouse"
         }
+      },
+      {
+        "__struct_id": 6,
+        "Area_Name": {
+          "type": "resref",
+          "value": "caverns"
+        }
       }
     ]
   },
@@ -121,7 +128,7 @@
   },
   "Mod_Entry_Area": {
     "type": "resref",
-    "value": "evergreentemp001"
+    "value": "caverns"
   },
   "Mod_Entry_Dir_X": {
     "type": "float",
@@ -133,11 +140,11 @@
   },
   "Mod_Entry_X": {
     "type": "float",
-    "value": 52.8432
+    "value": 5.0384
   },
   "Mod_Entry_Y": {
     "type": "float",
-    "value": 2.9713
+    "value": 57.018
   },
   "Mod_Entry_Z": {
     "type": "float",
@@ -161,7 +168,7 @@
   },
   "Mod_MinGameVer": {
     "type": "cexostring",
-    "value": "1.82"
+    "value": "1.83"
   },
   "Mod_MinPerHour": {
     "type": "byte",

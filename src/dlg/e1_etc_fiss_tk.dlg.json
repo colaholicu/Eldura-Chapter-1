@@ -23,7 +23,91 @@
         "__struct_id": 0,
         "ActionParams": {
           "type": "list",
+          "value": [
+            {
+              "__struct_id": 0,
+              "Key": {
+                "type": "cexostring",
+                "value": "args"
+              },
+              "Value": {
+                "type": "cexostring",
+                "value": "1"
+              }
+            },
+            {
+              "__struct_id": 1,
+              "Key": {
+                "type": "cexostring",
+                "value": "arg1"
+              },
+              "Value": {
+                "type": "cexostring",
+                "value": "j:e1_etc_caves_wp1=n:1"
+              }
+            }
+          ]
+        },
+        "Animation": {
+          "type": "dword",
+          "value": 0
+        },
+        "AnimLoop": {
+          "type": "byte",
+          "value": 1
+        },
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        },
+        "Delay": {
+          "type": "dword",
+          "value": 0
+        },
+        "Quest": {
+          "type": "cexostring",
+          "value": ""
+        },
+        "RepliesList": {
+          "type": "list",
           "value": []
+        },
+        "Script": {
+          "type": "resref",
+          "value": "e1_conv_set"
+        },
+        "Sound": {
+          "type": "resref",
+          "value": ""
+        },
+        "Speaker": {
+          "type": "cexostring",
+          "value": ""
+        },
+        "Text": {
+          "type": "cexolocstring",
+          "value": {
+            "0": "The fissure in the wall looks wide enough for someone to pass through with ease."
+          }
+        }
+      },
+      {
+        "__struct_id": 1,
+        "ActionParams": {
+          "type": "list",
+          "value": [
+            {
+              "__struct_id": 0,
+              "Key": {
+                "type": "cexostring",
+                "value": "arg1"
+              },
+              "Value": {
+                "type": "cexostring",
+                "value": "j:e1_etc_caves_wp1=n:1"
+              }
+            }
+          ]
         },
         "Animation": {
           "type": "dword",
@@ -111,7 +195,7 @@
   },
   "NumWords": {
     "type": "dword",
-    "value": 20
+    "value": 35
   },
   "PreventZoomIn": {
     "type": "byte",
@@ -178,7 +262,7 @@
               },
               "Value": {
                 "type": "cexostring",
-                "value": "1"
+                "value": "2"
               }
             },
             {
@@ -189,7 +273,18 @@
               },
               "Value": {
                 "type": "cexostring",
-                "value": "j:e1_etc_caves_to_wp1=n:1"
+                "value": "j:e1_etc_caves_wp1=n:1"
+              }
+            },
+            {
+              "__struct_id": 2,
+              "Key": {
+                "type": "cexostring",
+                "value": "arg2"
+              },
+              "Value": {
+                "type": "cexostring",
+                "value": "p:FissureJumpedOnce=n:1"
               }
             }
           ]
@@ -242,11 +337,72 @@
         "__struct_id": 0,
         "Active": {
           "type": "resref",
-          "value": ""
+          "value": "e1_check_cond"
         },
         "ConditionParams": {
           "type": "list",
-          "value": []
+          "value": [
+            {
+              "__struct_id": 0,
+              "Key": {
+                "type": "cexostring",
+                "value": "args"
+              },
+              "Value": {
+                "type": "cexostring",
+                "value": "1"
+              }
+            },
+            {
+              "__struct_id": 1,
+              "Key": {
+                "type": "cexostring",
+                "value": "arg1"
+              },
+              "Value": {
+                "type": "cexostring",
+                "value": "p:FissureJumpedOnce!=n:1"
+              }
+            }
+          ]
+        },
+        "Index": {
+          "type": "dword",
+          "value": 1
+        }
+      },
+      {
+        "__struct_id": 1,
+        "Active": {
+          "type": "resref",
+          "value": "e1_check_cond"
+        },
+        "ConditionParams": {
+          "type": "list",
+          "value": [
+            {
+              "__struct_id": 0,
+              "Key": {
+                "type": "cexostring",
+                "value": "args"
+              },
+              "Value": {
+                "type": "cexostring",
+                "value": "1"
+              }
+            },
+            {
+              "__struct_id": 1,
+              "Key": {
+                "type": "cexostring",
+                "value": "arg1"
+              },
+              "Value": {
+                "type": "cexostring",
+                "value": "p:FissureJumpedOnce!=n:0"
+              }
+            }
+          ]
         },
         "Index": {
           "type": "dword",
