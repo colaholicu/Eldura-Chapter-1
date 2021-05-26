@@ -1,4 +1,5 @@
 void main()
 {
-      ActionRandomWalk();
+    ExecuteScript("x2_def_spawn");
+    ActionRandomWalk();
 }

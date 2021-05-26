@@ -64,7 +64,7 @@
         "Text": {
           "type": "cexolocstring",
           "value": {
-            "0": "These tracks look to have been left by an animal. They seem to be heading up the ramp."
+            "0": "These tracks look to have been left by an animal. They seem to be heading towards the large tree on the west side."
           }
         }
       }
@@ -72,7 +72,7 @@
   },
   "NumWords": {
     "type": "dword",
-    "value": 18
+    "value": 23
   },
   "PreventZoomIn": {
     "type": "byte",
