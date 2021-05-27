@@ -8896,11 +8896,11 @@
         },
         "LinkedTo": {
           "type": "cexostring",
-          "value": ""
+          "value": "e1_euc_to_ec"
         },
         "LinkedToFlags": {
           "type": "byte",
-          "value": 0
+          "value": 1
         },
         "LoadScreenID": {
           "type": "word",
@@ -8993,7 +8993,7 @@
         },
         "Tag": {
           "type": "cexostring",
-          "value": "MineExit"
+          "value": "e1_ec_to_euc"
         },
         "TemplateResRef": {
           "type": "resref",

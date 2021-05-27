@@ -97,6 +97,13 @@
           "type": "resref",
           "value": "caverns"
         }
+      },
+      {
+        "__struct_id": 6,
+        "Area_Name": {
+          "type": "resref",
+          "value": "uppercaves"
+        }
       }
     ]
   },
@@ -132,23 +139,23 @@
   },
   "Mod_Entry_Dir_X": {
     "type": "float",
-    "value": 0.1467
+    "value": 0.0
   },
   "Mod_Entry_Dir_Y": {
     "type": "float",
-    "value": -0.9892
+    "value": 1.0
   },
   "Mod_Entry_X": {
     "type": "float",
-    "value": 52.7144
+    "value": 61.332
   },
   "Mod_Entry_Y": {
     "type": "float",
-    "value": 43.5213
+    "value": 29.1768
   },
   "Mod_Entry_Z": {
     "type": "float",
-    "value": -0.0
+    "value": 2.7931
   },
   "Mod_Expan_List": {
     "type": "list",
