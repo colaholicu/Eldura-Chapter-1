@@ -1,10 +1,16 @@
 {
     "folders": [
         {
-            "path": "..\\eldura\\"
+            // for the core source of the module
+            "path": "."
         },
         {
-            "path": "C:\\Users\\iosmur\\AppData\\Roaming\\nasher"
+            // for the .cfg files - relative to the workspace primary root (normally in <username>/AppData/(...))
+            "path": "..\\..\\..\\AppData\\Roaming\\nasher"
+        },
+        {
+            // for nwscript.nss and other core
+            "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Neverwinter Nights\\ovr"
         }
     ],
     "settings": {
@@ -26,7 +32,15 @@
             "**/*.utp": true,
             "**/*.uts": true,
             "**/.nasher": true,
-            "**/tools": true
+            "**/tools": true,
+            // from ovr
+            "**/*.dds": true,
+            "**/*.mdl": true,
+            "**/*.plt": true,
+            "**/*.2da": true,
+            "**/*.tga": true,
+            "**/*.mtr": true,
+            "**/*.txi": true,
         }
     },
     "files.associations": {}

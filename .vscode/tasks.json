@@ -47,6 +47,20 @@
             },
             "group": "none",
             "problemMatcher": []
+        },
+        {
+            "label": "Extract Snippets",
+            "type": "process",
+            "args": [
+                "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Neverwinter Nights\\ovr\\nwscript.nss",
+                "${file}",
+                "${fileDirname}",
+                "${workspaceFolder}\\.vscode\\nss.code-snippets"
+            ],
+            "command": [
+                "./tools/NSSnippets.exe"
+            ],
+            "problemMatcher": []
         }
     ]
 }
