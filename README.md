@@ -5,7 +5,7 @@ Luther is changed, he looks older and frail, a mere shadow of the mighty King th
 
 # Repository Setup
 **Nasher config**
-  * Nasher config path: `C:\Users\<username>\AppData\Roaming\nasher\nasher.cfg`
+  * Nasher config path: `C:\Users\<username>\AppData\Roaming\nasher\nasher.cfg` or `<path-to-repository>\.nasher\user.cfg`
   * Example config:
   ```
     installDir = "C:/Users/iosmur/Documents/Neverwinter Nights"
