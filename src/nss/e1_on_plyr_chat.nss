@@ -3,6 +3,13 @@
 float pitch = -1.0f;
 float distance = -1.0f;
 
+// "tp_[object_tag] -- teleport to an object retrieved by tag\n" +
+// "gm [0/1] -- toggle god mode\n" +
+// "kill -- kills the player\n" + 
+// "sli_[variable][value] -- SetLocalInt(PC, variable, value)\n" + 
+// "sgi_[variable][value] -- SetLocalInt(MODULE, variable, value)\n" + 
+// "gi_[item][1/0] -- Create an item on the player or remove it";
+
 void main()
 {
     string command = GetPCChatMessage();
@@ -172,7 +179,7 @@ void main()
         return;
     }
 
-    commandPrefix = "svi_";
+    commandPrefix = "sli_";
     isValidCommand = FindSubString(command, commandPrefix);
     if (isValidCommand != -1)
     {
@@ -186,7 +193,7 @@ void main()
         return;
     }
 
-    commandPrefix = "sgvi_";
+    commandPrefix = "sgi_";
     isValidCommand = FindSubString(command, commandPrefix);
     if (isValidCommand != -1)
     {

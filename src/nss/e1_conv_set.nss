@@ -3,7 +3,6 @@
 void main()
 {
     int args = StringToInt(GetScriptParam("argc"));
-
     int result = EvaluateExpression(GetScriptParam("arg" + IntToString(1)));
     int i = 2;
     for ( ; i <= args; i++)
