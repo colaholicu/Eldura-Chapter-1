@@ -113,7 +113,7 @@ int CompareInt(string variableName, int value, int op, int scope)
     {
         return FALSE;
     }
-    
+
     switch (op)
     {
         case op_equal:
@@ -153,7 +153,7 @@ int CompareFloat(string variableName, float value, int op, int scope)
     {
         return FALSE;
     }
-    
+
     switch (op)
     {
         case op_equal:
@@ -193,7 +193,7 @@ int CompareString(string variableName, string value, int op, int scope)
     {
         return FALSE;
     }
-    
+
     switch (op)
     {
         case op_equal:
@@ -222,7 +222,7 @@ int CompareObject(string variableName, string objectName, int op, int scope)
     {
         variable = GetLocalObject(GetModule(), variableName);
     }
-    
+
     object value = GetNearestObjectByTag(objectName);
     switch (op)
     {
@@ -256,7 +256,7 @@ int EvaluateGet(int scope, string variable, int op, int type, string value)
                 else
                 {
                     result = hasItem != StringToInt(value);
-                }            
+                }
             }
             else
             {
@@ -293,7 +293,7 @@ int EvaluateGet(int scope, string variable, int op, int type, string value)
             }
             break;
     }
-    
+
     DebugOut(ScopeToString(scope) + variable + OpToString(op) + TypeToString(type) + value + " => " + IntToString(result));
     return result;
 }
@@ -322,23 +322,18 @@ int EvaluateSet(int scope, string variable, int op, int type, string value)
             break;
 
         case scope_jump:
-            if (type == t_int)
             {
                 object target = GetObjectByTag(variable);
                 if (target == OBJECT_INVALID)
                 {
                     DebugOut("ERROR: GetObjectByTag(" + variable + ")");
+                    return FALSE;
                 }
                 else
                 {
                     DebugOut("SUCCESS: AssignCommand(PC, ActionJumpToObject(" + variable + ", FALSE" + "))");
                     AssignCommand(GetPCSpeaker(), ActionJumpToObject(target, FALSE));
                 }
-            }
-            else
-            {
-                DebugOut("ERROR: wrong type (expected \'n:\') in expression: ScopeToString(scope) + variable + OpToString(op) + TypeToString(type) + value");
-                return FALSE;
             }
             break;
 
@@ -427,52 +422,60 @@ int EvaluateExpression(string expression)
     }
 
     int op = -1;
-    for (op = op_equal; op <= op_assign; op++)
+    if (scope == scope_jump)
     {
-        int found = -1;
-        int opStrLength = 2;
-        switch (op)
+        op = op_assign;
+        variable = GetSubString(expression, 2, expressionLength - 2);
+    }
+    else
+    {
+        for (op = op_equal; op <= op_assign; op++)
         {
-            case op_equal:
-                found = FindSubString(expression, "==");
-                break;
+            int found = -1;
+            int opStrLength = 2;
+            switch (op)
+            {
+                case op_equal:
+                    found = FindSubString(expression, "==");
+                    break;
 
-            case op_not_equal:
-                found = FindSubString(expression, "!=");
-                break;
+                case op_not_equal:
+                    found = FindSubString(expression, "!=");
+                    break;
 
-            case op_less_or_equal:
-                found = FindSubString(expression, "<=");
-                break;
+                case op_less_or_equal:
+                    found = FindSubString(expression, "<=");
+                    break;
 
-            case op_greater_or_equal:
-                found = FindSubString(expression, ">=");
-                break;
+                case op_greater_or_equal:
+                    found = FindSubString(expression, ">=");
+                    break;
 
-            case op_less:
-                found = FindSubString(expression, "<");
-                opStrLength = 1;
-                break;
+                case op_less:
+                    found = FindSubString(expression, "<");
+                    opStrLength = 1;
+                    break;
 
-            case op_greater:
-                found = FindSubString(expression, ">");
-                opStrLength = 1;
-                break;
+                case op_greater:
+                    found = FindSubString(expression, ">");
+                    opStrLength = 1;
+                    break;
 
-            case op_assign:
-                found = FindSubString(expression, "=");
-                opStrLength = 1;
-                break;
-        }
+                case op_assign:
+                    found = FindSubString(expression, "=");
+                    opStrLength = 1;
+                    break;
+            }
 
-        if (found != -1)
-        {
-            variable = GetSubString(expression, 2, found - 2);
-            break;
+            if (found != -1)
+            {
+                variable = GetSubString(expression, 2, found - 2);
+                break;
+            }
         }
     }
 
-    if (op == op_assign)
+    if (op == op_assign || scope == scope_jump)
     {
         return EvaluateSet(scope, variable, op, type, value);
     }

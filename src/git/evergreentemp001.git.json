@@ -65915,15 +65915,15 @@
         },
         "X": {
           "type": "float",
-          "value": 13.7383
+          "value": 13.74
         },
         "Y": {
           "type": "float",
-          "value": 30.2591
+          "value": 30.26
         },
         "Z": {
           "type": "float",
-          "value": 7.3479
+          "value": 7.0
         }
       },
       {
@@ -66142,15 +66142,15 @@
         },
         "X": {
           "type": "float",
-          "value": 11.9382
+          "value": 11.94
         },
         "Y": {
           "type": "float",
-          "value": 29.1442
+          "value": 29.14
         },
         "Z": {
           "type": "float",
-          "value": 7.319
+          "value": 6.8
         }
       },
       {
@@ -66169,7 +66169,7 @@
         },
         "Bearing": {
           "type": "float",
-          "value": -0.3927
+          "value": -3.1416
         },
         "BodyBag": {
           "type": "byte",
@@ -66369,15 +66369,15 @@
         },
         "X": {
           "type": "float",
-          "value": 12.2018
+          "value": 12.2
         },
         "Y": {
           "type": "float",
-          "value": 26.6098
+          "value": 26.61
         },
         "Z": {
           "type": "float",
-          "value": 7.1917
+          "value": 6.9
         }
       },
       {
@@ -66596,15 +66596,15 @@
         },
         "X": {
           "type": "float",
-          "value": 10.0813
+          "value": 8.328099999999999
         },
         "Y": {
           "type": "float",
-          "value": 24.8251
+          "value": 27.2646
         },
         "Z": {
           "type": "float",
-          "value": 6.9533
+          "value": 6.4509
         }
       },
       {
@@ -66823,15 +66823,15 @@
         },
         "X": {
           "type": "float",
-          "value": 9.684900000000001
+          "value": 9.68
         },
         "Y": {
           "type": "float",
-          "value": 27.5421
+          "value": 27.53
         },
         "Z": {
           "type": "float",
-          "value": 6.8967
+          "value": 6.75
         }
       },
       {
@@ -66850,7 +66850,7 @@
         },
         "Bearing": {
           "type": "float",
-          "value": 1.3744
+          "value": 1.3736
         },
         "BodyBag": {
           "type": "byte",
@@ -67050,15 +67050,15 @@
         },
         "X": {
           "type": "float",
-          "value": 9.128
+          "value": 9.130000000000001
         },
         "Y": {
           "type": "float",
-          "value": 26.6007
+          "value": 26.6
         },
         "Z": {
           "type": "float",
-          "value": 7.0876
+          "value": 6.8
         }
       },
       {
@@ -67277,15 +67277,15 @@
         },
         "X": {
           "type": "float",
-          "value": 9.114699999999999
+          "value": 9.109999999999999
         },
         "Y": {
           "type": "float",
-          "value": 24.7196
+          "value": 24.72
         },
         "Z": {
           "type": "float",
-          "value": 7.1611
+          "value": 6.5
         }
       },
       {
@@ -68177,15 +68177,15 @@
         },
         "X": {
           "type": "float",
-          "value": 10.5794
+          "value": 10.58
         },
         "Y": {
           "type": "float",
-          "value": 26.4544
+          "value": 26.45
         },
         "Z": {
           "type": "float",
-          "value": 7.4854
+          "value": 7.1
         }
       },
       {
@@ -68635,7 +68635,7 @@
         },
         "Z": {
           "type": "float",
-          "value": 7.3962
+          "value": 7.3961
         }
       },
       {
@@ -68860,7 +68860,7 @@
         },
         "Z": {
           "type": "float",
-          "value": 8.5449
+          "value": 7.05
         }
       },
       {
@@ -69314,7 +69314,7 @@
         },
         "Z": {
           "type": "float",
-          "value": -0.0
+          "value": 0.0
         }
       },
       {
@@ -73820,7 +73820,7 @@
         },
         "Z": {
           "type": "float",
-          "value": 0.1307
+          "value": 0.2258
         }
       }
     ]
@@ -74175,7 +74175,7 @@
               },
               "PointZ": {
                 "type": "float",
-                "value": 0.025
+                "value": 0.0302
               }
             },
             {
@@ -74220,7 +74220,7 @@
               },
               "PointZ": {
                 "type": "float",
-                "value": 0.2148
+                "value": 0.215
               }
             }
           ]

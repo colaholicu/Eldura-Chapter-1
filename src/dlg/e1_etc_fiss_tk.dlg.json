@@ -34,17 +34,6 @@
                 "type": "cexostring",
                 "value": "1"
               }
-            },
-            {
-              "__struct_id": 1,
-              "Key": {
-                "type": "cexostring",
-                "value": "arg1"
-              },
-              "Value": {
-                "type": "cexostring",
-                "value": "j:e1_etc_caves_wp1=n:1"
-              }
             }
           ]
         },
@@ -74,7 +63,7 @@
         },
         "Script": {
           "type": "resref",
-          "value": "e1_conv_set"
+          "value": "e1_jump_on_used"
         },
         "Sound": {
           "type": "resref",
@@ -87,7 +76,7 @@
         "Text": {
           "type": "cexolocstring",
           "value": {
-            "0": "The fissure in the wall looks wide enough for someone to pass through with ease."
+            "0": ""
           }
         }
       },
@@ -104,7 +93,7 @@
               },
               "Value": {
                 "type": "cexostring",
-                "value": "j:e1_etc_caves_wp1=n:1"
+                "value": "j:e1_etc_caves_wp1"
               }
             }
           ]
@@ -195,7 +184,7 @@
   },
   "NumWords": {
     "type": "dword",
-    "value": 35
+    "value": 20
   },
   "PreventZoomIn": {
     "type": "byte",
@@ -273,7 +262,7 @@
               },
               "Value": {
                 "type": "cexostring",
-                "value": "j:e1_etc_caves_wp1=n:1"
+                "value": "j:e1_etc_caves_wp1"
               }
             },
             {

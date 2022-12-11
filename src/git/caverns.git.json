@@ -62,7 +62,7 @@
         },
         "ChallengeRating": {
           "type": "float",
-          "value": 0.3333
+          "value": 0.25
         },
         "ClassList": {
           "type": "list",
@@ -112,7 +112,7 @@
         },
         "Dex": {
           "type": "byte",
-          "value": 17
+          "value": 3
         },
         "Disarmable": {
           "type": "byte",
@@ -889,7 +889,7 @@
         },
         "ChallengeRating": {
           "type": "float",
-          "value": 0.3333
+          "value": 0.25
         },
         "ClassList": {
           "type": "list",
@@ -939,7 +939,7 @@
         },
         "Dex": {
           "type": "byte",
-          "value": 17
+          "value": 3
         },
         "Disarmable": {
           "type": "byte",
@@ -1716,7 +1716,7 @@
         },
         "ChallengeRating": {
           "type": "float",
-          "value": 0.3333
+          "value": 0.25
         },
         "ClassList": {
           "type": "list",
@@ -1766,7 +1766,7 @@
         },
         "Dex": {
           "type": "byte",
-          "value": 17
+          "value": 3
         },
         "Disarmable": {
           "type": "byte",
@@ -2543,7 +2543,7 @@
         },
         "ChallengeRating": {
           "type": "float",
-          "value": 0.3333
+          "value": 0.25
         },
         "ClassList": {
           "type": "list",
@@ -2593,7 +2593,7 @@
         },
         "Dex": {
           "type": "byte",
-          "value": 17
+          "value": 3
         },
         "Disarmable": {
           "type": "byte",
@@ -3370,7 +3370,7 @@
         },
         "ChallengeRating": {
           "type": "float",
-          "value": 0.3333
+          "value": 0.25
         },
         "ClassList": {
           "type": "list",
@@ -3420,7 +3420,7 @@
         },
         "Dex": {
           "type": "byte",
-          "value": 17
+          "value": 3
         },
         "Disarmable": {
           "type": "byte",
@@ -4197,7 +4197,7 @@
         },
         "ChallengeRating": {
           "type": "float",
-          "value": 0.3333
+          "value": 0.25
         },
         "ClassList": {
           "type": "list",
@@ -4247,7 +4247,7 @@
         },
         "Dex": {
           "type": "byte",
-          "value": 17
+          "value": 3
         },
         "Disarmable": {
           "type": "byte",
@@ -4672,7 +4672,7 @@
         },
         "ScriptDeath": {
           "type": "resref",
-          "value": "e1_dth_no_loot"
+          "value": "x2_def_ondeath"
         },
         "ScriptDialogue": {
           "type": "resref",
@@ -4704,7 +4704,7 @@
         },
         "ScriptSpawn": {
           "type": "resref",
-          "value": "e1_on_spawn_die"
+          "value": "e0_rdm_wk"
         },
         "ScriptSpellAt": {
           "type": "resref",
@@ -5024,7 +5024,7 @@
         },
         "ChallengeRating": {
           "type": "float",
-          "value": 0.3333
+          "value": 0.25
         },
         "ClassList": {
           "type": "list",
@@ -5074,7 +5074,7 @@
         },
         "Dex": {
           "type": "byte",
-          "value": 17
+          "value": 3
         },
         "Disarmable": {
           "type": "byte",
@@ -5499,7 +5499,7 @@
         },
         "ScriptDeath": {
           "type": "resref",
-          "value": "e1_dth_no_loot"
+          "value": "x2_def_ondeath"
         },
         "ScriptDialogue": {
           "type": "resref",
@@ -5531,7 +5531,7 @@
         },
         "ScriptSpawn": {
           "type": "resref",
-          "value": "e1_on_spawn_die"
+          "value": "e0_rdm_wk"
         },
         "ScriptSpellAt": {
           "type": "resref",
@@ -5851,7 +5851,7 @@
         },
         "ChallengeRating": {
           "type": "float",
-          "value": 0.3333
+          "value": 0.25
         },
         "ClassList": {
           "type": "list",
@@ -5901,7 +5901,7 @@
         },
         "Dex": {
           "type": "byte",
-          "value": 17
+          "value": 3
         },
         "Disarmable": {
           "type": "byte",
@@ -6326,7 +6326,7 @@
         },
         "ScriptDeath": {
           "type": "resref",
-          "value": "e1_dth_no_loot"
+          "value": "x2_def_ondeath"
         },
         "ScriptDialogue": {
           "type": "resref",
@@ -6358,7 +6358,7 @@
         },
         "ScriptSpawn": {
           "type": "resref",
-          "value": "e1_on_spawn_die"
+          "value": "e0_rdm_wk"
         },
         "ScriptSpellAt": {
           "type": "resref",
@@ -6678,7 +6678,7 @@
         },
         "ChallengeRating": {
           "type": "float",
-          "value": 0.3333
+          "value": 0.25
         },
         "ClassList": {
           "type": "list",
@@ -6728,7 +6728,7 @@
         },
         "Dex": {
           "type": "byte",
-          "value": 17
+          "value": 3
         },
         "Disarmable": {
           "type": "byte",
@@ -7153,7 +7153,7 @@
         },
         "ScriptDeath": {
           "type": "resref",
-          "value": "e1_dth_no_loot"
+          "value": "x2_def_ondeath"
         },
         "ScriptDialogue": {
           "type": "resref",
@@ -7185,7 +7185,7 @@
         },
         "ScriptSpawn": {
           "type": "resref",
-          "value": "e1_on_spawn_die"
+          "value": "e0_rdm_wk"
         },
         "ScriptSpellAt": {
           "type": "resref",
@@ -13231,7 +13231,7 @@
         },
         "Bearing": {
           "type": "float",
-          "value": 3.1416
+          "value": -3.1416
         },
         "BodyBag": {
           "type": "byte",
@@ -15706,7 +15706,7 @@
         },
         "Bearing": {
           "type": "float",
-          "value": 3.1416
+          "value": -3.1416
         },
         "BodyBag": {
           "type": "byte",
@@ -17731,7 +17731,7 @@
         },
         "Bearing": {
           "type": "float",
-          "value": 3.1416
+          "value": -3.1416
         },
         "BodyBag": {
           "type": "byte",
@@ -22006,7 +22006,7 @@
         },
         "Bearing": {
           "type": "float",
-          "value": 3.1416
+          "value": -3.1416
         },
         "BodyBag": {
           "type": "byte",
@@ -22231,7 +22231,7 @@
         },
         "Bearing": {
           "type": "float",
-          "value": 3.1416
+          "value": -3.1416
         },
         "BodyBag": {
           "type": "byte",
