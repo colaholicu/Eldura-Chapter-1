@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "name": "NWN",
+            "type": "node-terminal",
+            "preLaunchTask": "killProcess",
+            "command": "nasher test -y --default --verbose",
+            "request": "launch"
+        }
+    ]
+}

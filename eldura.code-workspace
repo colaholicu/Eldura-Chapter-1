@@ -41,7 +41,15 @@
             "**/*.tga": true,
             "**/*.mtr": true,
             "**/*.txi": true,
-        }
+        },
+        "naive-definitions-vscode.fileTypes": "**/*.{nss}",
+        "naive-definitions-vscode.definitions": [
+            "int",
+            "string",
+            "object",
+            "void"
+        ],
+        "debug.onTaskErrors": "debugAnyway"
     },
     "files.associations": {}
 }
