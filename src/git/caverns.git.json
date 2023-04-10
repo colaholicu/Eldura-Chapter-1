@@ -1271,7 +1271,7 @@
         "FirstName": {
           "type": "cexolocstring",
           "value": {
-            "0": "Small Spider"
+            "0": "Dead Spider"
           }
         },
         "fortbonus": {
@@ -1364,7 +1364,7 @@
         },
         "ScriptDeath": {
           "type": "resref",
-          "value": "x2_def_ondeath"
+          "value": "e1_dth_no_loot"
         },
         "ScriptDialogue": {
           "type": "resref",
@@ -1396,7 +1396,7 @@
         },
         "ScriptSpawn": {
           "type": "resref",
-          "value": "e0_rdm_wk"
+          "value": "e1_on_spawn_die"
         },
         "ScriptSpellAt": {
           "type": "resref",
@@ -2925,7 +2925,7 @@
         "FirstName": {
           "type": "cexolocstring",
           "value": {
-            "0": "Small Spider"
+            "0": "Dead Spider"
           }
         },
         "fortbonus": {
@@ -3018,7 +3018,7 @@
         },
         "ScriptDeath": {
           "type": "resref",
-          "value": "x2_def_ondeath"
+          "value": "e1_dth_no_loot"
         },
         "ScriptDialogue": {
           "type": "resref",
@@ -3050,7 +3050,7 @@
         },
         "ScriptSpawn": {
           "type": "resref",
-          "value": "e0_rdm_wk"
+          "value": "e1_on_spawn_die"
         },
         "ScriptSpellAt": {
           "type": "resref",
@@ -4579,7 +4579,7 @@
         "FirstName": {
           "type": "cexolocstring",
           "value": {
-            "0": "Small Spider"
+            "0": "Dead Spider"
           }
         },
         "fortbonus": {
@@ -4672,7 +4672,7 @@
         },
         "ScriptDeath": {
           "type": "resref",
-          "value": "x2_def_ondeath"
+          "value": "e1_dth_no_loot"
         },
         "ScriptDialogue": {
           "type": "resref",
@@ -4704,7 +4704,7 @@
         },
         "ScriptSpawn": {
           "type": "resref",
-          "value": "e0_rdm_wk"
+          "value": "e1_on_spawn_die"
         },
         "ScriptSpellAt": {
           "type": "resref",
@@ -5406,7 +5406,7 @@
         "FirstName": {
           "type": "cexolocstring",
           "value": {
-            "0": "Small Spider"
+            "0": "Dead Spider"
           }
         },
         "fortbonus": {
@@ -5499,7 +5499,7 @@
         },
         "ScriptDeath": {
           "type": "resref",
-          "value": "x2_def_ondeath"
+          "value": "e1_dth_no_loot"
         },
         "ScriptDialogue": {
           "type": "resref",
@@ -5531,7 +5531,7 @@
         },
         "ScriptSpawn": {
           "type": "resref",
-          "value": "e0_rdm_wk"
+          "value": "e1_on_spawn_die"
         },
         "ScriptSpellAt": {
           "type": "resref",
@@ -6233,7 +6233,7 @@
         "FirstName": {
           "type": "cexolocstring",
           "value": {
-            "0": "Small Spider"
+            "0": "Dead Spider"
           }
         },
         "fortbonus": {
@@ -6326,7 +6326,7 @@
         },
         "ScriptDeath": {
           "type": "resref",
-          "value": "x2_def_ondeath"
+          "value": "e1_dth_no_loot"
         },
         "ScriptDialogue": {
           "type": "resref",
@@ -6358,7 +6358,7 @@
         },
         "ScriptSpawn": {
           "type": "resref",
-          "value": "e0_rdm_wk"
+          "value": "e1_on_spawn_die"
         },
         "ScriptSpellAt": {
           "type": "resref",
@@ -7474,7 +7474,7 @@
         },
         "XPosition": {
           "type": "float",
-          "value": 49.6319
+          "value": 53.1234
         },
         "YOrientation": {
           "type": "float",
@@ -7482,7 +7482,7 @@
         },
         "YPosition": {
           "type": "float",
-          "value": 55.9418
+          "value": 56.1259
         },
         "ZPosition": {
           "type": "float",
@@ -13231,7 +13231,7 @@
         },
         "Bearing": {
           "type": "float",
-          "value": -3.1416
+          "value": 3.1416
         },
         "BodyBag": {
           "type": "byte",
@@ -15706,7 +15706,7 @@
         },
         "Bearing": {
           "type": "float",
-          "value": -3.1416
+          "value": 3.1416
         },
         "BodyBag": {
           "type": "byte",
@@ -17731,7 +17731,7 @@
         },
         "Bearing": {
           "type": "float",
-          "value": -3.1416
+          "value": 3.1416
         },
         "BodyBag": {
           "type": "byte",
@@ -22006,7 +22006,7 @@
         },
         "Bearing": {
           "type": "float",
-          "value": -3.1416
+          "value": 3.1416
         },
         "BodyBag": {
           "type": "byte",
@@ -22231,7 +22231,7 @@
         },
         "Bearing": {
           "type": "float",
-          "value": -3.1416
+          "value": 3.1416
         },
         "BodyBag": {
           "type": "byte",
