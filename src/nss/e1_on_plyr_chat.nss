@@ -14,6 +14,15 @@ void main()
 {
     string command = GetPCChatMessage();
     object pc = GetFirstPC();
+
+    if (command == "help")
+    {
+        DebugOut("tp_[object_tag] -- teleport to an object retrieved by tag");
+        DebugOut("gm [0/1] -- toggle god mode");
+        DebugOut("sli/sgi_[variable][value] -- SetLocalInt(PC/MODULE, variable, value)");
+        DebugOut("gi_[item][1/0] -- Create an item on the player or remove it");
+        return;
+    }
     
     int commandLength = GetStringLength(command);
     string commandPrefix = "tp_";
