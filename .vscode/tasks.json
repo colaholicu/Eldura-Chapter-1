@@ -15,7 +15,7 @@
                 "isDefault": true
             },
             "problemMatcher": []
-        },     
+        },
         {
             "label": "Compile Solution",
             "type": "shell",
@@ -51,10 +51,11 @@
             "problemMatcher": []
         },
         {
-            "label" : "killProcess",
+            "label": "killProcess",
             "type": "shell",
             "command": "taskkill /F /IM nwmain.exe",
             "problemMatcher": [],
-        },       
+            "hide": true
+        }
     ]
 }
