@@ -25,16 +25,16 @@ const int type_string = 2;
 const int type_object = 3;
 
 // operators:  ==, !=, <=, >=, <, >, Set
-// types: n:/Int -> int, f:/Float -> float, s:/String -> string, o:/Object -> object
-// scopes: p:/Blackboard -> Get/SetLocal<type>(PC), m:/Global -> Get/SetLocal<type>(module), i: -> Has/CreateItem(PC), j: -> JumpToLocation(PC)
+// types: Int, Float, String, Object
+// scopes: Blackboard -> Get/SetLocal<type>(PC), Global -> Get/SetLocal<type>(module), Has/Give(PC), Jump(PC) -> JumpToLocation
 
 // valid expression examples:
-// GetBlackboardInt(variable_name)==1
-// p:variable_name==n:1
-// GetModuleString(variable_name)==string_value
-// m:variable_name==s:string_value
-// SetBlackboardInt(variable_name,3)
-// p:variable_name=n:3
+// GetBlackboardInt(PC, variable_name) == 1
+// GetModuleString(variable_name) == string_value
+// SetBlackboardFloat(PC, variable_name, 3)
+// Has(PC, variable_name)==true
+// Give(PC, variable_name)
+// JumpTo(PC, location)
 
 string StringReplace(string in, string toReplace, string replaceWith)
 {
@@ -100,26 +100,6 @@ string TypeToString(int type)
     return "$:";
 }
 
-string ScopeToString(int scope)
-{
-    switch (scope)
-    {
-        case scope_local:
-            return "p:";
-
-        case scope_global:
-            return "m:";
-
-        case scope_inventory:
-            return "i:";
-
-        case scope_jump:
-            return "j:";
-    }
-
-    return "@:";
-}
-
 string OperationToString(int operation)
 {
     switch (operation)
@@ -145,7 +125,7 @@ int CompareInt(string variableName, int value, int op, int scope)
     int variable = 0;
     if (scope == scope_local)
     {
-        variable = GetLocalInt(GetPCSpeaker(), variableName);
+        variable = GetLocalInt(GetFirstPC(), variableName);
     }
     else if (scope == scope_global)
     {
@@ -185,7 +165,7 @@ int CompareFloat(string variableName, float value, int op, int scope)
     float variable = 0.0f;
     if (scope == scope_local)
     {
-        variable = GetLocalFloat(GetPCSpeaker(), variableName);
+        variable = GetLocalFloat(GetFirstPC(), variableName);
     }
     else if (scope == scope_global)
     {
@@ -225,7 +205,7 @@ int CompareString(string variableName, string value, int op, int scope)
     string variable = "";
     if (scope == scope_local)
     {
-        variable = GetLocalString(GetPCSpeaker(), variableName);
+        variable = GetLocalString(GetFirstPC(), variableName);
     }
     else if (scope == scope_global)
     {
@@ -257,7 +237,7 @@ int CompareObject(string variableName, string objectName, int op, int scope)
     object variable = OBJECT_INVALID;
     if (scope == scope_local)
     {
-        variable = GetLocalObject(GetPCSpeaker(), variableName);
+        variable = GetLocalObject(GetFirstPC(), variableName);
     }
     else
     {
@@ -289,7 +269,7 @@ int CompareObject(string variableName, string objectName, int op, int scope)
 //         case scope_inventory:
 //             if (type == type_int)
 //             {
-//                 int hasItem = HasItem(GetPCSpeaker(), variable);
+//                 int hasItem = HasItem(GetFirstPC(), variable);
 //                 if (op == op_equal)
 //                 {
 //                     result = hasItem == StringToInt(value);
@@ -346,7 +326,7 @@ int CompareObject(string variableName, string objectName, int op, int scope)
 //         case scope_inventory:
 //             if (type == type_int)
 //             {
-//                 if (CreateItemOnObject(variable, GetPCSpeaker(), StringToInt(value)) != OBJECT_INVALID)
+//                 if (CreateItemOnObject(variable, GetFirstPC(), StringToInt(value)) != OBJECT_INVALID)
 //                 {
 //                     DebugOut("SUCCESS: CreateItemOnObject(" + variable + ", PC, " + value + ")");
 //                 }
@@ -373,7 +353,7 @@ int CompareObject(string variableName, string objectName, int op, int scope)
 //                 else
 //                 {
 //                     DebugOut("SUCCESS: AssignCommand(PC, ActionJumpToObject(" + variable + ", FALSE" + "))");
-//                     AssignCommand(GetPCSpeaker(), ActionJumpToObject(target, FALSE));
+//                     AssignCommand(GetFirstPC(), ActionJumpToObject(target, FALSE));
 //                 }
 //             }
 //             else
@@ -388,19 +368,19 @@ int CompareObject(string variableName, string objectName, int op, int scope)
 //             switch (type)
 //             {
 //                 case type_int:
-//                     SetLocalInt((scope == scope_local) ? GetPCSpeaker() : GetModule(), variable, StringToInt(value));
+//                     SetLocalInt((scope == scope_local) ? GetFirstPC() : GetModule(), variable, StringToInt(value));
 //                     break;
 
 //                 case type_float:
-//                     SetLocalFloat((scope == scope_local) ? GetPCSpeaker() : GetModule(), variable, StringToFloat(value));
+//                     SetLocalFloat((scope == scope_local) ? GetFirstPC() : GetModule(), variable, StringToFloat(value));
 //                     break;
 
 //                 case type_string:
-//                     SetLocalString((scope == scope_local) ? GetPCSpeaker() : GetModule(), variable, value);
+//                     SetLocalString((scope == scope_local) ? GetFirstPC() : GetModule(), variable, value);
 //                     break;
 
 //                 case type_object:
-//                     SetLocalObject((scope == scope_local) ? GetPCSpeaker() : GetModule(), variable, GetNearestObjectByTag(value));
+//                     SetLocalObject((scope == scope_local) ? GetFirstPC() : GetModule(), variable, GetNearestObjectByTag(value));
 //                     break;
 
 //                 default:
@@ -424,7 +404,7 @@ int EvaluateInstruction(int operation, string variable, int type, string value)
         {
             if (type == type_int)
             {
-                if (CreateItemOnObject(variable, GetPCSpeaker(), StringToInt(value)) != OBJECT_INVALID)
+                if (CreateItemOnObject(variable, GetFirstPC(), StringToInt(value)) != OBJECT_INVALID)
                 {
                     DebugOut("SUCCESS: CreateItemOnObject(" + variable + ", PC, " + value + ")");
                 }
@@ -451,7 +431,7 @@ int EvaluateInstruction(int operation, string variable, int type, string value)
             else
             {
                 DebugOut("SUCCESS: AssignCommand(PC, ActionJumpToObject(" + variable + ", FALSE" + "))");
-                AssignCommand(GetPCSpeaker(), ActionJumpToObject(target, FALSE));
+                AssignCommand(GetFirstPC(), ActionJumpToObject(target, FALSE));
             }
             // else
             // {
@@ -466,19 +446,19 @@ int EvaluateInstruction(int operation, string variable, int type, string value)
             switch (type)
             {
                 case type_int:
-                    SetLocalInt((operation == operation_blackboard) ? GetPCSpeaker() : GetModule(), variable, StringToInt(value));
+                    SetLocalInt((operation == operation_blackboard) ? GetFirstPC() : GetModule(), variable, StringToInt(value));
                     break;
 
                 case type_float:
-                    SetLocalFloat((operation == operation_blackboard) ? GetPCSpeaker() : GetModule(), variable, StringToFloat(value));
+                    SetLocalFloat((operation == operation_blackboard) ? GetFirstPC() : GetModule(), variable, StringToFloat(value));
                     break;
 
                 case type_string:
-                    SetLocalString((operation == operation_blackboard) ? GetPCSpeaker() : GetModule(), variable, value);
+                    SetLocalString((operation == operation_blackboard) ? GetFirstPC() : GetModule(), variable, value);
                     break;
 
                 case type_object:
-                    SetLocalObject((operation == operation_blackboard) ? GetPCSpeaker() : GetModule(), variable, GetNearestObjectByTag(value));
+                    SetLocalObject((operation == operation_blackboard) ? GetFirstPC() : GetModule(), variable, GetNearestObjectByTag(value));
                     break;
 
                 default:
@@ -505,7 +485,7 @@ int EvaluateQuery(int operation, string variable, int op, int type, string value
     {
         case scope_inventory:
         {
-            int hasItem = HasItem(GetPCSpeaker(), variable);
+            int hasItem = HasItem(GetFirstPC(), variable);
             if (op == op_equal)
             {
                 result = hasItem == StringToInt(value);
@@ -559,8 +539,8 @@ int EvaluateExpressionEx(string expression)
 {
     int expressionLength = GetStringLength(expression);
 
-    expression = StringReplace(expression, " ", "");
     DebugOut("Expression: " + expression);
+    expression = StringReplace(expression, " ", "");    
 
     int operation = -1;
     int cursor = 0;
@@ -582,8 +562,6 @@ int EvaluateExpressionEx(string expression)
         DebugOut("ERROR: expression does not contain a valid operation!");
         return FALSE;
     }
-
-    // DebugOut("Operation: " + OperationToString(op));
 
     int isQuery = FALSE;
     // get if it's a query or if it's an action/assigment + advance the cursor
@@ -655,7 +633,6 @@ int EvaluateExpressionEx(string expression)
             break;
     }
 
-    DebugOut("Type: " + TypeToString(type));
     if (type == -1)
     {
         DebugOut("ERROR: Invalid type in operation!");
@@ -715,16 +692,27 @@ int EvaluateExpressionEx(string expression)
     }
     else
     {
-        int variableEnd = FindSubString(expression, ",", cursor);
-        variable = GetSubString(expression, cursor, variableEnd - cursor);
+        int variableEnd = 0;
+        if (operation == operation_blackboard)
+        {
+            cursor += 3; // PC,
+            variableEnd = FindSubString(expression, ",", cursor);
+            variable = GetSubString(expression, cursor, variableEnd - cursor);
+            variable = StringReplace(variable, " ", "");
+            cursor = variableEnd + 1; // to include ","
+        }
+        else
+        {
+            variableEnd = FindSubString(expression, ",", cursor);
+            variable = GetSubString(expression, cursor, variableEnd - cursor);
+        }
 
-        DebugOut("Variable: " + variable);
-        int valueEnd = FindSubString(expression, ",", variableEnd);
-        value = GetSubString(expression, variableEnd, valueEnd - variableEnd);
-        DebugOut("Value: " + value);
+        int valueEnd = FindSubString(expression, ")", cursor);
+        value = GetSubString(expression, cursor, valueEnd - cursor);
 
         return EvaluateInstruction(operation, variable, type, value);
     }
+
     DebugOut("Expression " + expression + " failed!");
     return FALSE;
 }
