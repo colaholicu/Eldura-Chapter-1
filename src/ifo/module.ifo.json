@@ -104,6 +104,13 @@
           "type": "resref",
           "value": "uppercaves"
         }
+      },
+      {
+        "__struct_id": 6,
+        "Area_Name": {
+          "type": "resref",
+          "value": "scripttest"
+        }
       }
     ]
   },
@@ -175,7 +182,7 @@
   },
   "Mod_MinGameVer": {
     "type": "cexostring",
-    "value": "1.83"
+    "value": "1.86"
   },
   "Mod_MinPerHour": {
     "type": "byte",
