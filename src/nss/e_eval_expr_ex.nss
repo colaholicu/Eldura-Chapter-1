@@ -1,5 +1,6 @@
 #include "e_debug_out"
 #include "nw_i0_tool"
+#include "x3_inc_string"
 
 const int op_equal = 0;
 const int op_not_equal = 1;
@@ -35,24 +36,6 @@ const int type_object = 3;
 // Has(PC, variable_name)==true
 // Give(PC, variable_name)
 // JumpTo(PC, location)
-
-string StringReplace(string in, string toReplace, string replaceWith)
-{
-    string result = "";
-    int pos = 0;
-    while (pos < GetStringLength(in))
-    {
-        string i = GetSubString(in, pos, 1);
-        if (i == toReplace)
-            result = result + replaceWith;
-        else
-            result = result + i;
-        pos++;
-    }
-
-    return result;
-}
-
 
 string OpToString(int op)
 {
