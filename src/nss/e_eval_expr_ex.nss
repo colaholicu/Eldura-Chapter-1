@@ -27,14 +27,14 @@ const int type_object = 3;
 
 // operators:  ==, !=, <=, >=, <, >, Set
 // types: Int, Float, String, Object
-// scopes: Blackboard -> Get/SetLocal<type>(PC), Global -> Get/SetLocal<type>(module), Has/Give(PC), Jump(PC) -> JumpToLocation
+// scopes: Blackboard -> Get/SetLocal<type>(PC), Global -> Get/SetLocal<type>(module), Has/GiveItem(PC), Jump(PC) -> JumpToLocation
 
 // valid expression examples:
 // GetBlackboardInt(PC, variable_name) == 1
 // GetModuleString(variable_name) == string_value
 // SetBlackboardFloat(PC, variable_name, 3)
-// Has(PC, variable_name)==true
-// Give(PC, variable_name)
+// HasItem(PC, variable_name)==true
+// GiveItem(PC, variable_name)
 // JumpTo(PC, location)
 
 string OpToString(int op)
@@ -91,7 +91,7 @@ string OperationToString(int operation)
             return "Blackboard";
 
         case operation_module:
-            return "Module";
+            return "Global";
 
         case operation_inventory:
             return "Item";
@@ -105,14 +105,14 @@ string OperationToString(int operation)
 
 int CompareInt(string variableName, int value, int op, int scope)
 {
-    int variable = 0;
+    int variable_value = 0;
     if (scope == scope_local)
     {
-        variable = GetLocalInt(GetFirstPC(), variableName);
+        variable_value = GetLocalInt(GetFirstPC(), variableName);
     }
     else if (scope == scope_global)
     {
-        variable = GetLocalInt(GetModule(), variableName);
+        variable_value = GetLocalInt(GetModule(), variableName);
     }
     else
     {
@@ -122,22 +122,22 @@ int CompareInt(string variableName, int value, int op, int scope)
     switch (op)
     {
         case op_equal:
-            return variable == value;
+            return variable_value == value;
 
         case op_not_equal:
-            return variable != value;
+            return variable_value != value;
 
         case op_less_or_equal:
-            return variable <= value;
+            return variable_value <= value;
 
         case op_greater_or_equal:
-            return variable >= value;
+            return variable_value >= value;
 
         case op_less:
-            return variable < value;
+            return variable_value < value;
 
         case op_greater:
-            return variable > value;
+            return variable_value > value;
     }
 
     return FALSE;
@@ -145,14 +145,14 @@ int CompareInt(string variableName, int value, int op, int scope)
 
 int CompareFloat(string variableName, float value, int op, int scope)
 {
-    float variable = 0.0f;
+    float variable_value = 0.0f;
     if (scope == scope_local)
     {
-        variable = GetLocalFloat(GetFirstPC(), variableName);
+        variable_value = GetLocalFloat(GetFirstPC(), variableName);
     }
     else if (scope == scope_global)
     {
-        variable = GetLocalFloat(GetModule(), variableName);
+        variable_value = GetLocalFloat(GetModule(), variableName);
     }
     else
     {
@@ -162,22 +162,22 @@ int CompareFloat(string variableName, float value, int op, int scope)
     switch (op)
     {
         case op_equal:
-            return variable == value;
+            return variable_value == value;
 
         case op_not_equal:
-            return variable != value;
+            return variable_value != value;
 
         case op_less_or_equal:
-            return variable <= value;
+            return variable_value <= value;
 
         case op_greater_or_equal:
-            return variable >= value;
+            return variable_value >= value;
 
         case op_less:
-            return variable < value;
+            return variable_value < value;
 
         case op_greater:
-            return variable > value;
+            return variable_value > value;
     }
 
     return FALSE;
@@ -185,14 +185,14 @@ int CompareFloat(string variableName, float value, int op, int scope)
 
 int CompareString(string variableName, string value, int op, int scope)
 {
-    string variable = "";
+    string variable_value = "";
     if (scope == scope_local)
     {
-        variable = GetLocalString(GetFirstPC(), variableName);
+        variable_value = GetLocalString(GetFirstPC(), variableName);
     }
     else if (scope == scope_global)
     {
-        variable = GetLocalString(GetModule(), variableName);
+        variable_value = GetLocalString(GetModule(), variableName);
     }
     else
     {
@@ -202,14 +202,14 @@ int CompareString(string variableName, string value, int op, int scope)
     switch (op)
     {
         case op_equal:
-            return variable == value;
+            return variable_value == value;
 
         case op_not_equal:
         case op_less_or_equal:
         case op_greater_or_equal:
         case op_less:
         case op_greater:
-            return variable != value;
+            return variable_value != value;
     }
 
     return FALSE;
@@ -217,28 +217,28 @@ int CompareString(string variableName, string value, int op, int scope)
 
 int CompareObject(string variableName, string objectName, int op, int scope)
 {
-    object variable = OBJECT_INVALID;
+    object variable_value = OBJECT_INVALID;
     if (scope == scope_local)
     {
-        variable = GetLocalObject(GetFirstPC(), variableName);
+        variable_value = GetLocalObject(GetFirstPC(), variableName);
     }
     else
     {
-        variable = GetLocalObject(GetModule(), variableName);
+        variable_value = GetLocalObject(GetModule(), variableName);
     }
     
     object value = GetNearestObjectByTag(objectName);
     switch (op)
     {
         case op_equal:
-            return variable == value;
+            return variable_value == value;
 
         case op_not_equal:
         case op_less_or_equal:
         case op_greater_or_equal:
         case op_less:
         case op_greater:
-            return variable != value;
+            return variable_value != value;
     }
 
     return FALSE;
@@ -463,11 +463,13 @@ int EvaluateInstruction(int operation, string variable, int type, string value)
 
 int EvaluateQuery(int operation, string variable, int op, int type, string value)
 {
-    int result = FALSE;    
+    int result = FALSE;
+    string operationPrefix = "Get";
     switch (operation)
     {
         case scope_inventory:
         {
+            operationPrefix = "Has";
             int hasItem = HasItem(GetFirstPC(), variable);
             if (op == op_equal)
             {
@@ -508,13 +510,13 @@ int EvaluateQuery(int operation, string variable, int op, int type, string value
 
                 default:
                     result = FALSE;
-                    DebugOut("ERROR: unknown type in expression: ScopeToString(scope) + variable + OpToString(op) + TypeToString(type) + value");
+                    DebugOut("ERROR: unknown type in expression: operationPrefix + OperationToString(operation) + TypeToString(type) + ( + variable + ) + OpToString(op) + value");
             }
             break;
         }
     }
     
-    DebugOut(OperationToString(operation) + variable + OpToString(op) + TypeToString(type) + value + " => " + IntToString(result));
+    DebugOut(operationPrefix + OperationToString(operation) + TypeToString(type) + "(" + variable + ")" + OpToString(op) + value + " => " + IntToString(result));
     return result;
 }
 
@@ -523,7 +525,8 @@ int EvaluateExpressionEx(string expression)
     int expressionLength = GetStringLength(expression);
 
     DebugOut("Expression: " + expression);
-    expression = StringReplace(expression, " ", "");    
+    expression = StringReplace(expression, " ", "");
+    expression = StringReplace(expression, "\"", "");
 
     int operation = -1;
     int cursor = 0;
@@ -565,14 +568,14 @@ int EvaluateExpressionEx(string expression)
             break;
 
         case operation_inventory:
-            if (FindSubString(expression, "Has") == 0)
+            if (FindSubString(expression, "HasItem") == 0)
             {
                 isQuery = TRUE;
-                cursor += 3;
+                cursor += 3 + 4;
             }
-            else if (FindSubString(expression, "Give") == 0)
+            else if (FindSubString(expression, "GiveItem") == 0)
             {
-                cursor += 4;                
+                cursor += 4 + 4;                
             }
             else
             {
@@ -633,40 +636,13 @@ int EvaluateExpressionEx(string expression)
         op = -1;
         for (op = op_equal; op < op_greater; op++)
         {
-            int found = -1;
-            int opStrLength = 2;
-            switch (op)
+            string op_string = OpToString(op);
+            cursor = FindSubString(expression, op_string);            
+
+            if ((cursor != -1) && (op != op_invalid))
             {
-                case op_equal:
-                    cursor = FindSubString(expression, "==");
-                    break;
-
-                case op_not_equal:
-                    cursor = FindSubString(expression, "!=");
-                    break;
-
-                case op_less_or_equal:
-                    cursor = FindSubString(expression, "<=");
-                    break;
-
-                case op_greater_or_equal:
-                    cursor = FindSubString(expression, ">=");
-                    break;
-
-                case op_less:
-                    cursor = FindSubString(expression, "<");
-                    opStrLength = 1;
-                    break;
-
-                case op_greater:
-                    cursor = FindSubString(expression, ">");
-                    opStrLength = 1;
-                    break;
-            }
-
-            if (cursor != -1)
-            {
-                value = GetSubString(expression, cursor, GetStringLength(expression) - cursor - 1);
+                cursor += GetStringLength(op_string);
+                value = GetSubString(expression, cursor, GetStringLength(expression) - cursor);
                 break;
             }
         }
@@ -679,20 +655,14 @@ int EvaluateExpressionEx(string expression)
         if (operation == operation_blackboard)
         {
             cursor += 3; // PC,
-            variableEnd = FindSubString(expression, ",", cursor);
-            variable = GetSubString(expression, cursor, variableEnd - cursor);
-            variable = StringReplace(variable, " ", "");
-            cursor = variableEnd + 1; // to include ","
         }
-        else
-        {
-            variableEnd = FindSubString(expression, ",", cursor);
-            variable = GetSubString(expression, cursor, variableEnd - cursor);
-        }
+        
+        variableEnd = FindSubString(expression, ",", cursor);
+        variable = GetSubString(expression, cursor, variableEnd - cursor);
+        cursor = variableEnd + 1; // to include ","
 
         int valueEnd = FindSubString(expression, ")", cursor);
         value = GetSubString(expression, cursor, valueEnd - cursor);
-
         return EvaluateInstruction(operation, variable, type, value);
     }
 

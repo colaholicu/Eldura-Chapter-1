@@ -7,7 +7,7 @@ void main()
 
     if (target == OBJECT_INVALID || GetStringLength(line) <= 0)
     {
-        DebugOut("Trigger with tag " + GetTag(OBJECT_SELF) + "needs to have valied values configured on the object for the \'target\' and \'line\' variables");
+        DebugOut("Trigger with tag " + GetTag(OBJECT_SELF) + "needs to have valid values configured on the object for the \'target\' and \'line\' variables");
         DestroyObject(OBJECT_SELF);
         return;
     }

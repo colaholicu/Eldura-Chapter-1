@@ -43,7 +43,7 @@
               },
               "Value": {
                 "type": "cexostring",
-                "value": "GetGlobalFloat(\"MyGlobalValue\") == 10"
+                "value": "GetGlobalFloat(\"MyGlobalValue\") == 10.3"
               }
             }
           ]
@@ -87,7 +87,7 @@
         "Text": {
           "type": "cexolocstring",
           "value": {
-            "0": "GetGlobalFloat(\"MyGlobalValue\") == 10"
+            "0": "GetGlobalFloat(\"MyGlobalValue\") == 10.3"
           }
         }
       },
