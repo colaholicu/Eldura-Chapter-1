@@ -465,6 +465,7 @@ int EvaluateQuery(int operation, string variable, int op, int type, string value
 {
     int result = FALSE;
     string operationPrefix = "Get";
+    string typeString = TypeToString(type);   
     switch (operation)
     {
         case scope_inventory:
@@ -478,7 +479,8 @@ int EvaluateQuery(int operation, string variable, int op, int type, string value
             else
             {
                 result = hasItem != StringToInt(value);
-            }  
+            }
+            typeString = "";
             break;
         }
 

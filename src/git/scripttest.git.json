@@ -2477,7 +2477,7 @@
           "id": 12423,
           "type": "cexolocstring",
           "value": {
-            "0": "HasItem(PC, \"palenecklace\") == true"
+            "0": "HasItem(PC, \"palenecklace\") == 1"
           }
         },
         "fortbonus": {
@@ -2864,7 +2864,7 @@
               },
               "Value": {
                 "type": "cexostring",
-                "value": "HasItem(PC, \"palenecklace\") == true"
+                "value": "HasItem(PC, \"palenecklace\") == 1"
               }
             }
           ]
