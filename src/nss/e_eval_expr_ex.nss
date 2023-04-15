@@ -33,7 +33,7 @@ const int type_object = 3;
 // GetBlackboardInt(PC, variable_name) == 1
 // GetModuleString(variable_name) == string_value
 // SetBlackboardFloat(PC, variable_name, 3)
-// HasItem(PC, variable_name)==true
+// HasItem(PC, variable_name)==1
 // GiveItem(PC, variable_name)
 // JumpTo(PC, location)
 
@@ -385,20 +385,13 @@ int EvaluateInstruction(int operation, string variable, int type, string value)
     {
         case operation_inventory:
         {
-            if (type == type_int)
+            if (CreateItemOnObject(variable, GetFirstPC(), StringToInt(value)) != OBJECT_INVALID)
             {
-                if (CreateItemOnObject(variable, GetFirstPC(), StringToInt(value)) != OBJECT_INVALID)
-                {
-                    DebugOut("SUCCESS: CreateItemOnObject(" + variable + ", PC, " + value + ")");
-                }
-                else
-                {
-                    DebugOut("ERROR: CreateItemOnObject(" + variable + ", PC, " + value + ")");
-                }
+                DebugOut("SUCCESS: CreateItemOnObject(" + variable + ", PC, " + value + ")");
             }
             else
             {
-                DebugOut("ERROR: wrong type (expected \'n:\') in expression: ScopeToString(scope) + variable + OpToString(op) + TypeToString(type) + value");
+                DebugOut("ERROR: CreateItemOnObject(" + variable + ", PC, " + value + ")");
                 return FALSE;
             }
             break;
@@ -518,7 +511,7 @@ int EvaluateQuery(int operation, string variable, int op, int type, string value
         }
     }
     
-    DebugOut(operationPrefix + OperationToString(operation) + TypeToString(type) + "(" + variable + ")" + OpToString(op) + value + " => " + IntToString(result));
+    DebugOut(operationPrefix + OperationToString(operation) + typeString + "(" + variable + ")" + OpToString(op) + value + " => " + IntToString(result));
     return result;
 }
 
@@ -660,11 +653,29 @@ int EvaluateExpressionEx(string expression)
         }
         
         variableEnd = FindSubString(expression, ",", cursor);
-        variable = GetSubString(expression, cursor, variableEnd - cursor);
-        cursor = variableEnd + 1; // to include ","
+        // GiveItem can be:
+        // GiveItem(PC, item_name) -> give 1 instance of this item
+        // GiveItem(PC, item_name, 3) -> give 3 instances of this item
+        if ((operation == operation_inventory) && (variableEnd == -1))
+        {
+            variableEnd = FindSubString(expression, ")", cursor);
+            if (variableEnd != -1)
+            {
+                variable = GetSubString(expression, cursor, variableEnd - cursor);
+                value = "1";
+            }
+        }
+        else
+        {
+            variable = GetSubString(expression, cursor, variableEnd - cursor);            
+        }
+        cursor = variableEnd + 1; // to include ","        
 
         int valueEnd = FindSubString(expression, ")", cursor);
         value = GetSubString(expression, cursor, valueEnd - cursor);
+        if (valueEnd >= 0)
+            value = GetSubString(expression, cursor, valueEnd - cursor);
+
         return EvaluateInstruction(operation, variable, type, value);
     }
 

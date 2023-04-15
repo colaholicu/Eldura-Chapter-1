@@ -115,7 +115,7 @@
               },
               "Value": {
                 "type": "cexostring",
-                "value": "HasItem(PC, \"palenecklace\") == 1"
+                "value": "GiveItem(PC, \"palenecklace\", 3)"
               }
             }
           ]
@@ -159,7 +159,7 @@
         "Text": {
           "type": "cexolocstring",
           "value": {
-            "0": "HasItem(PC, \"palenecklace\") == 1"
+            "0": "GiveItem(PC, \"palenecklace\",3 )"
           }
         }
       },
