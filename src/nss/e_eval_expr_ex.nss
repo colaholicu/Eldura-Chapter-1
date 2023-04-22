@@ -25,7 +25,7 @@ const int type_float = 1;
 const int type_string = 2;
 const int type_object = 3;
 
-// operators:  ==, !=, <=, >=, <, >, Set
+// operators:  ==, !=, <=, >=, <, >, Set/Get
 // types: Int, Float, String, Object
 // scopes: Blackboard -> Get/SetLocal<type>(PC), Global -> Get/SetLocal<type>(module), Has/GiveItem(PC), Jump(PC) -> JumpToLocation
 
@@ -244,141 +244,6 @@ int CompareObject(string variableName, string objectName, int op, int scope)
     return FALSE;
 }
 
-// int EvaluateGet(int scope, string variable, int op, int type, string value)
-// {
-//     int result = FALSE;
-//     switch (scope)
-//     {
-//         case scope_inventory:
-//             if (type == type_int)
-//             {
-//                 int hasItem = HasItem(GetFirstPC(), variable);
-//                 if (op == op_equal)
-//                 {
-//                     result = hasItem == StringToInt(value);
-//                 }
-//                 else
-//                 {
-//                     result = hasItem != StringToInt(value);
-//                 }            
-//             }
-//             else
-//             {
-//                 DebugOut("ERROR: wrong type (expected \'n:\') in expression: " + ScopeToString(scope) + variable + OpToString(op) + TypeToString(type) + value + ")");
-//             }
-//             break;
-
-//         case scope_jump:
-//             DebugOut("ERROR: invalid use of EvaluateGet() in expression: " + ScopeToString(scope) + variable + OpToString(op) + TypeToString(type) + value + ")");
-//             break;
-
-//         default:
-//             switch (type)
-//             {
-//                 case type_int:
-//                     result = CompareInt(variable, StringToInt(value), op, scope);
-//                     break;
-
-//                 case type_float:
-//                     result = CompareFloat(variable, StringToFloat(value), op, scope);
-//                     break;
-
-//                 case type_string:
-//                     result = CompareString(variable, value, op, scope);
-//                     break;
-
-//                 case type_object:
-//                     result = CompareObject(variable, value, op, scope);
-//                     break;
-
-//                 default:
-//                     result = FALSE;
-//                     DebugOut("ERROR: unknown type in expression: ScopeToString(scope) + variable + OpToString(op) + TypeToString(type) + value");
-//             }
-//             break;
-//     }
-    
-//     DebugOut(ScopeToString(scope) + variable + OpToString(op) + TypeToString(type) + value + " => " + IntToString(result));
-//     return result;
-// }
-
-// int EvaluateSet(int scope, string variable, int op, int type, string value)
-// {
-//     switch (scope)
-//     {
-//         case scope_inventory:
-//             if (type == type_int)
-//             {
-//                 if (CreateItemOnObject(variable, GetFirstPC(), StringToInt(value)) != OBJECT_INVALID)
-//                 {
-//                     DebugOut("SUCCESS: CreateItemOnObject(" + variable + ", PC, " + value + ")");
-//                 }
-//                 else
-//                 {
-//                     DebugOut("ERROR: CreateItemOnObject(" + variable + ", PC, " + value + ")");
-//                 }
-//             }
-//             else
-//             {
-//                 DebugOut("ERROR: wrong type (expected \'n:\') in expression: ScopeToString(scope) + variable + OpToString(op) + TypeToString(type) + value");
-//                 return FALSE;
-//             }
-//             break;
-
-//         case scope_jump:
-//             if (type == type_int)
-//             {
-//                 object target = GetObjectByTag(variable);
-//                 if (target == OBJECT_INVALID)
-//                 {
-//                     DebugOut("ERROR: GetObjectByTag(" + variable + ")");
-//                 }
-//                 else
-//                 {
-//                     DebugOut("SUCCESS: AssignCommand(PC, ActionJumpToObject(" + variable + ", FALSE" + "))");
-//                     AssignCommand(GetFirstPC(), ActionJumpToObject(target, FALSE));
-//                 }
-//             }
-//             else
-//             {
-//                 DebugOut("ERROR: wrong type (expected \'n:\') in expression: ScopeToString(scope) + variable + OpToString(op) + TypeToString(type) + value");
-//                 return FALSE;
-//             }
-//             break;
-
-
-//         default:
-//             switch (type)
-//             {
-//                 case type_int:
-//                     SetLocalInt((scope == scope_local) ? GetFirstPC() : GetModule(), variable, StringToInt(value));
-//                     break;
-
-//                 case type_float:
-//                     SetLocalFloat((scope == scope_local) ? GetFirstPC() : GetModule(), variable, StringToFloat(value));
-//                     break;
-
-//                 case type_string:
-//                     SetLocalString((scope == scope_local) ? GetFirstPC() : GetModule(), variable, value);
-//                     break;
-
-//                 case type_object:
-//                     SetLocalObject((scope == scope_local) ? GetFirstPC() : GetModule(), variable, GetNearestObjectByTag(value));
-//                     break;
-
-//                 default:
-//                     DebugOut("ERROR: wrong type in expression: ScopeToString(scope) + variable + OpToString(op) + TypeToString(type) + value");
-//                     return FALSE;
-//             }
-
-//             DebugOut("SetLocal<type>(" + ((scope == scope_local) ? "PC, " : "Module, ") + variable + ", " + value + ")");
-//             break;
-
-//     }
-
-//     return TRUE;
-// }
-
 int EvaluateInstruction(int operation, string variable, int type, string value)
 {
     switch (operation)
@@ -399,21 +264,21 @@ int EvaluateInstruction(int operation, string variable, int type, string value)
 
         case operation_jump:
         {
-            object target = GetObjectByTag(variable);
-            if (target == OBJECT_INVALID)
+            object targetCharacter = variable == "PC" ? GetFirstPC() : GetObjectByTag(variable);
+            object targetDestination = GetObjectByTag(value);
+            if (targetCharacter == OBJECT_INVALID)
             {
                 DebugOut("ERROR: GetObjectByTag(" + variable + ")");
+                return FALSE;
             }
-            else
+            if (targetDestination == OBJECT_INVALID)
             {
-                DebugOut("SUCCESS: AssignCommand(PC, ActionJumpToObject(" + variable + ", FALSE" + "))");
-                AssignCommand(GetFirstPC(), ActionJumpToObject(target, FALSE));
+                DebugOut("ERROR: GetObjectByTag(" + value + ")");
+                return FALSE;
             }
-            // else
-            // {
-            //     DebugOut("ERROR: wrong type (expected \'n:\') in expression: ScopeToString(scope) + variable + OpToString(op) + TypeToString(type) + value");
-            //     return FALSE;
-            // }
+            
+            DebugOut("SUCCESS: AssignCommand(" + variable + ", ActionJumpToObject(" + value + ", FALSE" + "))");
+            AssignCommand(targetCharacter, ActionJumpToObject(targetDestination, FALSE));            
             break;
         }
 
@@ -527,7 +392,7 @@ int EvaluateExpressionEx(string expression)
     int cursor = 0;
     int op = -1;
     // get the type of operation + advance the cursor by the length of the operation string
-    for (op = operation_blackboard; op < operation_jump; op++)
+    for (op = operation_blackboard; op <= operation_jump; op++)
     {
         string operationKeyword = OperationToString(op);
         if (FindSubString(expression, operationKeyword) >= 0)
@@ -608,8 +473,9 @@ int EvaluateExpressionEx(string expression)
             }
             break;
 
-        case operation_inventory:
         case operation_jump:
+            cursor += 1;
+        case operation_inventory:        
             type = 0;
             break;
     }
