@@ -174,15 +174,7 @@
   },
   "Mod_HakList": {
     "type": "list",
-    "value": [
-      {
-        "__struct_id": 8,
-        "Mod_Hak": {
-          "type": "cexostring",
-          "value": "eldura"
-        }
-      }
-    ]
+    "value": []
   },
   "Mod_IsSaveGame": {
     "type": "byte",
