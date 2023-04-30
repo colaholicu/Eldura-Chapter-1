@@ -7,8 +7,8 @@ void DebugOut(string message)
     int nColourGreen = 0x00FF0FF;
     int nColourBlue = 0x0000FFFF;
     int nColourWhite = 0xFFFFFFFF;
-    int nFadeOut = 0xFFFFFFFF;
-    float timeOnScreen = 9999.0f;
+    int nFadeOut = 0x00000000;
+    float timeOnScreen = 9.0f;
 
     string msg1 = GetLocalString(pc, "msg1");
     string msg2 = GetLocalString(pc, "msg2");

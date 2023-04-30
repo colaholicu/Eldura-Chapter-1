@@ -6,6 +6,7 @@ float distance = -1.0f;
 // "tp_[object_tag] -- teleport to an object retrieved by tag\n" +
 // "gm [0/1] -- toggle god mode\n" +
 // "kill -- kills the player\n" + 
+// "dmg [0/1]-- infinite (very high) damage bonus\n" + 
 // "sli_[variable][value] -- SetLocalInt(PC, variable, value)\n" + 
 // "sgi_[variable][value] -- SetLocalInt(MODULE, variable, value)\n" + 
 // "gi_[item][1/0] -- Create an item on the player or remove it";
@@ -65,6 +66,45 @@ void main()
 
                 SetLocalInt(pc, "GodMode", 0);
                 ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectDamage(hp - originalHP), pc);
+            }
+        }
+
+        DebugOut(debug);
+        return;
+    }
+
+    commandPrefix = "dmg";
+    isValidCommand = FindSubString(command, commandPrefix);
+    if (isValidCommand != -1)
+    {
+        int prefixLength = GetStringLength(commandPrefix);
+        string strValue = GetSubString(command, commandLength - 1, 1);
+        int value = StringToInt(strValue);
+        string debug = "dmg mismatch";
+        if (value == 1)
+        {
+            if (GetLocalInt(pc, "Dmg") == 0)
+            {
+                debug = "ApplyEffectToObject(DURATION_TYPE_PERMANENT, EffectDamageIncrease(1000, DAMAGE_TYPE_FIRE), pc)";
+
+                SetLocalInt(pc, "Dmg", 1);
+                int damageType = -1;
+                for (damageType = DAMAGE_TYPE_BLUDGEONING; damageType <= DAMAGE_TYPE_SONIC; damageType *= 2)
+                    ApplyEffectToObject(DURATION_TYPE_PERMANENT, EffectDamageIncrease(20, damageType), pc);
+                ApplyEffectToObject(DURATION_TYPE_PERMANENT, EffectAttackIncrease(20, ATTACK_BONUS_ONHAND), pc);
+            }
+        }
+        else
+        {
+            if (GetLocalInt(pc, "Dmg") == 1)
+            {
+                debug = "ApplyEffectToObject(DURATION_TYPE_INSTANT, EffectDamageIncrease(-1000, DAMAGE_TYPE_FIRE), pc)";
+
+                SetLocalInt(pc, "Dmg", 0);
+                int damageType = -1;
+                for (damageType = DAMAGE_TYPE_BLUDGEONING; damageType <= DAMAGE_TYPE_SONIC; damageType *= 2)
+                    ApplyEffectToObject(DURATION_TYPE_PERMANENT, EffectDamageIncrease(-20, damageType), pc);
+                ApplyEffectToObject(DURATION_TYPE_PERMANENT, EffectAttackIncrease(-20, ATTACK_BONUS_ONHAND), pc);
             }
         }
 
