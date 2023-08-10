@@ -44,10 +44,11 @@
         },
         "naive-definitions-vscode.fileTypes": "**/*.{nss}",
         "naive-definitions-vscode.definitions": [
+            "void",
+            "float",
             "int",
             "string",
-            "object",
-            "void"
+            "object"
         ],
         "debug.onTaskErrors": "debugAnyway"
     },
