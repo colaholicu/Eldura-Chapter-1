@@ -249,7 +249,7 @@
   },
   "ScriptUserDefine": {
     "type": "resref",
-    "value": "c4_illspider_ud"
+    "value": "x2_def_userdef"
   },
   "SkillList": {
     "type": "list",

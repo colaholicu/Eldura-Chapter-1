@@ -130,5 +130,9 @@
   "TemplateResRef": {
     "type": "resref",
     "value": "elduranhelmet"
+  },
+  "xModelPart1": {
+    "type": "word",
+    "value": 22
   }
 }

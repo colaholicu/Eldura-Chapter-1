@@ -251,6 +251,10 @@
                 "type": "resref",
                 "value": "nw_it_crewps018"
               },
+              "xModelPart1": {
+                "type": "word",
+                "value": 1
+              },
               "XOrientation": {
                 "type": "float",
                 "value": 0.0
@@ -401,6 +405,10 @@
               "TemplateResRef": {
                 "type": "resref",
                 "value": "nw_it_creitem007"
+              },
+              "xModelPart1": {
+                "type": "word",
+                "value": 1
               },
               "XOrientation": {
                 "type": "float",
@@ -577,7 +585,7 @@
         },
         "ScriptUserDefine": {
           "type": "resref",
-          "value": "c4_illspider_ud"
+          "value": "x2_def_userdef"
         },
         "SkillList": {
           "type": "list",
@@ -1078,6 +1086,10 @@
                 "type": "resref",
                 "value": "nw_it_crewps018"
               },
+              "xModelPart1": {
+                "type": "word",
+                "value": 1
+              },
               "XOrientation": {
                 "type": "float",
                 "value": 0.0
@@ -1228,6 +1240,10 @@
               "TemplateResRef": {
                 "type": "resref",
                 "value": "nw_it_creitem007"
+              },
+              "xModelPart1": {
+                "type": "word",
+                "value": 1
               },
               "XOrientation": {
                 "type": "float",
@@ -1404,7 +1420,7 @@
         },
         "ScriptUserDefine": {
           "type": "resref",
-          "value": "c4_illspider_ud"
+          "value": "x2_def_userdef"
         },
         "SkillList": {
           "type": "list",
@@ -1905,6 +1921,10 @@
                 "type": "resref",
                 "value": "nw_it_crewps018"
               },
+              "xModelPart1": {
+                "type": "word",
+                "value": 1
+              },
               "XOrientation": {
                 "type": "float",
                 "value": 0.0
@@ -2055,6 +2075,10 @@
               "TemplateResRef": {
                 "type": "resref",
                 "value": "nw_it_creitem007"
+              },
+              "xModelPart1": {
+                "type": "word",
+                "value": 1
               },
               "XOrientation": {
                 "type": "float",
@@ -2231,7 +2255,7 @@
         },
         "ScriptUserDefine": {
           "type": "resref",
-          "value": "c4_illspider_ud"
+          "value": "x2_def_userdef"
         },
         "SkillList": {
           "type": "list",
@@ -2732,6 +2756,10 @@
                 "type": "resref",
                 "value": "nw_it_crewps018"
               },
+              "xModelPart1": {
+                "type": "word",
+                "value": 1
+              },
               "XOrientation": {
                 "type": "float",
                 "value": 0.0
@@ -2882,6 +2910,10 @@
               "TemplateResRef": {
                 "type": "resref",
                 "value": "nw_it_creitem007"
+              },
+              "xModelPart1": {
+                "type": "word",
+                "value": 1
               },
               "XOrientation": {
                 "type": "float",
@@ -3058,7 +3090,7 @@
         },
         "ScriptUserDefine": {
           "type": "resref",
-          "value": "c4_illspider_ud"
+          "value": "x2_def_userdef"
         },
         "SkillList": {
           "type": "list",
@@ -3559,6 +3591,10 @@
                 "type": "resref",
                 "value": "nw_it_crewps018"
               },
+              "xModelPart1": {
+                "type": "word",
+                "value": 1
+              },
               "XOrientation": {
                 "type": "float",
                 "value": 0.0
@@ -3709,6 +3745,10 @@
               "TemplateResRef": {
                 "type": "resref",
                 "value": "nw_it_creitem007"
+              },
+              "xModelPart1": {
+                "type": "word",
+                "value": 1
               },
               "XOrientation": {
                 "type": "float",
@@ -3885,7 +3925,7 @@
         },
         "ScriptUserDefine": {
           "type": "resref",
-          "value": "c4_illspider_ud"
+          "value": "x2_def_userdef"
         },
         "SkillList": {
           "type": "list",
@@ -4386,6 +4426,10 @@
                 "type": "resref",
                 "value": "nw_it_crewps018"
               },
+              "xModelPart1": {
+                "type": "word",
+                "value": 1
+              },
               "XOrientation": {
                 "type": "float",
                 "value": 0.0
@@ -4536,6 +4580,10 @@
               "TemplateResRef": {
                 "type": "resref",
                 "value": "nw_it_creitem007"
+              },
+              "xModelPart1": {
+                "type": "word",
+                "value": 1
               },
               "XOrientation": {
                 "type": "float",
@@ -4712,7 +4760,7 @@
         },
         "ScriptUserDefine": {
           "type": "resref",
-          "value": "c4_illspider_ud"
+          "value": "x2_def_userdef"
         },
         "SkillList": {
           "type": "list",
@@ -5213,6 +5261,10 @@
                 "type": "resref",
                 "value": "nw_it_crewps018"
               },
+              "xModelPart1": {
+                "type": "word",
+                "value": 1
+              },
               "XOrientation": {
                 "type": "float",
                 "value": 0.0
@@ -5364,6 +5416,10 @@
                 "type": "resref",
                 "value": "nw_it_creitem007"
               },
+              "xModelPart1": {
+                "type": "word",
+                "value": 1
+              },
               "XOrientation": {
                 "type": "float",
                 "value": 0.0
@@ -5406,7 +5462,7 @@
         "FirstName": {
           "type": "cexolocstring",
           "value": {
-            "0": "Dead Spider"
+            "0": "Small Spider"
           }
         },
         "fortbonus": {
@@ -5539,7 +5595,7 @@
         },
         "ScriptUserDefine": {
           "type": "resref",
-          "value": "c4_illspider_ud"
+          "value": "x2_def_userdef"
         },
         "SkillList": {
           "type": "list",
@@ -6040,6 +6096,10 @@
                 "type": "resref",
                 "value": "nw_it_crewps018"
               },
+              "xModelPart1": {
+                "type": "word",
+                "value": 1
+              },
               "XOrientation": {
                 "type": "float",
                 "value": 0.0
@@ -6190,6 +6250,10 @@
               "TemplateResRef": {
                 "type": "resref",
                 "value": "nw_it_creitem007"
+              },
+              "xModelPart1": {
+                "type": "word",
+                "value": 1
               },
               "XOrientation": {
                 "type": "float",
@@ -6366,7 +6430,7 @@
         },
         "ScriptUserDefine": {
           "type": "resref",
-          "value": "c4_illspider_ud"
+          "value": "x2_def_userdef"
         },
         "SkillList": {
           "type": "list",
@@ -6867,6 +6931,10 @@
                 "type": "resref",
                 "value": "nw_it_crewps018"
               },
+              "xModelPart1": {
+                "type": "word",
+                "value": 1
+              },
               "XOrientation": {
                 "type": "float",
                 "value": 0.0
@@ -7017,6 +7085,10 @@
               "TemplateResRef": {
                 "type": "resref",
                 "value": "nw_it_creitem007"
+              },
+              "xModelPart1": {
+                "type": "word",
+                "value": 1
               },
               "XOrientation": {
                 "type": "float",
@@ -7193,7 +7265,7 @@
         },
         "ScriptUserDefine": {
           "type": "resref",
-          "value": "c4_illspider_ud"
+          "value": "x2_def_userdef"
         },
         "SkillList": {
           "type": "list",
@@ -7693,6 +7765,10 @@
                 "type": "resref",
                 "value": "nw_it_crewps018"
               },
+              "xModelPart1": {
+                "type": "word",
+                "value": 1
+              },
               "XOrientation": {
                 "type": "float",
                 "value": 0.0
@@ -7843,6 +7919,10 @@
               "TemplateResRef": {
                 "type": "resref",
                 "value": "nw_it_crewps018"
+              },
+              "xModelPart1": {
+                "type": "word",
+                "value": 1
               },
               "XOrientation": {
                 "type": "float",
@@ -7995,6 +8075,10 @@
                 "type": "resref",
                 "value": "nw_it_crewps018"
               },
+              "xModelPart1": {
+                "type": "word",
+                "value": 1
+              },
               "XOrientation": {
                 "type": "float",
                 "value": 0.0
@@ -8145,6 +8229,10 @@
               "TemplateResRef": {
                 "type": "resref",
                 "value": "nw_it_creitem007"
+              },
+              "xModelPart1": {
+                "type": "word",
+                "value": 1
               },
               "XOrientation": {
                 "type": "float",
@@ -8588,7 +8676,7 @@
         },
         "XPosition": {
           "type": "float",
-          "value": 29.477
+          "value": 29.6193
         },
         "YOrientation": {
           "type": "float",
@@ -8596,7 +8684,7 @@
         },
         "YPosition": {
           "type": "float",
-          "value": 9.678900000000001
+          "value": 10.7038
         },
         "ZPosition": {
           "type": "float",
@@ -13231,7 +13319,7 @@
         },
         "Bearing": {
           "type": "float",
-          "value": 3.1416
+          "value": -3.1416
         },
         "BodyBag": {
           "type": "byte",
@@ -15679,11 +15767,11 @@
         },
         "X": {
           "type": "float",
-          "value": 29.5865
+          "value": 31.6187
         },
         "Y": {
           "type": "float",
-          "value": 10.3946
+          "value": 7.8693
         },
         "Z": {
           "type": "float",
@@ -15706,7 +15794,7 @@
         },
         "Bearing": {
           "type": "float",
-          "value": 3.1416
+          "value": -3.1416
         },
         "BodyBag": {
           "type": "byte",
@@ -16129,15 +16217,15 @@
         },
         "X": {
           "type": "float",
-          "value": 30.8516
+          "value": 24.8371
         },
         "Y": {
           "type": "float",
-          "value": 14.3892
+          "value": 10.4082
         },
         "Z": {
           "type": "float",
-          "value": 0.01
+          "value": -0.0
         }
       },
       {
@@ -16579,11 +16667,11 @@
         },
         "X": {
           "type": "float",
-          "value": 26.9952
+          "value": 26.2367
         },
         "Y": {
           "type": "float",
-          "value": 12.8926
+          "value": 13.1843
         },
         "Z": {
           "type": "float",
@@ -17731,7 +17819,7 @@
         },
         "Bearing": {
           "type": "float",
-          "value": 3.1416
+          "value": -3.1416
         },
         "BodyBag": {
           "type": "byte",
@@ -22006,7 +22094,7 @@
         },
         "Bearing": {
           "type": "float",
-          "value": 3.1416
+          "value": -3.1416
         },
         "BodyBag": {
           "type": "byte",
@@ -22231,7 +22319,7 @@
         },
         "Bearing": {
           "type": "float",
-          "value": 3.1416
+          "value": -3.1416
         },
         "BodyBag": {
           "type": "byte",
@@ -22429,11 +22517,11 @@
         },
         "X": {
           "type": "float",
-          "value": 31.1878
+          "value": 32.9913
         },
         "Y": {
           "type": "float",
-          "value": 10.975
+          "value": 8.186299999999999
         },
         "Z": {
           "type": "float",
@@ -22654,11 +22742,11 @@
         },
         "X": {
           "type": "float",
-          "value": 30.9518
+          "value": 29.1676
         },
         "Y": {
           "type": "float",
-          "value": 8.3798
+          "value": 6.2492
         },
         "Z": {
           "type": "float",
@@ -22879,11 +22967,11 @@
         },
         "X": {
           "type": "float",
-          "value": 28.0233
+          "value": 28.1041
         },
         "Y": {
           "type": "float",
-          "value": 7.9705
+          "value": 7.7432
         },
         "Z": {
           "type": "float",
@@ -23104,11 +23192,11 @@
         },
         "X": {
           "type": "float",
-          "value": 27.9963
+          "value": 26.8815
         },
         "Y": {
           "type": "float",
-          "value": 10.298
+          "value": 8.6837
         },
         "Z": {
           "type": "float",
@@ -23329,11 +23417,11 @@
         },
         "X": {
           "type": "float",
-          "value": 29.2361
+          "value": 27.795
         },
         "Y": {
           "type": "float",
-          "value": 12.7137
+          "value": 13.4824
         },
         "Z": {
           "type": "float",
