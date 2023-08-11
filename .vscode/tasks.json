@@ -6,7 +6,7 @@
         {
             "label": "Pack",
             "type": "shell",
-            "command": "nasher install",
+            "command": "nasher install --verbose",
             "presentation": {
                 "reveal": "always"
             },
@@ -19,7 +19,7 @@
         {
             "label": "Compile Solution",
             "type": "shell",
-            "command": "nasher compile",
+            "command": "nasher compile --verbose",
             "presentation": {
                 "reveal": "always"
             },
@@ -29,7 +29,7 @@
         {
             "label": "Sync from Toolset",
             "type": "shell",
-            "command": "nasher unpack",
+            "command": "nasher unpack --verbose",
             "presentation": {
                 "reveal": "always"
             },
