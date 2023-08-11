@@ -1,9 +1,4 @@
-object mortul = GetNearestObjectByTag("e1_mortul", GetFirstPC());
-object arctus = GetNearestObjectByTag("e1_arctus_human", GetFirstPC());
-object luther = GetNearestObjectByTag("e1_luther", GetFirstPC());
-object pc = GetFirstPC();
-
-void Leave()
+void Leave(object pc)
 {
     // object target = GetNearestObjectByTag("e1_dream_one_target", mortul);
     // AssignCommand(mortul, ActionJumpToObject(target));
@@ -14,8 +9,12 @@ void Leave()
     DelayCommand(7.0f, AssignCommand(pc, ActionJumpToLocation(GetLocation(GetObjectByTag("e1_naroo_inn_start")))));
 }
 
-void TalkDream1(int line)
-{
+void TalkDream1(int line, object pc)
+{    
+    object mortul = GetNearestObjectByTag("e1_mortul", pc);
+    object arctus = GetNearestObjectByTag("e1_arctus_human", pc);
+    object luther = GetNearestObjectByTag("e1_luther", pc);    
+
     string lineToSpeak = "";
     object actor = OBJECT_INVALID;
     float delay = 5.0f;
@@ -53,23 +52,24 @@ void TalkDream1(int line)
             break;
 
         default:
-            Leave();
+            Leave(pc);
             return;
     }
  
     AssignCommand(actor, ActionSpeakString(lineToSpeak));
-    DelayCommand(delay, TalkDream1(line + 1));
+    DelayCommand(delay, TalkDream1(line + 1, pc));
 }
 
 void main()
-{
-    SetCutsceneMode(pc);
-    FadeFromBlack(pc);
-
+{   
+    object pc = GetFirstPC();
     string areaName = GetTag(GetArea(pc));
     if (areaName == "e1_dream1")
-    {
-        DelayCommand(2.0f, TalkDream1(1));
+    {        
+        SetCutsceneMode(pc);
+        FadeFromBlack(pc);
+
+        DelayCommand(2.0f, TalkDream1(1, pc));
     }
 
     ExecuteScript("e1_on_area_enter");

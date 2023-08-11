@@ -23,9 +23,10 @@ void spawnZombies(object mortul, object pc)
 
 void main()
 {    
-    object pc = GetFirstPC();
-    object mortul = GetObjectByTag("e1_mortul_weak");
+    object pc = GetFirstPC();    
     SetCutsceneMode(pc);
+
+    object mortul = GetObjectByTag("e1_mortul_weak");
     AssignCommand(mortul, ClearAllActions());
     AssignCommand(mortul, PlayAnimation(ANIMATION_LOOPING_CONJURE2, 1.0f, 5.0f));
     DelayCommand(2.0f, spawnZombies(mortul, pc));
