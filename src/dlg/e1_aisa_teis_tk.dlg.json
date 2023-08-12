@@ -278,7 +278,7 @@
         },
         "Script": {
           "type": "resref",
-          "value": "e1_teis_spwn_mor"
+          "value": ""
         },
         "Sound": {
           "type": "resref",
@@ -355,12 +355,12 @@
         },
         "Speaker": {
           "type": "cexostring",
-          "value": "e1_mortul_weak"
+          "value": ""
         },
         "Text": {
           "type": "cexolocstring",
           "value": {
-            "0": "I'm afraid my ruse has been unveiled... How inconvenient, but liberating. Impersonating the old man really takes a toll on one's body."
+            "0": "You fool!"
           }
         }
       },
@@ -429,7 +429,7 @@
         "Text": {
           "type": "cexolocstring",
           "value": {
-            "0": "However, I'm forever grateful to you, <FirstName>. You have been an invaluable help as I have told you when we first met in Drahkthu. If not for you, I wouldn't have been able to seize these stones."
+            "0": "I'm afraid my ruse has been unveiled... How inconvenient, but liberating. Impersonating the old man really takes a toll on one's body."
           }
         }
       },
@@ -498,7 +498,7 @@
         "Text": {
           "type": "cexolocstring",
           "value": {
-            "0": "Unfortunately, he didn't escape the culling of Ishtar... But enough with the unhappy thoughts! It's time to end this. And you, <FirstName>, have outlived your usefulness."
+            "0": "However, I'm forever grateful to you, <FirstName>. You have been an invaluable help as I have told you when we first met in Drahkthu. If not for you, I wouldn't have been able to seize these stones."
           }
         }
       },
@@ -567,6 +567,75 @@
         "Text": {
           "type": "cexolocstring",
           "value": {
+            "0": "Unfortunately, he didn't escape the culling of Ishtar... But enough with the unhappy thoughts! It's time to end this. And you, <FirstName>, have outlived your usefulness."
+          }
+        }
+      },
+      {
+        "__struct_id": 8,
+        "ActionParams": {
+          "type": "list",
+          "value": []
+        },
+        "Animation": {
+          "type": "dword",
+          "value": 0
+        },
+        "AnimLoop": {
+          "type": "byte",
+          "value": 1
+        },
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        },
+        "Delay": {
+          "type": "dword",
+          "value": 4294967295
+        },
+        "Quest": {
+          "type": "cexostring",
+          "value": ""
+        },
+        "RepliesList": {
+          "type": "list",
+          "value": [
+            {
+              "__struct_id": 0,
+              "Active": {
+                "type": "resref",
+                "value": ""
+              },
+              "ConditionParams": {
+                "type": "list",
+                "value": []
+              },
+              "Index": {
+                "type": "dword",
+                "value": 8
+              },
+              "IsChild": {
+                "type": "byte",
+                "value": 0
+              }
+            }
+          ]
+        },
+        "Script": {
+          "type": "resref",
+          "value": ""
+        },
+        "Sound": {
+          "type": "resref",
+          "value": ""
+        },
+        "Speaker": {
+          "type": "cexostring",
+          "value": "e1_mortul_weak"
+        },
+        "Text": {
+          "type": "cexolocstring",
+          "value": {
             "0": "Poor choice of last words..."
           }
         }
@@ -575,7 +644,7 @@
   },
   "NumWords": {
     "type": "dword",
-    "value": 162
+    "value": 168
   },
   "PreventZoomIn": {
     "type": "byte",
@@ -831,7 +900,7 @@
         },
         "Script": {
           "type": "resref",
-          "value": ""
+          "value": "e1_teis_spwn_mor"
         },
         "Sound": {
           "type": "resref",
@@ -905,7 +974,7 @@
         "Text": {
           "type": "cexolocstring",
           "value": {
-            "0": "You!"
+            "0": "What... in the... nine..."
           }
         }
       },
@@ -970,7 +1039,7 @@
         "Text": {
           "type": "cexolocstring",
           "value": {
-            "0": "Monster! What have you done to Luther?"
+            "0": "You!"
           }
         }
       },
@@ -1035,12 +1104,77 @@
         "Text": {
           "type": "cexolocstring",
           "value": {
-            "0": "Murderer! You'll pay for this!"
+            "0": "Monster! What have you done to Luther?"
           }
         }
       },
       {
         "__struct_id": 7,
+        "ActionParams": {
+          "type": "list",
+          "value": []
+        },
+        "Animation": {
+          "type": "dword",
+          "value": 0
+        },
+        "AnimLoop": {
+          "type": "byte",
+          "value": 1
+        },
+        "Comment": {
+          "type": "cexostring",
+          "value": ""
+        },
+        "Delay": {
+          "type": "dword",
+          "value": 4294967295
+        },
+        "EntriesList": {
+          "type": "list",
+          "value": [
+            {
+              "__struct_id": 0,
+              "Active": {
+                "type": "resref",
+                "value": ""
+              },
+              "ConditionParams": {
+                "type": "list",
+                "value": []
+              },
+              "Index": {
+                "type": "dword",
+                "value": 8
+              },
+              "IsChild": {
+                "type": "byte",
+                "value": 0
+              }
+            }
+          ]
+        },
+        "Quest": {
+          "type": "cexostring",
+          "value": ""
+        },
+        "Script": {
+          "type": "resref",
+          "value": ""
+        },
+        "Sound": {
+          "type": "resref",
+          "value": ""
+        },
+        "Text": {
+          "type": "cexolocstring",
+          "value": {
+            "0": "Murderer! You'll pay for this!"
+          }
+        }
+      },
+      {
+        "__struct_id": 8,
         "ActionParams": {
           "type": "list",
           "value": []
