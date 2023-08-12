@@ -10,10 +10,10 @@ void Leave(object pc)
 }
 
 void TalkDream1(int line, object pc)
-{    
+{
     object mortul = GetNearestObjectByTag("e1_mortul", pc);
     object arctus = GetNearestObjectByTag("e1_arctus_human", pc);
-    object luther = GetNearestObjectByTag("e1_luther", pc);    
+    object luther = GetNearestObjectByTag("e1_luther", pc);
 
     string lineToSpeak = "";
     object actor = OBJECT_INVALID;
@@ -29,11 +29,11 @@ void TalkDream1(int line, object pc)
             lineToSpeak = "Be patient, Ra'nor! It would be unwise to rush in after all these years!";
             actor = luther;
             break;
-        
+
         case 3:
             lineToSpeak = "I'm afraid we don't have time to wait for the Arch Magi, Luther.";
             actor = arctus;
-            delay = 2.0f;
+            delay = 4.0f;
             break;
 
         case 4:
@@ -55,17 +55,29 @@ void TalkDream1(int line, object pc)
             Leave(pc);
             return;
     }
- 
+
     AssignCommand(actor, ActionSpeakString(lineToSpeak));
     DelayCommand(delay, TalkDream1(line + 1, pc));
 }
 
 void main()
-{   
+{
     object pc = GetFirstPC();
     string areaName = GetTag(GetArea(pc));
     if (areaName == "e1_dream1")
-    {        
+    {
+        StoreCameraFacing();
+        int cameraMode = CAMERA_MODE_STIFF_CHASE_CAMERA;
+        float facing = GetFacing(pc);
+        float pitch = 80.0f;
+        float distance = 5.0f;
+
+        DelayCommand(0.5f, AssignCommand(pc, SetCameraFacing(facing, distance, pitch)));
+
+        DelayCommand(0.7f, LockCameraDistance(pc, TRUE));
+        DelayCommand(0.8f, LockCameraPitch(pc, TRUE));
+        DelayCommand(0.9f, SetCameraMode(pc, cameraMode));
+
         SetCutsceneMode(pc);
         FadeFromBlack(pc);
 
