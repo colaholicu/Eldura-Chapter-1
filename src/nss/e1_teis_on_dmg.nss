@@ -100,13 +100,32 @@ void main()
     }
 
     if (!GetLocalInt(OBJECT_SELF, "StoppedCombat") && (GetCurrentHitPoints(OBJECT_SELF) <= FloatToInt((GetMaxHitPoints() * 0.1f))))
-    {        
+    {
+        object pc = GetFirstPC();
         ClearAllActions(TRUE);
-        AssignCommand(GetFirstPC(), ClearAllActions(TRUE));
-        SetIsTemporaryFriend(GetFirstPC());
-        SetIsTemporaryFriend(OBJECT_SELF, GetFirstPC());
+        AssignCommand(pc, ClearAllActions(TRUE));
+
+        // Find all the faction members of the summoner (the summoned creatures)
+        object oCreature = GetFirstFactionMember(pc);
+        while (GetIsObjectValid(oCreature))
+        {
+            // Do something with the summoned creature, like storing its pointer or applying commands
+            // For example, you could store the object pointer in a local variable
+            object oSummonedCreature = oCreature;
+
+            // Do something with oSummonedCreature, e.g., assign a command to it
+            AssignCommand(oSummonedCreature, ClearAllActions(TRUE));
+            ApplyEffectAtLocation(DURATION_TYPE_INSTANT, EffectVisualEffect(VFX_IMP_UNSUMMON), GetLocation(oSummonedCreature));
+            DestroyObject(oSummonedCreature);
+
+            // Move to the next faction member (summoned creature)
+            oCreature = GetNextFactionMember(pc);
+        }
+
+        SetIsTemporaryFriend(pc);
+        SetIsTemporaryFriend(OBJECT_SELF, pc);
         SetLocalInt(OBJECT_SELF, "StoppedCombat", 1);
-        AssignCommand(OBJECT_SELF, ActionStartConversation(GetFirstPC(), "e1_teis_mor_tk", FALSE, FALSE));
+        AssignCommand(OBJECT_SELF, ActionStartConversation(pc, "e1_teis_mor_tk", FALSE, FALSE));
     }
 
     // Send the user-defined event signal
