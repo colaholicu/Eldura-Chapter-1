@@ -48,635 +48,6 @@
     "value": [
       {
         "__struct_id": 4,
-        "Appearance_Type": {
-          "type": "word",
-          "value": 176
-        },
-        "BodyBag": {
-          "type": "byte",
-          "value": 0
-        },
-        "Cha": {
-          "type": "byte",
-          "value": 6
-        },
-        "ChallengeRating": {
-          "type": "float",
-          "value": 2.0
-        },
-        "ClassList": {
-          "type": "list",
-          "value": [
-            {
-              "__struct_id": 2,
-              "Class": {
-                "type": "int",
-                "value": 12
-              },
-              "ClassLevel": {
-                "type": "short",
-                "value": 4
-              }
-            }
-          ]
-        },
-        "Con": {
-          "type": "byte",
-          "value": 15
-        },
-        "Conversation": {
-          "type": "resref",
-          "value": ""
-        },
-        "CRAdjust": {
-          "type": "int",
-          "value": 0
-        },
-        "CurrentHitPoints": {
-          "type": "short",
-          "value": 11
-        },
-        "DecayTime": {
-          "type": "dword",
-          "value": 5000
-        },
-        "Deity": {
-          "type": "cexostring",
-          "value": ""
-        },
-        "Description": {
-          "id": 12456,
-          "type": "cexolocstring",
-          "value": {}
-        },
-        "Dex": {
-          "type": "byte",
-          "value": 11
-        },
-        "Disarmable": {
-          "type": "byte",
-          "value": 0
-        },
-        "Equip_ItemList": {
-          "type": "list",
-          "value": [
-            {
-              "__struct_id": 65536,
-              "AddCost": {
-                "type": "dword",
-                "value": 0
-              },
-              "BaseItem": {
-                "type": "int",
-                "value": 69
-              },
-              "Charges": {
-                "type": "byte",
-                "value": 0
-              },
-              "Cost": {
-                "type": "dword",
-                "value": 320
-              },
-              "Cursed": {
-                "type": "byte",
-                "value": 0
-              },
-              "DescIdentified": {
-                "type": "cexolocstring",
-                "value": {}
-              },
-              "Description": {
-                "type": "cexolocstring",
-                "value": {}
-              },
-              "Identified": {
-                "type": "byte",
-                "value": 0
-              },
-              "LocalizedName": {
-                "id": 13235,
-                "type": "cexolocstring",
-                "value": {}
-              },
-              "ModelPart1": {
-                "type": "byte",
-                "value": 1
-              },
-              "Plot": {
-                "type": "byte",
-                "value": 0
-              },
-              "PropertiesList": {
-                "type": "list",
-                "value": [
-                  {
-                    "__struct_id": 0,
-                    "ChanceAppear": {
-                      "type": "byte",
-                      "value": 100
-                    },
-                    "CostTable": {
-                      "type": "byte",
-                      "value": 19
-                    },
-                    "CostValue": {
-                      "type": "word",
-                      "value": 3
-                    },
-                    "Param1": {
-                      "type": "byte",
-                      "value": 255
-                    },
-                    "Param1Value": {
-                      "type": "byte",
-                      "value": 255
-                    },
-                    "PropertyName": {
-                      "type": "word",
-                      "value": 77
-                    },
-                    "Subtype": {
-                      "type": "word",
-                      "value": 0
-                    }
-                  }
-                ]
-              },
-              "StackSize": {
-                "type": "word",
-                "value": 1
-              },
-              "Stolen": {
-                "type": "byte",
-                "value": 0
-              },
-              "Tag": {
-                "type": "cexostring",
-                "value": "NW_IT_CREWPS002"
-              },
-              "TemplateResRef": {
-                "type": "resref",
-                "value": "nw_it_crewps002"
-              },
-              "xModelPart1": {
-                "type": "word",
-                "value": 1
-              },
-              "XOrientation": {
-                "type": "float",
-                "value": 0.0
-              },
-              "XPosition": {
-                "type": "float",
-                "value": -1.0
-              },
-              "YOrientation": {
-                "type": "float",
-                "value": 1.0
-              },
-              "YPosition": {
-                "type": "float",
-                "value": -1.0
-              },
-              "ZPosition": {
-                "type": "float",
-                "value": -1.0
-              }
-            }
-          ]
-        },
-        "FactionID": {
-          "type": "word",
-          "value": 2
-        },
-        "FeatList": {
-          "type": "list",
-          "value": [
-            {
-              "__struct_id": 1,
-              "Feat": {
-                "type": "word",
-                "value": 289
-              }
-            }
-          ]
-        },
-        "FirstName": {
-          "id": 12457,
-          "type": "cexolocstring",
-          "value": {
-            "0": "Dog"
-          }
-        },
-        "fortbonus": {
-          "type": "short",
-          "value": 0
-        },
-        "Gender": {
-          "type": "byte",
-          "value": 2
-        },
-        "GoodEvil": {
-          "type": "byte",
-          "value": 50
-        },
-        "HitPoints": {
-          "type": "short",
-          "value": 11
-        },
-        "Int": {
-          "type": "byte",
-          "value": 3
-        },
-        "Interruptable": {
-          "type": "byte",
-          "value": 1
-        },
-        "IsImmortal": {
-          "type": "byte",
-          "value": 0
-        },
-        "IsPC": {
-          "type": "byte",
-          "value": 0
-        },
-        "LastName": {
-          "type": "cexolocstring",
-          "value": {}
-        },
-        "LawfulChaotic": {
-          "type": "byte",
-          "value": 50
-        },
-        "Lootable": {
-          "type": "byte",
-          "value": 0
-        },
-        "MaxHitPoints": {
-          "type": "short",
-          "value": 19
-        },
-        "NaturalAC": {
-          "type": "byte",
-          "value": 0
-        },
-        "NoPermDeath": {
-          "type": "byte",
-          "value": 0
-        },
-        "PerceptionRange": {
-          "type": "byte",
-          "value": 8
-        },
-        "Phenotype": {
-          "type": "int",
-          "value": 0
-        },
-        "Plot": {
-          "type": "byte",
-          "value": 0
-        },
-        "PortraitId": {
-          "type": "word",
-          "value": 189
-        },
-        "Race": {
-          "type": "byte",
-          "value": 8
-        },
-        "refbonus": {
-          "type": "short",
-          "value": 0
-        },
-        "ScriptAttacked": {
-          "type": "resref",
-          "value": "nw_c2_default5"
-        },
-        "ScriptDamaged": {
-          "type": "resref",
-          "value": "nw_c2_default6"
-        },
-        "ScriptDeath": {
-          "type": "resref",
-          "value": "nw_c2_default7"
-        },
-        "ScriptDialogue": {
-          "type": "resref",
-          "value": "nw_c2_default4"
-        },
-        "ScriptDisturbed": {
-          "type": "resref",
-          "value": "nw_c2_default8"
-        },
-        "ScriptEndRound": {
-          "type": "resref",
-          "value": "nw_c2_default3"
-        },
-        "ScriptHeartbeat": {
-          "type": "resref",
-          "value": "nw_c2_default1"
-        },
-        "ScriptOnBlocked": {
-          "type": "resref",
-          "value": "nw_c2_defaulte"
-        },
-        "ScriptOnNotice": {
-          "type": "resref",
-          "value": "nw_c2_default2"
-        },
-        "ScriptRested": {
-          "type": "resref",
-          "value": "nw_c2_defaulta"
-        },
-        "ScriptSpawn": {
-          "type": "resref",
-          "value": "e0_rdm_wk"
-        },
-        "ScriptSpellAt": {
-          "type": "resref",
-          "value": "nw_c2_defaultb"
-        },
-        "ScriptUserDefine": {
-          "type": "resref",
-          "value": "nw_c2_defaultd"
-        },
-        "SkillList": {
-          "type": "list",
-          "value": [
-            {
-              "__struct_id": 0,
-              "Rank": {
-                "type": "byte",
-                "value": 0
-              }
-            },
-            {
-              "__struct_id": 0,
-              "Rank": {
-                "type": "byte",
-                "value": 0
-              }
-            },
-            {
-              "__struct_id": 0,
-              "Rank": {
-                "type": "byte",
-                "value": 0
-              }
-            },
-            {
-              "__struct_id": 0,
-              "Rank": {
-                "type": "byte",
-                "value": 0
-              }
-            },
-            {
-              "__struct_id": 0,
-              "Rank": {
-                "type": "byte",
-                "value": 0
-              }
-            },
-            {
-              "__struct_id": 0,
-              "Rank": {
-                "type": "byte",
-                "value": 0
-              }
-            },
-            {
-              "__struct_id": 0,
-              "Rank": {
-                "type": "byte",
-                "value": 5
-              }
-            },
-            {
-              "__struct_id": 0,
-              "Rank": {
-                "type": "byte",
-                "value": 0
-              }
-            },
-            {
-              "__struct_id": 0,
-              "Rank": {
-                "type": "byte",
-                "value": 0
-              }
-            },
-            {
-              "__struct_id": 0,
-              "Rank": {
-                "type": "byte",
-                "value": 0
-              }
-            },
-            {
-              "__struct_id": 0,
-              "Rank": {
-                "type": "byte",
-                "value": 0
-              }
-            },
-            {
-              "__struct_id": 0,
-              "Rank": {
-                "type": "byte",
-                "value": 0
-              }
-            },
-            {
-              "__struct_id": 0,
-              "Rank": {
-                "type": "byte",
-                "value": 0
-              }
-            },
-            {
-              "__struct_id": 0,
-              "Rank": {
-                "type": "byte",
-                "value": 0
-              }
-            },
-            {
-              "__struct_id": 0,
-              "Rank": {
-                "type": "byte",
-                "value": 0
-              }
-            },
-            {
-              "__struct_id": 0,
-              "Rank": {
-                "type": "byte",
-                "value": 0
-              }
-            },
-            {
-              "__struct_id": 0,
-              "Rank": {
-                "type": "byte",
-                "value": 0
-              }
-            },
-            {
-              "__struct_id": 0,
-              "Rank": {
-                "type": "byte",
-                "value": 5
-              }
-            },
-            {
-              "__struct_id": 0,
-              "Rank": {
-                "type": "byte",
-                "value": 0
-              }
-            },
-            {
-              "__struct_id": 0,
-              "Rank": {
-                "type": "byte",
-                "value": 0
-              }
-            },
-            {
-              "__struct_id": 0,
-              "Rank": {
-                "type": "byte",
-                "value": 0
-              }
-            },
-            {
-              "__struct_id": 0,
-              "Rank": {
-                "type": "byte",
-                "value": 0
-              }
-            },
-            {
-              "__struct_id": 0,
-              "Rank": {
-                "type": "byte",
-                "value": 0
-              }
-            },
-            {
-              "__struct_id": 0,
-              "Rank": {
-                "type": "byte",
-                "value": 0
-              }
-            },
-            {
-              "__struct_id": 0,
-              "Rank": {
-                "type": "byte",
-                "value": 0
-              }
-            },
-            {
-              "__struct_id": 0,
-              "Rank": {
-                "type": "byte",
-                "value": 0
-              }
-            },
-            {
-              "__struct_id": 0,
-              "Rank": {
-                "type": "byte",
-                "value": 0
-              }
-            },
-            {
-              "__struct_id": 0,
-              "Rank": {
-                "type": "byte",
-                "value": 0
-              }
-            }
-          ]
-        },
-        "SoundSetFile": {
-          "type": "word",
-          "value": 27
-        },
-        "SpecAbilityList": {
-          "type": "list",
-          "value": []
-        },
-        "StartingPackage": {
-          "type": "byte",
-          "value": 74
-        },
-        "Str": {
-          "type": "byte",
-          "value": 15
-        },
-        "Subrace": {
-          "type": "cexostring",
-          "value": ""
-        },
-        "Tag": {
-          "type": "cexostring",
-          "value": "NW_DOG"
-        },
-        "Tail_New": {
-          "type": "dword",
-          "value": 0
-        },
-        "TemplateList": {
-          "type": "list",
-          "value": []
-        },
-        "TemplateResRef": {
-          "type": "resref",
-          "value": "nw_dog"
-        },
-        "WalkRate": {
-          "type": "int",
-          "value": 7
-        },
-        "willbonus": {
-          "type": "short",
-          "value": 0
-        },
-        "Wings_New": {
-          "type": "dword",
-          "value": 0
-        },
-        "Wis": {
-          "type": "byte",
-          "value": 12
-        },
-        "XOrientation": {
-          "type": "float",
-          "value": 0.0
-        },
-        "XPosition": {
-          "type": "float",
-          "value": 106.8548
-        },
-        "YOrientation": {
-          "type": "float",
-          "value": 1.0
-        },
-        "YPosition": {
-          "type": "float",
-          "value": 9.4415
-        },
-        "ZPosition": {
-          "type": "float",
-          "value": -0.0
-        }
-      },
-      {
-        "__struct_id": 4,
         "Appearance_Head": {
           "type": "byte",
           "value": 14
@@ -35742,7 +35113,7 @@
               "DescIdentified": {
                 "type": "cexolocstring",
                 "value": {
-                  "0": "The small note is mostly covered in the Elduran's guard dried up blood. However, there are a few readable parts:\n\n\" .....time is com.....\"\n\"meet........ ruins......\"\n\"......Ar'Ishtanu........\"\n\nThe sender of this note signed it only with the letter \"A\""
+                  "0": "The small note is mostly covered in the Elduran's guard dried up blood. However, there are a few readable parts:\n\n\" .....tymp'l a vien.....\"\n\"ajthepta'ma........ ruyne'le......\"\n\"......Ar'Ishtanu........\"\n\nThe sender of this note signed it only with the letter \"A\""
                 }
               },
               "Description": {
@@ -44599,6 +43970,207 @@
           "type": "float",
           "value": 0.0
         }
+      },
+      {
+        "__struct_id": 1,
+        "AutoRemoveKey": {
+          "type": "byte",
+          "value": 0
+        },
+        "Cursor": {
+          "type": "byte",
+          "value": 1
+        },
+        "DisarmDC": {
+          "type": "byte",
+          "value": 0
+        },
+        "Faction": {
+          "type": "dword",
+          "value": 1
+        },
+        "Geometry": {
+          "type": "list",
+          "value": [
+            {
+              "__struct_id": 3,
+              "PointX": {
+                "type": "float",
+                "value": -5.9308
+              },
+              "PointY": {
+                "type": "float",
+                "value": -10.2079
+              },
+              "PointZ": {
+                "type": "float",
+                "value": 0.025
+              }
+            },
+            {
+              "__struct_id": 3,
+              "PointX": {
+                "type": "float",
+                "value": -0.3379
+              },
+              "PointY": {
+                "type": "float",
+                "value": -9.943400000000001
+              },
+              "PointZ": {
+                "type": "float",
+                "value": 0.026
+              }
+            },
+            {
+              "__struct_id": 3,
+              "PointX": {
+                "type": "float",
+                "value": 0.0
+              },
+              "PointY": {
+                "type": "float",
+                "value": 0.0
+              },
+              "PointZ": {
+                "type": "float",
+                "value": 0.0241
+              }
+            },
+            {
+              "__struct_id": 3,
+              "PointX": {
+                "type": "float",
+                "value": -5.9006
+              },
+              "PointY": {
+                "type": "float",
+                "value": -0.1225
+              },
+              "PointZ": {
+                "type": "float",
+                "value": 0.0251
+              }
+            }
+          ]
+        },
+        "HighlightHeight": {
+          "type": "float",
+          "value": 0.0
+        },
+        "KeyName": {
+          "type": "cexostring",
+          "value": ""
+        },
+        "LinkedTo": {
+          "type": "cexostring",
+          "value": "e1_etc_from_efn"
+        },
+        "LinkedToFlags": {
+          "type": "byte",
+          "value": 2
+        },
+        "LoadScreenID": {
+          "type": "word",
+          "value": 0
+        },
+        "LocalizedName": {
+          "id": 14760,
+          "type": "cexolocstring",
+          "value": {}
+        },
+        "OnClick": {
+          "type": "resref",
+          "value": ""
+        },
+        "OnDisarm": {
+          "type": "resref",
+          "value": ""
+        },
+        "OnTrapTriggered": {
+          "type": "resref",
+          "value": ""
+        },
+        "PortraitId": {
+          "type": "word",
+          "value": 0
+        },
+        "ScriptHeartbeat": {
+          "type": "resref",
+          "value": ""
+        },
+        "ScriptOnEnter": {
+          "type": "resref",
+          "value": ""
+        },
+        "ScriptOnExit": {
+          "type": "resref",
+          "value": ""
+        },
+        "ScriptUserDefine": {
+          "type": "resref",
+          "value": ""
+        },
+        "Tag": {
+          "type": "cexostring",
+          "value": "e1_efn_to_efc"
+        },
+        "TemplateResRef": {
+          "type": "resref",
+          "value": "newtransition"
+        },
+        "TrapDetectable": {
+          "type": "byte",
+          "value": 1
+        },
+        "TrapDetectDC": {
+          "type": "byte",
+          "value": 0
+        },
+        "TrapDisarmable": {
+          "type": "byte",
+          "value": 1
+        },
+        "TrapFlag": {
+          "type": "byte",
+          "value": 0
+        },
+        "TrapOneShot": {
+          "type": "byte",
+          "value": 1
+        },
+        "TrapType": {
+          "type": "byte",
+          "value": 0
+        },
+        "Type": {
+          "type": "int",
+          "value": 1
+        },
+        "XOrientation": {
+          "type": "float",
+          "value": 0.0
+        },
+        "XPosition": {
+          "type": "float",
+          "value": 6.1763
+        },
+        "YOrientation": {
+          "type": "float",
+          "value": 0.0
+        },
+        "YPosition": {
+          "type": "float",
+          "value": 50.0805
+        },
+        "ZOrientation": {
+          "type": "float",
+          "value": 0.0
+        },
+        "ZPosition": {
+          "type": "float",
+          "value": 0.0
+        }
       }
     ]
   },
@@ -44719,6 +44291,68 @@
         "YPosition": {
           "type": "float",
           "value": 72.5489
+        },
+        "ZPosition": {
+          "type": "float",
+          "value": 0.01
+        }
+      },
+      {
+        "__struct_id": 5,
+        "Appearance": {
+          "type": "byte",
+          "value": 1
+        },
+        "Description": {
+          "type": "cexolocstring",
+          "value": {}
+        },
+        "HasMapNote": {
+          "type": "byte",
+          "value": 0
+        },
+        "LinkedTo": {
+          "type": "cexostring",
+          "value": ""
+        },
+        "LocalizedName": {
+          "id": 14817,
+          "type": "cexolocstring",
+          "value": {
+            "0": "Waypoint"
+          }
+        },
+        "MapNote": {
+          "type": "cexolocstring",
+          "value": {}
+        },
+        "MapNoteEnabled": {
+          "type": "byte",
+          "value": 1
+        },
+        "Tag": {
+          "type": "cexostring",
+          "value": "e1_efn_from_etc"
+        },
+        "TemplateResRef": {
+          "type": "resref",
+          "value": "nw_waypoint001"
+        },
+        "XOrientation": {
+          "type": "float",
+          "value": 0.9988
+        },
+        "XPosition": {
+          "type": "float",
+          "value": 7.1485
+        },
+        "YOrientation": {
+          "type": "float",
+          "value": 0.0491
+        },
+        "YPosition": {
+          "type": "float",
+          "value": 44.8573
         },
         "ZPosition": {
           "type": "float",
