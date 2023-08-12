@@ -2,5 +2,8 @@ void main()
 {
     object pc = GetFirstPC();
     SetCutsceneMode(pc, FALSE);
-    AssignCommand(GetNearestObjectByTag("e1_mortul_weak"), ActionAttack(pc));
+    object mortulWeak = GetNearestObjectByTag("e1_mortul_weak");
+    AssignCommand(mortulWeak, ActionAttack(pc));
+    SetIsTemporaryEnemy(mortulWeak, pc);
+    SetIsTemporaryEnemy(pc, mortulWeak);
 }
