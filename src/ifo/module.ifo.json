@@ -146,27 +146,27 @@
   },
   "Mod_Entry_Area": {
     "type": "resref",
-    "value": "caverns"
+    "value": "area"
   },
   "Mod_Entry_Dir_X": {
     "type": "float",
-    "value": 0.0
+    "value": -0.9925000000000001
   },
   "Mod_Entry_Dir_Y": {
     "type": "float",
-    "value": 1.0
+    "value": -0.1224
   },
   "Mod_Entry_X": {
     "type": "float",
-    "value": 61.332
+    "value": 14.823
   },
   "Mod_Entry_Y": {
     "type": "float",
-    "value": 29.1768
+    "value": 9.303599999999999
   },
   "Mod_Entry_Z": {
     "type": "float",
-    "value": 2.7931
+    "value": 0.0
   },
   "Mod_Expan_List": {
     "type": "list",
