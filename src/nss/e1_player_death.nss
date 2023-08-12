@@ -227,11 +227,11 @@ void main()
         SetStandardFactionReputation(STANDARD_FACTION_DEFENDER, 80, oPlayer);
     }
 
-    DelayCommand(2.5, Raise(oPlayer));
-    string sDestTag = "e1_purgatory";
-    object oSpawnPoint = GetObjectByTag(sDestTag);
-    DelayCommand(2.5, AssignCommand(oPlayer,JumpToLocation(GetLocation(oSpawnPoint))));
-    return;
+    // do not teleport to purgatory since that's not developed yet
+    // DelayCommand(2.5, Raise(oPlayer));
+    // string sDestTag = "e1_purgatory";
+    // object oSpawnPoint = GetObjectByTag(sDestTag);
+    // DelayCommand(2.5, AssignCommand(oPlayer,JumpToLocation(GetLocation(oSpawnPoint))));
 
     DelayCommand(2.5, PopUpGUIPanel(oPlayer,GUI_PANEL_PLAYER_DEATH));
 
